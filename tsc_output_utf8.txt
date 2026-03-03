@@ -1,1 +1,0 @@
-src/pageInline/ProjectPanel.tsx(233,107): error TS2503: Cannot find namespace 'React'.

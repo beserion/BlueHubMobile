@@ -1,7 +1,0 @@
-Bu uygulamadaki arama filtrelerinde hala div içinde div var. Bu düzeltilecek arama inputunun etrafını kaplayan div kalkacak böylece arama butonu büyüyecek. Ayrıca tüm arama inputları Sol tarafında Ara... yazacak ve sağ tarafında arama yapmanı sağlayan buton ve arama inputuna yazılanları silecek bir çarpı butonu olacak.
-
-Stok sayfasında , Servisler sayfasında ve Projeler sayfasında dökümanlar bölümündeki sayfanın başlığı bulunan bölümlerin turuncusu çok parlak daha az parlak bir turuncu ile değiştirilecek.
-
-Bazı telefonlarda, telefonun en üstünde bulunan saat pil gibi ikonların bulunduğu yer headerın üstüne çıkıyor ve görüşü v tıklanmayı engelliyor
-
-

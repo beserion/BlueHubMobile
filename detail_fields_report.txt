@@ -1,0 +1,149 @@
+# Detay Sayfası Veri Alanları Raporu
+
+Aşağıda her bir modülün detay sayfasında (DetailDashboard) gösterilebilecek mevcut veri alanları listelenmiştir. Lütfen gizlemek veya öncelikli göstermek istediğiniz alanları belirtiniz.
+
+## 1. Lojistik (Logistic)
+- route: Rota (Örn: İstanbul → İzmir)
+- shipments: Sevkiyat Sayısı
+- revenue: Ciro/Gelir
+- cost: Maliyet
+- profit: Kâr
+- margin: Kâr Marjı (%)
+
+## 2. Sipariş (Order)
+- orderNo: Sipariş Numarası
+- customer: Müşteri Adı
+- items: Kalem Sayısı
+- amount: Tutar
+- currency: Para Birimi
+- date: Tarih
+- status: Durum (Onaylandı, Hazırlanıyor, vb.)
+
+## 3. Teklif (Offer)
+- offerNo: Teklif Numarası
+- customer: Müşteri Adı
+- subject: Konu
+- amount: Tutar
+- currency: Para Birimi
+- status: Durum
+- date: Tarih
+
+## 4. Talep (Request)
+- trackingNumber: Takip Numarası
+- title: Başlık
+- status: Durum
+- date: Tarih
+- responsibleUser: Sorumlu Kişi
+- currency: Para Birimi
+- amount: Tutar
+
+## 5. Fatura (Invoice)
+- invoiceNo: Fatura Numarası
+- partner: Cari/Partner Adı
+- type: Tür (Alış/Satış)
+- amount: Tutar
+- currency: Para Birimi
+- date: Tarih
+- status: Durum (Ödendi, Gecikmiş, vb.)
+
+## 6. Ödeme (Payment)
+- paymentNo: Ödeme Numarası
+- partner: Cari/Partner Adı
+- type: Tür (Havale, EFT, vb.)
+- amount: Tutar
+- currency: Para Birimi
+- date: Tarih
+- status: Durum
+
+## 7. Proje (Project)
+- name: Proje Adı
+- customer: Müşteri
+- status: Durum
+- progress: İlerleme (%)
+- startDate: Başlangıç Tarihi
+- endDate: Bitiş Tarihi
+- budget: Bütçe
+- spent: Harcanan
+
+## 8. Yapılacaklar (Todo)
+- title: Başlık
+- assignee: Atanan Kişi
+- dueDate: Son Tarih
+- priority: Öncelik (Yüksek, Orta, Düşük)
+- status: Durum
+
+## 9. Gemi Ziyareti (Vessel Visit)
+- vessel: Gemi Adı
+- port: Liman
+- arrivalDate: Varış Tarihi
+- departureDate: Kalkış Tarihi
+- purpose: Ziyaret Amacı
+- agent: Acenta
+
+## 10. İş Ortağı (Partner)
+- name: Firma Adı
+- type: Tür (Tedarikçi, Müşteri)
+- city: Şehir
+- phone: Telefon
+- balance: Bakiye
+- currency: Para Birimi
+
+## 11. Gemi (Ship)
+- name: Gemi Adı
+- type: Gemi Tipi
+- flag: Bayrak
+- imo: IMO Numarası
+- status: Durum
+- buildYear: Yapım Yılı
+- capacity: Kapasite
+
+## 12. Servis (Service)
+- serviceNo: Servis Numarası
+- subject: Konu
+- vessel: Gemi
+- status: Durum
+- date: Tarih
+- description: Açıklama
+- technician: Teknisyen
+
+## 13. Depo (Warehouse)
+- name: Depo Adı
+- location: Konum
+- capacity: Kapasite
+- usage: Doluluk Oranı
+- items: Ürün Sayısı
+- manager: Yönetici
+
+## 14. Personel (Employee)
+- name: Ad Soyad
+- department: Departman
+- position: Pozisyon
+- startDate: İşe Başlama Tarihi
+- phone: Telefon
+- email: E-posta
+
+## 15. Sözleşme (Contract)
+- employee: Personel
+- type: Sözleşme Tipi
+- startDate: Başlangıç
+- salary: Maaş
+- status: Durum
+
+## 16. İzin (Leave)
+- employee: Personel
+- type: İzin Tipi
+- startDate: Başlangıç
+- endDate: Bitiş
+- days: Gün Sayısı
+- status: Durum
+
+## 17. Devam (Attendance)
+- employee: Personel
+- date: Tarih
+- checkIn: Giriş Saati
+- checkOut: Çıkış Saati
+- status: Durum
+- hours: Saat
+
+---
+Gizleneceklerleri sildim şuangi hali görünecekler.

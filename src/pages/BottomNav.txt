@@ -1,0 +1,22 @@
+<div id="bottom-menu" className="fixed bottom-0 left-0 w-full p-4 z-30">
+    <div className="bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border border-slate-200 dark:border-slate-800 rounded-2xl shadow-xl p-2 max-w-lg mx-auto transition-colors duration-200">
+        <nav className="grid grid-cols-4 gap-1">
+            {salesMenu.map((m) => (
+                <button
+                    key={m.id}
+                    onClick={() => setActiveTab(m.id)}
+                    className={`
+                                flex flex-col items-center justify-center py-2 px-1 rounded-xl transition-all duration-200 group w-full outline-none focus:outline-none tap-highlight-transparent
+                                ${activeTab === m.id
+                            ? 'text-sky-600 dark:text-sky-400 bg-sky-50 dark:bg-slate-800'
+                            : 'text-slate-400 dark:text-slate-500 active:text-blue-600 dark:active:text-blue-400 active:bg-slate-50 dark:active:bg-slate-800 md:hover:bg-slate-50 md:dark:hover:bg-slate-800 md:hover:text-blue-600 md:dark:hover:text-blue-300'
+                        }
+                                `}
+                >
+                    <m.icon size={20} strokeWidth={2.5} className="mb-1 transition-colors duration-200 mb-2 " />
+                    <span className="text-[13px] font-semibold text-center leading-tight">{m.label}</span>
+                </button>
+            ))}
+        </nav>
+    </div>
+</div>

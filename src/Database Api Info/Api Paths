@@ -1,0 +1,356 @@
+﻿
+======================================
+  AppApi
+======================================
+
+GET /
+  Responses: 200 Success
+
+
+======================================
+  Auth
+======================================
+
+POST /api/Auth/login
+  Responses: 200 Success
+
+GET /api/Auth/me
+  Responses: 200 Success
+
+
+======================================
+  Dashboard
+======================================
+
+GET /api/Dashboard/customers-by-channel
+  Parameters:
+    - companyId (query, integer, int32, default: 1)
+    - channelId (query, integer, int32, default: 0)
+    - period (query, string, default: ytd)
+  Responses: 200 Success
+
+POST /api/Dashboard/operational
+  Responses: 200 Success
+
+GET /api/Dashboard/operational-summary
+  Parameters:
+    - companyId (query, integer, int32, default: 1)
+    - userId (query, integer, int32, default: 0)
+    - period (query, string, default: month)
+  Responses: 200 Success
+
+GET /api/Dashboard/purchase/chart
+  Parameters:
+    - companyId (query, integer, int32, default: 1)
+  Responses: 200 Success
+
+GET /api/Dashboard/purchase/last-invoices
+  Parameters:
+    - companyId (query, integer, int32, default: 1)
+  Responses: 200 Success
+
+GET /api/Dashboard/purchase/summary
+  Parameters:
+    - companyId (query, integer, int32, default: 1)
+  Responses: 200 Success
+
+GET /api/Dashboard/purchase/top-suppliers
+  Parameters:
+    - companyId (query, integer, int32, default: 1)
+  Responses: 200 Success
+
+GET /api/Dashboard/quotes-by-customer
+  Parameters:
+    - companyId (query, integer, int32, default: 1)
+    - customerId (query, integer, int32, default: 0)
+  Responses: 200 Success
+
+GET /api/Dashboard/revenue-by-channel
+  Parameters:
+    - period (query, string, default: ytd)
+  Responses: 200 Success
+
+GET /api/Dashboard/simulate-salesman-bonus
+  Parameters:
+    - target (query, number, double)
+    - actual (query, number, double)
+    - commissionRate (query, number, double)
+    - bonusRate (query, number, double)
+  Responses: 200 Success
+
+
+======================================
+  Delivery
+======================================
+
+GET /api/Delivery/view
+  Parameters:
+    - companyId (query, integer, int32, default: 0)
+    - type (query)
+    - startDate (query, string, date-time)
+    - endDate (query, string, date-time)
+  Responses: 200 Success
+
+
+======================================
+  Files
+======================================
+
+POST /files/upload
+  Responses: 200 Success
+
+POST /files/uploadAll
+  Responses: 200 Success
+
+
+======================================
+  Finance
+======================================
+
+GET /api/Finance/bank-account-view
+  Responses: 200 Success
+
+GET /api/Finance/company-accounts
+  Parameters:
+    - companyId (query, integer, int32, default: 1)
+  Responses: 200 Success
+
+GET /api/Finance/partner-balance
+  Parameters:
+    - companyId (query, integer, int32, default: 0)
+    - kriter (query, string)
+    - startDate (query, string, date-time)
+    - endDate (query, string, date-time)
+    - startRow (query, integer, int32, default: 0)
+    - endRow (query, integer, int32, default: 50)
+  Responses: 200 Success
+
+
+======================================
+  HR
+======================================
+
+GET /api/HR/attendance-list
+  Parameters:
+    - employeeId (query, integer, int32)
+    - date (query, string, date-time)
+  Responses: 200 Success
+
+GET /api/HR/attendance-report-list
+  Parameters:
+    - employeeId (query, integer, int32)
+    - departmentId (query, integer, int32)
+    - status (query)
+    - startDate (query, string, date-time)
+    - endDate (query, string, date-time)
+  Responses: 200 Success
+
+GET /api/HR/contract-list
+  Responses: 200 Success
+
+GET /api/HR/employee-list
+  Responses: 200 Success
+
+GET /api/HR/leave-list
+  Responses: 200 Success
+
+
+======================================
+  Inventory
+======================================
+
+GET /api/Inventory/warehouse-list
+  Responses: 200 Success
+
+
+======================================
+  Invoice
+======================================
+
+GET /api/Invoice/list
+  Parameters:
+    - companyId (query, integer, int32, default: 0)
+    - invoiceType (query, integer, int32, default: 0)
+    - partnerId (query, integer, int32)
+    - startDate (query, string, date-time)
+    - endDate (query, string, date-time)
+    - status (query, string)
+  Responses: 200 Success
+
+
+======================================
+  Logistic
+======================================
+
+GET /api/Logistic/profitability-list
+  Parameters:
+    - fromDate (query, string, date-time)
+    - toDate (query, string, date-time)
+  Responses: 200 Success
+
+
+======================================
+  Offer
+======================================
+
+GET /api/Offer/details
+  Parameters:
+    - id (query, integer, int32)
+    - includeDeleted (query, boolean, default: False)
+  Responses: 200 Success
+
+GET /api/Offer/list
+  Parameters:
+    - companyId (query, integer, int32, default: 0)
+    - kriter (query, string)
+    - startRow (query, integer, int32, default: 0)
+    - endRow (query, integer, int32, default: 50)
+  Responses: 200 Success
+
+
+======================================
+  Order
+======================================
+
+GET /api/Order/details
+  Parameters:
+    - id (query, integer, int32)
+  Responses: 200 Success
+
+GET /api/Order/list
+  Parameters:
+    - companyId (query, integer, int32, default: 0)
+    - kriter (query, string)
+    - startRow (query, integer, int32, default: 0)
+    - endRow (query, integer, int32, default: 100)
+  Responses: 200 Success
+
+
+======================================
+  Partner
+======================================
+
+GET /api/Partner/view
+  Responses: 200 Success
+
+
+======================================
+  Payment
+======================================
+
+GET /api/Payment/list
+  Parameters:
+    - companyId (query, integer, int32, default: 0)
+    - paymentType (query)
+    - startDate (query, string, date-time)
+    - endDate (query, string, date-time)
+    - currency (query, string)
+    - kriter (query, string)
+    - currentpage (query, integer, int32, default: 1)
+    - pagesize (query, integer, int32, default: 10)
+  Responses: 200 Success
+
+
+======================================
+  Project
+======================================
+
+GET /api/Project/dashboard
+  Parameters:
+    - companyId (query, integer, int32, default: 0)
+  Responses: 200 Success
+
+GET /api/Project/documents
+  Parameters:
+    - id (query, integer, int32, default: 0)
+    - companyId (query, integer, int32, default: 0)
+  Responses: 200 Success
+
+GET /api/Project/list
+  Parameters:
+    - CompanyId (query, integer, int32)
+    - Kriter (query, string)
+    - CompanyList (query, array)
+  Responses: 200 Success
+
+GET /api/Project/team-work-stats
+  Parameters:
+    - companyId (query, integer, int32, default: 0)
+  Responses: 200 Success
+
+
+======================================
+  Report
+======================================
+
+GET /api/Report/income-statement
+  Parameters:
+    - companyId (query, integer, int32, default: 0)
+    - startDate (query, string, date-time)
+    - endDate (query, string, date-time)
+  Responses: 200 Success
+
+
+======================================
+  Request
+======================================
+
+GET /api/Request/details
+  Parameters:
+    - id (query, integer, int32)
+  Responses: 200 Success
+
+GET /api/Request/list
+  Parameters:
+    - companyId (query, integer, int32, default: 0)
+    - kriter (query, string)
+    - startRow (query, integer, int32, default: 0)
+    - endRow (query, integer, int32, default: 100)
+  Responses: 200 Success
+
+
+======================================
+  ToDo
+======================================
+
+GET /api/ToDo/list
+  Parameters:
+    - companyId (query, integer, int32, default: 0)
+    - startDate (query, string, date-time)
+    - endDate (query, string, date-time)
+    - status (query, string)
+    - kriter (query, string)
+    - startRow (query, integer, int32, default: 0)
+    - endRow (query, integer, int32, default: 50)
+  Responses: 200 Success
+
+
+======================================
+  VesselVisit
+======================================
+
+GET /api/VesselVisit/list
+  Parameters:
+    - companyId (query, integer, int32, default: 0)
+    - startDate (query, string, date-time)
+    - endDate (query, string, date-time)
+    - kriter (query, string)
+    - startRow (query, integer, int32, default: 0)
+    - endRow (query, integer, int32, default: 50)
+  Responses: 200 Success
+
+
+======================================
+  Voucher
+======================================
+
+GET /api/Voucher/list
+  Parameters:
+    - companyId (query, integer, int32, default: 0)
+    - voucherType (query)
+    - startDate (query, string, date-time)
+    - endDate (query, string, date-time)
+    - page (query, integer, int32, default: 1)
+    - pageSize (query, integer, int32, default: 10)
+  Responses: 200 Success
+

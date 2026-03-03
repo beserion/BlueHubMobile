@@ -1,0 +1,3070 @@
+﻿AppApi v1.0  Schemas
+=====================
+
+======================================
+  EDApi.Controllers.AuthController.LoginRequest
+======================================
+Type: object
+additionalProperties: false
+
+Properties:
+  email                     string  nullable: true
+  userName                  string  nullable: true
+  password                  string  nullable: true
+
+======================================
+  EDApi.Controllers.AuthController.LoginResponse
+======================================
+Type: object
+additionalProperties: false
+
+Properties:
+  success                   boolean
+  token                     string  nullable: true
+  expiresUtc                string  (date-time)
+  user                      EDApi.Controllers.AuthController.UserInfo
+
+======================================
+  EDApi.Controllers.AuthController.UserInfo
+======================================
+Type: object
+additionalProperties: false
+
+Properties:
+  id                        string  nullable: true
+  userName                  string  nullable: true
+  email                     string  nullable: true
+  name                      string  nullable: true
+  companyId                 integer  (int32)
+  branchId                  integer  (int32)
+  roles                     array of string  nullable: true
+
+======================================
+  AccountPlan
+======================================
+Type: object
+additionalProperties: false
+
+Properties:
+  id                        integer  (int32)
+  createdBy                 string  nullable: true
+  modifiedBy                string  nullable: true
+  createdDate               string  (date-time)  nullable: true
+  modifiedDate              string  (date-time)  nullable: true
+  isDeleted                 boolean
+  isNew                     boolean  readOnly: true
+  companyId                 integer  (int32)
+  company                   Companies
+  rowCnt                    integer  (int32)
+  rowNumber                 integer  (int32)
+  accountCode               string  nullable: true
+  accountName               string  nullable: true
+  accountType               string  nullable: true
+  level                     integer  (int32)
+  isGroup                   boolean
+  parentCode                string  nullable: true
+  refCode                   string  nullable: true
+  initialBalanceDate        string  (date-time)  nullable: true
+  initialBalanceType        string  nullable: true
+  initialBalance            number  (double)
+  initialBalanceTL          number  (double)
+  balance                   number  (double)
+  budget                    number  (double)
+  balanceTL                 number  (double)
+  balanceEUR                number  (double)
+  balanceUSD                number  (double)
+  isSelectable              boolean
+  hide                      boolean
+  transactionCount          integer  (int32)
+  accountTypes              array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
+  cCurrencies               array of CCurrency  nullable: true
+
+======================================
+  AccountTransactionsVM
+======================================
+Type: object
+additionalProperties: false
+
+Properties:
+  id                        integer  (int32)
+  transactionId             integer  (int32)
+  documentNo                string  nullable: true
+  documentType              string  nullable: true
+  companyId                 integer  (int32)
+  companyId2                integer  (int32)
+  companyName               string  nullable: true
+  transactionCode           string  nullable: true
+  transactionDate           string  (date-time)  nullable: true
+  original                  boolean
+  reverse                   boolean
+  refCode                   string  nullable: true
+  grupCode                  string  nullable: true
+  actionType                string  nullable: true
+  accountType               string  nullable: true
+  accountCode               string  nullable: true
+  accountName               string  nullable: true
+  accountCode2              string  nullable: true
+  accountName2              string  nullable: true
+  partnerName               string  nullable: true
+  groupName                 string  nullable: true
+  description               string  nullable: true
+  currency                  string  nullable: true
+  currency2                 string  nullable: true
+  rate                      number  (double)
+  rate2                     number  (double)
+  amount                    number  (double)
+  amount2                   number  (double)
+  amountTL                  number  (double)
+  amountTL2                 number  (double)
+  debt                      number  (double)
+  credit                    number  (double)
+  balance                   number  (double)
+  debtTL                    number  (double)
+  creditTL                  number  (double)
+  balanceTL                 number  (double)
+  balanceLocal              number  (double)
+  debtLocal                 number  (double)
+  creditLocal               number  (double)
+  cumBalance                number  (double)
+  cumBalanceTL              number  (double)
+  cumBalanceEUR             number  (double)
+  cumBalanceUSD             number  (double)
+  debtEUR                   number  (double)
+  creditEUR                 number  (double)
+  balanceEUR                number  (double)
+  debtUSD                   number  (double)
+  creditUSD                 number  (double)
+  balanceUSD                number  (double)
+  debtSGD                   number  (double)
+  creditSGD                 number  (double)
+  balanceSGD                number  (double)
+  debtINR                   number  (double)
+  creditINR                 number  (double)
+  balanceINR                number  (double)
+  debtAED                   number  (double)
+  creditAED                 number  (double)
+  balanceAED                number  (double)
+  debtJPY                   number  (double)
+  creditJPY                 number  (double)
+  balanceJPY                number  (double)
+  debtGBP                   number  (double)
+  creditGBP                 number  (double)
+  balanceGBP                number  (double)
+  totalDebtTL               number  (double)
+  totalCreditTL             number  (double)
+  totalBalanceTL            number  (double)
+  totalAmountTL             number  (double)
+  totalAmountEUR            number  (double)
+  totalAmountUSD            number  (double)
+  totalAmountTTL            number  (double)
+  totalAmountSGD            number  (double)
+  totalAmountINR            number  (double)
+  totalAmountAED            number  (double)
+  totalAmountJPY            number  (double)
+  totalAmountGBP            number  (double)
+  status                    string  nullable: true
+  remarks                   string  nullable: true
+  rowNo                     integer  (int32)
+  totalRowCnt               integer  (int32)
+  debtOverall               number  (double)
+  creditOverall             number  (double)
+  balanceOverall            number  (double)
+  subTotalTL                number  (double)
+  subTotalTL_TL             number  (double)
+  subTotalEUR               number  (double)
+  subTotalEUR_TL            number  (double)
+  subTotalUSD               number  (double)
+  subTotalUSD_TL            number  (double)
+  totalTL                   number  (double)
+  transactionCount          integer  (int32)
+  rateChanged               boolean  nullable: true
+
+======================================
+  AccountVM
+======================================
+Type: object
+additionalProperties: false
+
+Properties:
+  id                        integer  (int32)
+  companyId                 string  nullable: true
+  accountType               string  nullable: true
+  accountCode               string  nullable: true
+  accountName               string  nullable: true
+  budget                    number  (double)
+  credit                    number  (double)
+  debt                      number  (double)
+  balance                   number  (double)
+  diff                      number  (double)
+
+======================================
+  AssigneeTaskCountRow
+======================================
+Type: object
+additionalProperties: false
+
+Properties:
+  personelId                integer  (int32)  nullable: true
+  assigneeName              string  nullable: true
+  taskCount                 integer  (int32)
+
+======================================
+  Attachments
+======================================
+Type: object
+additionalProperties: false
+
+Properties:
+  id                        integer  (int32)
+  createdBy                 string  nullable: true
+  modifiedBy                string  nullable: true
+  createdDate               string  (date-time)  nullable: true
+  modifiedDate              string  (date-time)  nullable: true
+  isDeleted                 boolean
+  isNew                     boolean  readOnly: true
+  companyId                 integer  (int32)
+  company                   Companies
+  rowCnt                    integer  (int32)
+  rowNumber                 integer  (int32)
+  refId                     integer  (int64)
+  refParentId               integer  (int64)
+  module                    string  nullable: true
+  title                     string  nullable: true
+  refCode                   string  nullable: true
+  refName                   string  nullable: true
+  fileName                  string  nullable: true
+  loadDataCall              boolean
+  message                   string  nullable: true
+  filePath                  string  nullable: true
+  attachmentUrl             string  nullable: true  readOnly: true
+  attachmentNewUrl          string  nullable: true  readOnly: true
+
+======================================
+  AttendanceByDateVM
+======================================
+Type: object
+additionalProperties: false
+
+Properties:
+  date                      string  nullable: true
+  presentCount              integer  (int32)
+  absentCount               integer  (int32)
+  lateCount                 integer  (int32)
+
+======================================
+  AttendanceByDepartmentVM
+======================================
+Type: object
+additionalProperties: false
+
+Properties:
+  department                string  nullable: true
+  count                     integer  (int32)
+  avgWorkedHours            number  (double)
+
+======================================
+  AttendanceByStatusVM
+======================================
+Type: object
+additionalProperties: false
+
+Properties:
+  status                    string  nullable: true
+  count                     integer  (int32)
+
+======================================
+  AttendanceStatus
+======================================
+Type: integer int32
+Values: 1, 2, 3, 4, 5, 6
+
+======================================
+  BalanceSheetRowDto
+======================================
+Type: object
+additionalProperties: false
+
+Properties:
+  accountCode               string  nullable: true
+  accountName               string  nullable: true
+  accountType               string  nullable: true
+  refCode                   string  nullable: true
+  balance                   number  (double)
+
+======================================
+  BankAccount
+======================================
+Type: object
+additionalProperties: false
+
+Properties:
+  id                        integer  (int32)
+  createdBy                 string  nullable: true
+  modifiedBy                string  nullable: true
+  createdDate               string  (date-time)  nullable: true
+  modifiedDate              string  (date-time)  nullable: true
+  isDeleted                 boolean
+  isNew                     boolean  readOnly: true
+  companyId                 integer  (int32)
+  company                   Companies
+  rowCnt                    integer  (int32)
+  rowNumber                 integer  (int32)
+  active                    boolean
+  partnerId                 integer  (int32)
+  accountCode               string  nullable: true
+  accountName               string  nullable: true
+  grup                      string  nullable: true
+  category                  string  nullable: true
+  bankCode                  string  nullable: true
+  bankName                  string  nullable: true
+  branchCode                string  nullable: true
+  branchName                string  nullable: true
+  currency                  string  nullable: true
+  accountNo                 string  nullable: true
+  ibanNo                    string  nullable: true
+  swiftCode                 string  nullable: true
+  country                   string  nullable: true
+  city                      string  nullable: true
+  logo                      string  nullable: true
+  iconName                  string  nullable: true
+  lastBalance               number  (double)
+  balance                   number  (double)
+  remarks                   string  nullable: true
+  logoUrl                   string  nullable: true  readOnly: true
+  banks                     array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
+  bankAccounts              array of BankAccount  nullable: true
+  companies                 array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
+  countries                 array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
+  cities                    array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
+
+======================================
+  BloodType
+======================================
+Type: integer int32
+Values: 1, 2, 3, 4, 5, 6, 7, 8
+
+======================================
+  CCurrency
+======================================
+Type: object
+additionalProperties: false
+
+Properties:
+  id                        integer  (int32)
+  code                      string  nullable: true
+  name                      string  nullable: true
+  active                    boolean
+
+======================================
+  Companies
+======================================
+Type: object
+additionalProperties: false
+
+Properties:
+  id                        integer  (int32)
+  isNew                     boolean  readOnly: true
+  createdBy                 string  nullable: true
+  modifiedBy                string  nullable: true
+  createdDate               string  (date-time)  nullable: true
+  modifiedDate              string  (date-time)  nullable: true
+  isDeleted                 boolean
+  active                    boolean
+  offShore                  boolean
+  groupCompany              boolean
+  ownerName                 string  nullable: true
+  companyColor              string  nullable: true
+  companyCode               string  nullable: true
+  companyName               string  nullable: true
+  companyType               string  nullable: true
+  shortName                 string  nullable: true
+  groupName                 string  nullable: true
+  manager                   string  nullable: true
+  description               string  nullable: true
+  taxOffice                 string  nullable: true
+  taxNumber                 string  nullable: true
+  invoiceAddress            string  nullable: true
+  address                   string  nullable: true
+  deliveryAddress           string  nullable: true
+  operationManager          string  nullable: true
+  accountManager            string  nullable: true
+  officePhone               string  nullable: true
+  officeFax                 string  nullable: true
+  eMailAddress              string  nullable: true
+  eMailAddress2             string  nullable: true
+  webAddress                string  nullable: true
+  officeAddress             string  nullable: true
+  remark                    string  nullable: true
+  country                   string  nullable: true
+  city                      string  nullable: true
+  currency                  string  nullable: true
+  bankAccountDescription    string  nullable: true
+  purchaseOrderNote         string  nullable: true
+  logo                      string  nullable: true
+  logoUrl                   string  nullable: true  readOnly: true
+  vesselList                array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
+  countryList               array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
+  partnerTypes              array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
+
+======================================
+  CompanyAccountGroupCurrencyList
+======================================
+Type: object
+additionalProperties: false
+
+Properties:
+  companyId                 integer  (int32)
+  accountCode               string  nullable: true
+  companies                 array of Companies  nullable: true
+  tlAccounts                array of AccountVM  nullable: true
+  eurAccounts               array of AccountVM  nullable: true
+  usdAccounts               array of AccountVM  nullable: true
+  totalTL                   number  (double)
+  totalUSD                  number  (double)
+  totalEUR                  number  (double)
+
+======================================
+  ContractStatus
+======================================
+Type: integer int32
+Values: 1, 2, 3, 4
+
+======================================
+  ContractType
+======================================
+Type: integer int32
+Values: 1, 2, 3, 4
+
+======================================
+  DeliveryDto
+======================================
+Type: object
+additionalProperties: false
+
+Properties:
+  id                        integer  (int32)
+  companyId                 integer  (int32)
+  deliveryNo                string  nullable: true
+  deliveryDate              string  (date-time)
+  deliveryType              EDUtility.DeliveryType
+  status                    EDUtility.DeliveryStatus
+  partnerId                 integer  (int32)
+  partnerName               string  nullable: true
+  warehouseId               integer  (int32)  nullable: true
+  docNo                     string  nullable: true
+  description               string  nullable: true
+  remarks                   string  nullable: true
+  currency                  string  nullable: true
+  currencyRate              number  (double)
+  totalAmount               number  (double)
+  totalAmountTL             number  (double)
+  invoiceId                 integer  (int32)  nullable: true
+  lines                     array of DeliveryLineDto  nullable: true
+  partnerList               array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
+  currencyList              array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
+  warehouseList             array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
+
+======================================
+  DeliveryHeader
+======================================
+Type: object
+additionalProperties: false
+
+Properties:
+  id                        integer  (int32)
+  createdBy                 string  nullable: true
+  modifiedBy                string  nullable: true
+  createdDate               string  (date-time)  nullable: true
+  modifiedDate              string  (date-time)  nullable: true
+  isDeleted                 boolean
+  isNew                     boolean  readOnly: true
+  companyId                 integer  (int32)
+  company                   Companies
+  rowCnt                    integer  (int32)
+  rowNumber                 integer  (int32)
+  deliveryNo                string  nullable: true
+  deliveryDate              string  (date-time)
+  deliveryType              EDUtility.DeliveryType
+  status                    EDUtility.DeliveryStatus
+  partnerId                 integer  (int32)
+  partner                   Partner
+  warehouseId               integer  (int32)  nullable: true
+  docNo                     string  nullable: true
+  description               string  nullable: true
+  remarks                   string  nullable: true
+  currency                  string  nullable: true
+  currencyRate              number  (double)
+  totalAmount               number  (double)
+  totalAmountTL             number  (double)
+  invoiceId                 integer  (int32)  nullable: true
+  voucherId                 integer  (int32)  nullable: true
+  lines                     array of DeliveryLine  nullable: true
+
+======================================
+  DeliveryLine
+======================================
+Type: object
+additionalProperties: false
+
+Properties:
+  id                        integer  (int32)
+  createdBy                 string  nullable: true
+  modifiedBy                string  nullable: true
+  createdDate               string  (date-time)  nullable: true
+  modifiedDate              string  (date-time)  nullable: true
+  isDeleted                 boolean
+  isNew                     boolean  readOnly: true
+  companyId                 integer  (int32)
+  company                   Companies
+  rowCnt                    integer  (int32)
+  rowNumber                 integer  (int32)
+  headerId                  integer  (int32)
+  header                    DeliveryHeader
+  productId                 integer  (int32)  nullable: true
+  description               string  nullable: true
+  qty                       number  (double)
+  unitPrice                 number  (double)
+  vatRate                   number  (double)
+  lineTotal                 number  (double)
+  vatTotal                  number  (double)
+  gnlTotal                  number  (double)
+
+======================================
+  DeliveryLineDto
+======================================
+Type: object
+additionalProperties: false
+
+Properties:
+  id                        integer  (int32)
+  headerId                  integer  (int32)
+  productId                 integer  (int32)  nullable: true
+  description               string  nullable: true
+  qty                       number  (double)
+  unitPrice                 number  (double)
+  vatRate                   number  (double)
+  lineTotal                 number  (double)
+  vatTotal                  number  (double)
+  gnlTotal                  number  (double)
+
+======================================
+  DisciplineAction
+======================================
+Type: integer int32
+Values: 1, 2, 3, 4, 5
+
+======================================
+  DisciplineType
+======================================
+Type: integer int32
+Values: 1, 2, 3, 4, 5
+
+======================================
+  EducationLevel
+======================================
+Type: integer int32
+Values: 1, 2, 3, 4, 5, 6, 7
+
+======================================
+  EmployeeProjectCountRow
+======================================
+Type: object
+additionalProperties: false
+
+Properties:
+  employeeId                integer  (int32)
+  employeeName              string  nullable: true
+  projectCount              integer  (int32)
+  taskAssignedCount         integer  (int32)
+
+======================================
+  EmploymentStatus
+======================================
+Type: integer int32
+Values: 1, 2, 3, 4
+
+======================================
+  EmploymentType
+======================================
+Type: integer int32
+Values: 1, 2, 3, 4, 5
+
+======================================
+  FinOperationalDashboardFilterDto
+======================================
+Type: object
+additionalProperties: false
+
+Properties:
+  companyId                 integer  (int32)
+  branchId                  integer  (int32)
+  vesselId                  integer  (int32)
+  currency                  string  nullable: true
+  startDate                 string  (date-time)  nullable: true
+  endDate                   string  (date-time)  nullable: true
+  period                    string  nullable: true
+
+======================================
+  Gender
+======================================
+Type: integer int32
+Values: 1, 2, 3
+
+======================================
+  GoodsIssue
+======================================
+Type: object
+additionalProperties: false
+
+Properties:
+  id                        integer  (int32)
+  createdBy                 string  nullable: true
+  modifiedBy                string  nullable: true
+  createdDate               string  (date-time)  nullable: true
+  modifiedDate              string  (date-time)  nullable: true
+  isDeleted                 boolean
+  isNew                     boolean  readOnly: true
+  companyId                 integer  (int32)
+  company                   Companies
+  rowCnt                    integer  (int32)
+  rowNumber                 integer  (int32)
+  documentNo                string
+  documentDate              string  (date-time)
+  warehouseId               integer  (int32)
+  warehouse                 Warehouse
+  requisitionId             integer  (int32)  nullable: true
+  projectId                 integer  (int32)  nullable: true
+  project                   Project
+  issueType                 string  nullable: true
+  status                    string  nullable: true
+  remarks                   string  nullable: true
+  createdByUserId           integer  (int32)  nullable: true
+  postedDate                string  (date-time)  nullable: true
+  postedByUserId            integer  (int32)  nullable: true
+  lines                     array of GoodsIssueLine  nullable: true
+  warehouseName             string  nullable: true
+
+======================================
+  GoodsIssueLine
+======================================
+Type: object
+additionalProperties: false
+
+Properties:
+  id                        integer  (int32)
+  createdBy                 string  nullable: true
+  modifiedBy                string  nullable: true
+  createdDate               string  (date-time)  nullable: true
+  modifiedDate              string  (date-time)  nullable: true
+  isDeleted                 boolean
+  isNew                     boolean  readOnly: true
+  companyId                 integer  (int32)
+  company                   Companies
+  rowCnt                    integer  (int32)
+  rowNumber                 integer  (int32)
+  goodsIssueId              integer  (int32)
+  goodsIssue                GoodsIssue
+  stockId                   integer  (int32)
+  stock                     Stock
+  batchNo                   string  nullable: true
+  serialNo                  string  nullable: true
+  requestedQty              number  (double)
+  issuedQty                 number  (double)
+  unit                      string  nullable: true
+  unitPrice                 number  (double)
+  amount                    number  (double)
+  remarks                   string  nullable: true
+  stockCode                 string  nullable: true
+  stockName                 string  nullable: true
+  warehouseName             string  nullable: true
+
+======================================
+  GoodsReceipt
+======================================
+Type: object
+additionalProperties: false
+
+Properties:
+  id                        integer  (int32)
+  createdBy                 string  nullable: true
+  modifiedBy                string  nullable: true
+  createdDate               string  (date-time)  nullable: true
+  modifiedDate              string  (date-time)  nullable: true
+  isDeleted                 boolean
+  isNew                     boolean  readOnly: true
+  companyId                 integer  (int32)
+  company                   Companies
+  rowCnt                    integer  (int32)
+  rowNumber                 integer  (int32)
+  documentNo                string
+  documentDate              string  (date-time)
+  warehouseId               integer  (int32)
+  warehouse                 Warehouse
+  partnerId                 integer  (int32)  nullable: true
+  partner                   Partner
+  purchaseOrderId           integer  (int32)  nullable: true
+  projectId                 integer  (int32)  nullable: true
+  project                   Project
+  supplierInvoiceNo         string  nullable: true
+  supplierInvoiceDate       string  (date-time)  nullable: true
+  status                    string  nullable: true
+  remarks                   string  nullable: true
+  createdByUserId           integer  (int32)  nullable: true
+  postedDate                string  (date-time)  nullable: true
+  postedByUserId            integer  (int32)  nullable: true
+  lines                     array of GoodsReceiptLine  nullable: true
+  warehouseName             string  nullable: true
+  partnerName               string  nullable: true
+
+======================================
+  GoodsReceiptLine
+======================================
+Type: object
+additionalProperties: false
+
+Properties:
+  id                        integer  (int32)
+  createdBy                 string  nullable: true
+  modifiedBy                string  nullable: true
+  createdDate               string  (date-time)  nullable: true
+  modifiedDate              string  (date-time)  nullable: true
+  isDeleted                 boolean
+  isNew                     boolean  readOnly: true
+  companyId                 integer  (int32)
+  company                   Companies
+  rowCnt                    integer  (int32)
+  rowNumber                 integer  (int32)
+  goodsReceiptId            integer  (int32)
+  goodsReceipt              GoodsReceipt
+  stockId                   integer  (int32)
+  stock                     Stock
+  batchNo                   string  nullable: true
+  serialNo                  string  nullable: true
+  orderedQty                number  (double)
+  receivedQty               number  (double)
+  rejectedQty               number  (double)
+  unit                      string  nullable: true
+  unitPrice                 number  (double)
+  amount                    number  (double)
+  landedCostAmount          number  (double)  nullable: true
+  totalCost                 number  (double)  nullable: true
+  expiryDate                string  (date-time)  nullable: true
+  remarks                   string  nullable: true
+  stockCode                 string  nullable: true
+  stockName                 string  nullable: true
+  warehouseName             string  nullable: true
+
+======================================
+  HRAttendance
+======================================
+Type: object
+additionalProperties: false
+
+Properties:
+  id                        integer  (int32)
+  createdBy                 string  nullable: true
+  modifiedBy                string  nullable: true
+  createdDate               string  (date-time)  nullable: true
+  modifiedDate              string  (date-time)  nullable: true
+  isDeleted                 boolean
+  isNew                     boolean  readOnly: true
+  companyId                 integer  (int32)
+  company                   Companies
+  rowCnt                    integer  (int32)
+  rowNumber                 integer  (int32)
+  employeeId                integer  (int32)
+  employee                  HREmployee
+  attendanceDate            string  (date-time)
+  checkInTime               string  (date-time)  nullable: true
+  checkOutTime              string  (date-time)  nullable: true
+  workedHours               number  (double)  nullable: true
+  overtimeHours             number  (double)  nullable: true
+  status                    AttendanceStatus
+  checkInLocation           string  nullable: true
+  checkOutLocation          string  nullable: true
+  notes                     string  nullable: true
+  isManualEntry             boolean
+
+======================================
+  HRAttendanceListVM
+======================================
+Type: object
+additionalProperties: false
+
+Properties:
+  attendances               array of HRAttendance  nullable: true
+  employeeList              array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
+  statusList                array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
+  employeeId                integer  (int32)  nullable: true
+  date                      string  (date-time)  nullable: true
+  status                    AttendanceStatus
+
+======================================
+  HRAttendanceReportListVM
+======================================
+Type: object
+additionalProperties: false
+
+Properties:
+  employeeList              array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
+  departmentList            array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
+  statusList                array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
+  employeeId                integer  (int32)  nullable: true
+  departmentId              integer  (int32)  nullable: true
+  status                    AttendanceStatus
+  startDate                 string  (date-time)  nullable: true
+  endDate                   string  (date-time)  nullable: true
+  totalRecords              integer  (int32)
+  presentCount              integer  (int32)
+  absentCount               integer  (int32)
+  lateCount                 integer  (int32)
+  onLeaveCount              integer  (int32)
+  totalWorkedHours          number  (double)
+  totalOvertimeHours        number  (double)
+  attendances               array of HRAttendance  nullable: true
+  attendancesByStatus       array of AttendanceByStatusVM  nullable: true
+  attendancesByDepartment   array of AttendanceByDepartmentVM  nullable: true
+  attendancesByDate         array of AttendanceByDateVM  nullable: true
+
+======================================
+  HRCertificate
+======================================
+Type: object
+additionalProperties: false
+
+Properties:
+  id                        integer  (int32)
+  createdBy                 string  nullable: true
+  modifiedBy                string  nullable: true
+  createdDate               string  (date-time)  nullable: true
+  modifiedDate              string  (date-time)  nullable: true
+  isDeleted                 boolean
+  isNew                     boolean  readOnly: true
+  companyId                 integer  (int32)
+  company                   Companies
+  rowCnt                    integer  (int32)
+  rowNumber                 integer  (int32)
+  employeeId                integer  (int32)
+  employee                  HREmployee
+  certificateName           string
+  certificateNo             string  nullable: true
+  issuingAuthority          string  nullable: true
+  issueDate                 string  (date-time)
+  expiryDate                string  (date-time)  nullable: true
+  documentPath              string  nullable: true
+  isActive                  boolean
+  notes                     string  nullable: true
+
+======================================
+  HRContract
+======================================
+Type: object
+additionalProperties: false
+
+Properties:
+  id                        integer  (int32)
+  createdBy                 string  nullable: true
+  modifiedBy                string  nullable: true
+  createdDate               string  (date-time)  nullable: true
+  modifiedDate              string  (date-time)  nullable: true
+  isDeleted                 boolean
+  isNew                     boolean  readOnly: true
+  companyId                 integer  (int32)
+  company                   Companies
+  rowCnt                    integer  (int32)
+  rowNumber                 integer  (int32)
+  employeeId                integer  (int32)
+  employee                  HREmployee
+  contractNo                string
+  contractType              ContractType
+  startDate                 string  (date-time)
+  endDate                   string  (date-time)  nullable: true
+  grossSalary               number  (double)
+  currency                  string  nullable: true
+  paymentPeriod             PaymentPeriod
+  workingHoursPerWeek       integer  (int32)
+  annualLeaveDays           integer  (int32)
+  benefits                  string  nullable: true
+  specialTerms              string  nullable: true
+  status                    ContractStatus
+  documentPath              string  nullable: true
+  notes                     string  nullable: true
+
+======================================
+  HRContractListVM
+======================================
+Type: object
+additionalProperties: false
+
+Properties:
+  contracts                 array of HRContract  nullable: true
+  employeeList              array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
+
+======================================
+  HRDepartment
+======================================
+Type: object
+additionalProperties: false
+
+Properties:
+  id                        integer  (int32)
+  createdBy                 string  nullable: true
+  modifiedBy                string  nullable: true
+  createdDate               string  (date-time)  nullable: true
+  modifiedDate              string  (date-time)  nullable: true
+  isDeleted                 boolean
+  isNew                     boolean  readOnly: true
+  companyId                 integer  (int32)
+  company                   Companies
+  rowCnt                    integer  (int32)
+  rowNumber                 integer  (int32)
+  departmentCode            string
+  departmentName            string
+  parentDepartmentId        integer  (int32)  nullable: true
+  parentDepartment          HRDepartment
+  managerId                 integer  (int32)  nullable: true
+  description               string  nullable: true
+  isActive                  boolean
+  sortOrder                 integer  (int32)
+  employees                 array of HREmployee  nullable: true
+  positions                 array of HRPosition  nullable: true
+
+======================================
+  HRDiscipline
+======================================
+Type: object
+additionalProperties: false
+
+Properties:
+  id                        integer  (int32)
+  createdBy                 string  nullable: true
+  modifiedBy                string  nullable: true
+  createdDate               string  (date-time)  nullable: true
+  modifiedDate              string  (date-time)  nullable: true
+  isDeleted                 boolean
+  isNew                     boolean  readOnly: true
+  companyId                 integer  (int32)
+  company                   Companies
+  rowCnt                    integer  (int32)
+  rowNumber                 integer  (int32)
+  employeeId                integer  (int32)
+  employee                  HREmployee
+  incidentDate              string  (date-time)
+  disciplineType            DisciplineType
+  description               string
+  action                    DisciplineAction
+  actionDate                string  (date-time)
+  issuedById                integer  (int32)  nullable: true
+  documentPath              string  nullable: true
+  expiryDate                string  (date-time)  nullable: true
+  employeeResponse          string  nullable: true
+  notes                     string  nullable: true
+
+======================================
+  HRDocument
+======================================
+Type: object
+additionalProperties: false
+
+Properties:
+  id                        integer  (int32)
+  createdBy                 string  nullable: true
+  modifiedBy                string  nullable: true
+  createdDate               string  (date-time)  nullable: true
+  modifiedDate              string  (date-time)  nullable: true
+  isDeleted                 boolean
+  isNew                     boolean  readOnly: true
+  companyId                 integer  (int32)
+  company                   Companies
+  rowCnt                    integer  (int32)
+  rowNumber                 integer  (int32)
+  employeeId                integer  (int32)
+  employee                  HREmployee
+  documentName              string
+  documentType              HRDocumentType
+  filePath                  string  nullable: true
+  expiryDate                string  (date-time)  nullable: true
+  description               string  nullable: true
+  isConfidential            boolean
+
+======================================
+  HRDocumentType
+======================================
+Type: integer int32
+Values: 1, 2, 3, 4, 5, 6, 7, 99
+
+======================================
+  HREmployee
+======================================
+Type: object
+additionalProperties: false
+
+Properties:
+  id                        integer  (int32)
+  createdBy                 string  nullable: true
+  modifiedBy                string  nullable: true
+  createdDate               string  (date-time)  nullable: true
+  modifiedDate              string  (date-time)  nullable: true
+  isDeleted                 boolean
+  isNew                     boolean  readOnly: true
+  companyId                 integer  (int32)
+  company                   Companies
+  rowCnt                    integer  (int32)
+  rowNumber                 integer  (int32)
+  employeeCode              string
+  firstName                 string
+  lastName                  string
+  fullName                  string  nullable: true  readOnly: true
+  tcKimlikNo                string  nullable: true
+  passportNo                string  nullable: true
+  birthDate                 string  (date-time)  nullable: true
+  birthPlace                string  nullable: true
+  gender                    Gender
+  maritalStatus             MaritalStatus
+  militaryStatus            MilitaryStatus
+  nationality               string  nullable: true
+  bloodType                 BloodType
+  phone                     string  nullable: true
+  mobile                    string  nullable: true
+  email                     string  nullable: true
+  personalEmail             string  nullable: true
+  address                   string  nullable: true
+  city                      string  nullable: true
+  district                  string  nullable: true
+  postalCode                string  nullable: true
+  emergencyContact          string  nullable: true
+  emergencyPhone            string  nullable: true
+  emergencyRelation         string  nullable: true
+  hireDate                  string  (date-time)
+  terminationDate           string  (date-time)  nullable: true
+  terminationReason         string  nullable: true
+  employmentStatus          EmploymentStatus
+  employmentType            EmploymentType
+  departmentId              integer  (int32)  nullable: true
+  department                HRDepartment
+  positionId                integer  (int32)  nullable: true
+  position                  HRPosition
+  salaryGradeId             integer  (int32)  nullable: true
+  salaryGrade               HRSalaryGrade
+  managerId                 integer  (int32)  nullable: true
+  manager                   HREmployee
+  branchId                  integer  (int32)  nullable: true
+  bankName                  string  nullable: true
+  bankBranch                string  nullable: true
+  iban                      string  nullable: true
+  sgkNo                     string  nullable: true
+  educationLevel            EducationLevel
+  university                string  nullable: true
+  educationDepartment       string  nullable: true
+  graduationYear            integer  (int32)  nullable: true
+  photoPath                 string  nullable: true
+  notes                     string  nullable: true
+  contracts                 array of HRContract  nullable: true
+  leaves                    array of HRLeave  nullable: true
+  attendances               array of HRAttendance  nullable: true
+  employeeTrainings         array of HREmployeeTraining  nullable: true
+  performances              array of HRPerformance  nullable: true
+  disciplines               array of HRDiscipline  nullable: true
+  certificates              array of HRCertificate  nullable: true
+  documents                 array of HRDocument  nullable: true
+
+======================================
+  HREmployeeDto
+======================================
+Type: object
+additionalProperties: false
+
+Properties:
+  id                        integer  (int32)
+  employeeCode              string  nullable: true
+  firstName                 string  nullable: true
+  lastName                  string  nullable: true
+  fullName                  string  nullable: true  readOnly: true
+  tcKimlikNo                string  nullable: true
+  birthDate                 string  (date-time)  nullable: true
+  gender                    Gender
+  phone                     string  nullable: true
+  mobile                    string  nullable: true
+  email                     string  nullable: true
+  hireDate                  string  (date-time)
+  employmentStatus          EmploymentStatus
+  employmentType            EmploymentType
+  departmentId              integer  (int32)  nullable: true
+  departmentName            string  nullable: true
+  positionId                integer  (int32)  nullable: true
+  positionName              string  nullable: true
+  managerId                 integer  (int32)  nullable: true
+  managerName               string  nullable: true
+  photoPath                 string  nullable: true
+
+======================================
+  HREmployeeListVM
+======================================
+Type: object
+additionalProperties: false
+
+Properties:
+  employees                 array of HREmployeeDto  nullable: true
+  departmentList            array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
+  positionList              array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
+  statusList                array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
+  departmentId              integer  (int32)  nullable: true
+  positionId                integer  (int32)  nullable: true
+  status                    EmploymentStatus
+  searchTerm                string  nullable: true
+
+======================================
+  HREmployeeTraining
+======================================
+Type: object
+additionalProperties: false
+
+Properties:
+  id                        integer  (int32)
+  createdBy                 string  nullable: true
+  modifiedBy                string  nullable: true
+  createdDate               string  (date-time)  nullable: true
+  modifiedDate              string  (date-time)  nullable: true
+  isDeleted                 boolean
+  isNew                     boolean  readOnly: true
+  companyId                 integer  (int32)
+  company                   Companies
+  rowCnt                    integer  (int32)
+  rowNumber                 integer  (int32)
+  employeeId                integer  (int32)
+  employee                  HREmployee
+  trainingId                integer  (int32)
+  training                  HRTraining
+  status                    TrainingStatus
+  completionDate            string  (date-time)  nullable: true
+  score                     number  (double)  nullable: true
+  isPassed                  boolean
+  certificatePath           string  nullable: true
+  certificateExpiryDate     string  (date-time)  nullable: true
+  notes                     string  nullable: true
+
+======================================
+  HRLeave
+======================================
+Type: object
+additionalProperties: false
+
+Properties:
+  id                        integer  (int32)
+  createdBy                 string  nullable: true
+  modifiedBy                string  nullable: true
+  createdDate               string  (date-time)  nullable: true
+  modifiedDate              string  (date-time)  nullable: true
+  isDeleted                 boolean
+  isNew                     boolean  readOnly: true
+  companyId                 integer  (int32)
+  company                   Companies
+  rowCnt                    integer  (int32)
+  rowNumber                 integer  (int32)
+  employeeId                integer  (int32)
+  employee                  HREmployee
+  leaveTypeId               integer  (int32)
+  leaveType                 HRLeaveType
+  startDate                 string  (date-time)
+  endDate                   string  (date-time)
+  totalDays                 number  (double)
+  reason                    string  nullable: true
+  status                    LeaveStatus
+  approvedById              integer  (int32)  nullable: true
+  approvalDate              string  (date-time)  nullable: true
+  approvalNotes             string  nullable: true
+  documentPath              string  nullable: true
+  deputyEmployeeId          integer  (int32)  nullable: true
+  deputyEmployee            HREmployee
+
+======================================
+  HRLeaveDto
+======================================
+Type: object
+additionalProperties: false
+
+Properties:
+  id                        integer  (int32)
+  employeeId                integer  (int32)
+  employeeName              string  nullable: true
+  leaveTypeId               integer  (int32)
+  leaveTypeName             string  nullable: true
+  startDate                 string  (date-time)
+  endDate                   string  (date-time)
+  totalDays                 number  (double)
+  reason                    string  nullable: true
+  status                    LeaveStatus
+  approvedByName            string  nullable: true
+  approvalDate              string  (date-time)  nullable: true
+
+======================================
+  HRLeaveListVM
+======================================
+Type: object
+additionalProperties: false
+
+Properties:
+  leaves                    array of HRLeaveDto  nullable: true
+  employeeList              array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
+  leaveTypeList             array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
+  statusList                array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
+  employeeId                integer  (int32)  nullable: true
+  leaveTypeId               integer  (int32)  nullable: true
+  status                    LeaveStatus
+  startDate                 string  (date-time)  nullable: true
+  endDate                   string  (date-time)  nullable: true
+
+======================================
+  HRLeaveType
+======================================
+Type: object
+additionalProperties: false
+
+Properties:
+  id                        integer  (int32)
+  createdBy                 string  nullable: true
+  modifiedBy                string  nullable: true
+  createdDate               string  (date-time)  nullable: true
+  modifiedDate              string  (date-time)  nullable: true
+  isDeleted                 boolean
+  isNew                     boolean  readOnly: true
+  companyId                 integer  (int32)
+  company                   Companies
+  rowCnt                    integer  (int32)
+  rowNumber                 integer  (int32)
+  leaveTypeName             string
+  leaveTypeCode             string  nullable: true
+  isPaid                    boolean
+  maxDaysPerYear            integer  (int32)  nullable: true
+  requiresApproval          boolean
+  requiresDocument          boolean
+  description               string  nullable: true
+  isActive                  boolean
+
+======================================
+  HRPerformance
+======================================
+Type: object
+additionalProperties: false
+
+Properties:
+  id                        integer  (int32)
+  createdBy                 string  nullable: true
+  modifiedBy                string  nullable: true
+  createdDate               string  (date-time)  nullable: true
+  modifiedDate              string  (date-time)  nullable: true
+  isDeleted                 boolean
+  isNew                     boolean  readOnly: true
+  companyId                 integer  (int32)
+  company                   Companies
+  rowCnt                    integer  (int32)
+  rowNumber                 integer  (int32)
+  employeeId                integer  (int32)
+  employee                  HREmployee
+  periodId                  integer  (int32)
+  period                    HRPerformancePeriod
+  evaluatorId               integer  (int32)  nullable: true
+  evaluator                 HREmployee
+  goalAchievement           number  (double)  nullable: true
+  jobKnowledge              number  (double)  nullable: true
+  quality                   number  (double)  nullable: true
+  productivity              number  (double)  nullable: true
+  communication             number  (double)  nullable: true
+  teamwork                  number  (double)  nullable: true
+  initiative                number  (double)  nullable: true
+  attendance                number  (double)  nullable: true
+  overallScore              number  (double)  nullable: true
+  rating                    PerformanceRating
+  strengths                 string  nullable: true
+  areasToImprove            string  nullable: true
+  goals                     string  nullable: true
+  employeeComments          string  nullable: true
+  managerComments           string  nullable: true
+  status                    PerformanceStatus
+  submissionDate            string  (date-time)  nullable: true
+  approvalDate              string  (date-time)  nullable: true
+
+======================================
+  HRPerformancePeriod
+======================================
+Type: object
+additionalProperties: false
+
+Properties:
+  id                        integer  (int32)
+  createdBy                 string  nullable: true
+  modifiedBy                string  nullable: true
+  createdDate               string  (date-time)  nullable: true
+  modifiedDate              string  (date-time)  nullable: true
+  isDeleted                 boolean
+  isNew                     boolean  readOnly: true
+  companyId                 integer  (int32)
+  company                   Companies
+  rowCnt                    integer  (int32)
+  rowNumber                 integer  (int32)
+  periodName                string
+  year                      integer  (int32)
+  startDate                 string  (date-time)
+  endDate                   string  (date-time)
+  status                    PerformancePeriodStatus
+  isActive                  boolean
+
+======================================
+  HRPosition
+======================================
+Type: object
+additionalProperties: false
+
+Properties:
+  id                        integer  (int32)
+  createdBy                 string  nullable: true
+  modifiedBy                string  nullable: true
+  createdDate               string  (date-time)  nullable: true
+  modifiedDate              string  (date-time)  nullable: true
+  isDeleted                 boolean
+  isNew                     boolean  readOnly: true
+  companyId                 integer  (int32)
+  company                   Companies
+  rowCnt                    integer  (int32)
+  rowNumber                 integer  (int32)
+  positionCode              string
+  positionName              string
+  departmentId              integer  (int32)  nullable: true
+  department                HRDepartment
+  level                     integer  (int32)
+  description               string  nullable: true
+  requirements              string  nullable: true
+  minSalary                 number  (double)  nullable: true
+  maxSalary                 number  (double)  nullable: true
+  isActive                  boolean
+  employees                 array of HREmployee  nullable: true
+
+======================================
+  HRSalaryGrade
+======================================
+Type: object
+additionalProperties: false
+
+Properties:
+  id                        integer  (int32)
+  createdBy                 string  nullable: true
+  modifiedBy                string  nullable: true
+  createdDate               string  (date-time)  nullable: true
+  modifiedDate              string  (date-time)  nullable: true
+  isDeleted                 boolean
+  isNew                     boolean  readOnly: true
+  companyId                 integer  (int32)
+  company                   Companies
+  rowCnt                    integer  (int32)
+  rowNumber                 integer  (int32)
+  gradeCode                 string
+  gradeName                 string
+  level                     integer  (int32)
+  minSalary                 number  (double)
+  maxSalary                 number  (double)
+  currency                  string  nullable: true
+  description               string  nullable: true
+  isActive                  boolean
+  sortOrder                 integer  (int32)
+  employees                 array of HREmployee  nullable: true
+
+======================================
+  HRTraining
+======================================
+Type: object
+additionalProperties: false
+
+Properties:
+  id                        integer  (int32)
+  createdBy                 string  nullable: true
+  modifiedBy                string  nullable: true
+  createdDate               string  (date-time)  nullable: true
+  modifiedDate              string  (date-time)  nullable: true
+  isDeleted                 boolean
+  isNew                     boolean  readOnly: true
+  companyId                 integer  (int32)
+  company                   Companies
+  rowCnt                    integer  (int32)
+  rowNumber                 integer  (int32)
+  trainingName              string
+  trainingCode              string  nullable: true
+  trainingType              TrainingType
+  provider                  string  nullable: true
+  startDate                 string  (date-time)
+  endDate                   string  (date-time)  nullable: true
+  durationHours             integer  (int32)  nullable: true
+  location                  string  nullable: true
+  cost                      number  (double)  nullable: true
+  currency                  string  nullable: true
+  description               string  nullable: true
+  isCompleted               boolean
+  employeeTrainings         array of HREmployeeTraining  nullable: true
+
+======================================
+  IncomeStatementFilterDto
+======================================
+Type: object
+additionalProperties: false
+
+Properties:
+  companyId                 integer  (int32)
+  startDate                 string  (date-time)
+  endDate                   string  (date-time)
+  companyList               array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
+
+======================================
+  IncomeStatementVM
+======================================
+Type: object
+additionalProperties: false
+
+Properties:
+  filter                    IncomeStatementFilterDto
+  gelirRows                 array of BalanceSheetRowDto  nullable: true
+  giderRows                 array of BalanceSheetRowDto  nullable: true
+  totalGelir                number  (double)
+  totalGider                number  (double)
+  netKarZarar               number  (double)
+
+======================================
+  Invoice
+======================================
+Type: object
+additionalProperties: false
+
+Properties:
+  id                        integer  (int32)
+  createdBy                 string  nullable: true
+  modifiedBy                string  nullable: true
+  createdDate               string  (date-time)  nullable: true
+  modifiedDate              string  (date-time)  nullable: true
+  isDeleted                 boolean
+  isNew                     boolean  readOnly: true
+  companyId                 integer  (int32)
+  company                   Companies
+  rowCnt                    integer  (int32)
+  rowNumber                 integer  (int32)
+  partnerId                 integer  (int32)
+  partner                   Partner
+  invoiceNo                 string
+  documentNo                string  nullable: true
+  description               string  nullable: true
+  invoiceDate               string  (date-time)
+  dueDate                   string  (date-time)  nullable: true
+  invoiceType               EDUtility.InvoiceType
+  currency                  string  nullable: true
+  currencyRate              number  (double)
+  subTotal                  number  (double)
+  dscTotal                  number  (double)
+  netTotal                  number  (double)
+  vatTotal                  number  (double)
+  gnlTotal                  number  (double)
+  paidAmount                number  (double)
+  balance                   number  (double)  readOnly: true
+  isClosed                  boolean
+  status                    string  nullable: true
+  voucherId                 integer  (int32)  nullable: true
+  voucherType               EDUtility.VoucherType
+  projectId                 integer  (int32)  nullable: true
+  project                   Project
+  purchaseOrderId           integer  (int32)  nullable: true
+  lines                     array of InvoiceLine  nullable: true
+  payments                  array of InvoicePayment  nullable: true
+
+======================================
+  InvoiceDto
+======================================
+Type: object
+additionalProperties: false
+
+Properties:
+  id                        integer  (int32)
+  invoiceId                 integer  (int32)  nullable: true
+  companyId                 integer  (int32)
+  partnerId                 integer  (int32)
+  voucherId                 integer  (int32)  nullable: true
+  projectId                 integer  (int32)  nullable: true
+  voucherType               EDUtility.VoucherType
+  invoiceType               EDUtility.InvoiceType
+  accountCode               string  nullable: true
+  accountName               string  nullable: true
+  invoiceNo                 string  nullable: true
+  description               string  nullable: true
+  invoiceDate               string  (date-time)
+  subTotal                  number  (double)
+  dscTotal                  number  (double)
+  netTotal                  number  (double)
+  vatTotal                  number  (double)
+  gnlTotal                  number  (double)
+  balance                   number  (double)
+  currency                  string  nullable: true
+  currencyRate              number  (double)
+  paidAmount                number  (double)
+  remainingAmount           number  (double)
+  isClosed                  boolean
+  purchaseOrderId           integer  (int32)  nullable: true
+  purchaseOrderNo           string  nullable: true
+  partners                  array of Partner  nullable: true
+  lines                     array of InvoiceLineDto  nullable: true
+  currencyList              array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
+  partnerList               array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
+  projectList               array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
+
+======================================
+  InvoiceFilter
+======================================
+Type: object
+additionalProperties: false
+
+Properties:
+  companyId                 integer  (int32)
+  invoiceType               EDUtility.InvoiceType
+  partnerId                 integer  (int32)  nullable: true
+  startDate                 string  (date-time)  nullable: true
+  endDate                   string  (date-time)  nullable: true
+  status                    string  nullable: true
+
+======================================
+  InvoiceLine
+======================================
+Type: object
+additionalProperties: false
+
+Properties:
+  id                        integer  (int32)
+  createdBy                 string  nullable: true
+  modifiedBy                string  nullable: true
+  createdDate               string  (date-time)  nullable: true
+  modifiedDate              string  (date-time)  nullable: true
+  isDeleted                 boolean
+  isNew                     boolean  readOnly: true
+  companyId                 integer  (int32)
+  company                   Companies
+  rowCnt                    integer  (int32)
+  rowNumber                 integer  (int32)
+  invoiceId                 integer  (int32)
+  invoice                   Invoice
+  productId                 integer  (int32)  nullable: true
+  warehouseId               integer  (int32)  nullable: true
+  description               string  nullable: true
+  qty                       number  (double)
+  price                     number  (double)
+  dscRate                   number  (double)
+  vatRate                   number  (double)
+  vatTotal                  number  (double)  readOnly: true
+  lineTotal                 number  (double)  readOnly: true
+
+======================================
+  InvoiceLineDto
+======================================
+Type: object
+additionalProperties: false
+
+Properties:
+  no                        integer  (int32)
+  id                        integer  (int32)
+  headerId                  integer  (int32)
+  invoiceId                 integer  (int32)
+  productId                 integer  (int32)  nullable: true
+  warehouseId               integer  (int32)  nullable: true
+  description               string  nullable: true
+  qty                       number  (double)
+  price                     number  (double)
+  dscRate                   number  (double)
+  vatRate                   number  (double)
+  lineTotal                 number  (double)  readOnly: true
+  dscTotal                  number  (double)  readOnly: true
+  netTotal                  number  (double)  readOnly: true
+  vatTotal                  number  (double)  readOnly: true
+  gnlTotal                  number  (double)  readOnly: true
+
+======================================
+  InvoiceListVM
+======================================
+Type: object
+additionalProperties: false
+
+Properties:
+  filter                    InvoiceFilter
+  invoiceList               array of InvoiceDto  nullable: true
+  partnerList               array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
+  invoiceTypeList           array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
+
+======================================
+  InvoicePayment
+======================================
+Type: object
+additionalProperties: false
+
+Properties:
+  id                        integer  (int32)
+  createdBy                 string  nullable: true
+  modifiedBy                string  nullable: true
+  createdDate               string  (date-time)  nullable: true
+  modifiedDate              string  (date-time)  nullable: true
+  isDeleted                 boolean
+  isNew                     boolean  readOnly: true
+  companyId                 integer  (int32)
+  company                   Companies
+  rowCnt                    integer  (int32)
+  rowNumber                 integer  (int32)
+  invoiceId                 integer  (int32)
+  paymentId                 integer  (int32)
+  voucherId                 integer  (int32)  nullable: true
+  paidAmount                number  (double)
+  paidDate                  string  (date-time)
+  remarks                   string  nullable: true
+
+======================================
+  LeaveStatus
+======================================
+Type: integer int32
+Values: 1, 2, 3, 4
+
+======================================
+  MaritalStatus
+======================================
+Type: integer int32
+Values: 1, 2, 3, 4
+
+======================================
+  MilitaryStatus
+======================================
+Type: integer int32
+Values: 1, 2, 3, 4
+
+======================================
+  Offer
+======================================
+Type: object
+additionalProperties: false
+
+Properties:
+  id                        integer  (int32)
+  createdBy                 string  nullable: true
+  modifiedBy                string  nullable: true
+  createdDate               string  (date-time)  nullable: true
+  modifiedDate              string  (date-time)  nullable: true
+  isDeleted                 boolean
+  isNew                     boolean  readOnly: true
+  companyId                 integer  (int32)
+  company                   Companies
+  rowCnt                    integer  (int32)
+  rowNumber                 integer  (int32)
+  documentNo                string  nullable: true
+  offerCode                 string  nullable: true
+  deliveryType              string  nullable: true
+  validityDays              integer  (int32)  nullable: true
+  portFee                   integer  (int32)  nullable: true
+  customFee                 integer  (int32)  nullable: true
+  offerDate                 string  (date-time)  nullable: true
+  dueDate                   string  (date-time)  nullable: true
+  deliveryDate              string  (date-time)  nullable: true
+  vesselName                string  nullable: true
+  preparedBy                string  nullable: true
+  partnerRefNo              string  nullable: true
+  paymentTerms              number  (double)
+  status                    string  nullable: true
+  remark                    string  nullable: true
+  serviceLinked             boolean  nullable: true
+  currency                  string  nullable: true
+  freightCharge             number  (double)  nullable: true
+  amount                    number  (double)  nullable: true
+  dscAmount                 number  (double)  nullable: true
+  netAmount                 number  (double)  nullable: true
+  kdvAmount                 number  (double)  nullable: true
+  discount                  number  (double)  nullable: true
+  ttlAmount                 number  (double)  nullable: true
+  requestId                 integer  (int32)  nullable: true
+  messageReceived           boolean  nullable: true
+  deliveryLocation          string  nullable: true
+  partnerId                 integer  (int32)  nullable: true
+  partner                   Partner
+  partnerName               string  nullable: true
+  groupPartnerName          string  nullable: true
+  companyName               string  nullable: true
+  userName                  string  nullable: true
+  deliveryTypeDisplay       string  nullable: true
+  orderId                   integer  (int32)
+  pendingCount              integer  (int32)
+  approvedCount             integer  (int32)
+  confirmedCount            integer  (int32)
+  canceledCount             integer  (int32)
+  companyIdFirst            integer  (int32)
+  accountName               string  nullable: true
+  rate                      number  (double)  nullable: true
+  groupPartners             array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
+  vessels                   array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
+  preparedByList            array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
+  accountManagerList        array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
+  middleManList             array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
+  billingAddressList        array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
+  shipingAddressList        array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
+  invcoiceTypes             array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
+  partners                  array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
+  companies                 array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
+  countries                 array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
+  transportations           array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
+
+======================================
+  OfferDetailsResponseDto
+======================================
+Type: object
+additionalProperties: false
+
+Properties:
+  offerId                   integer  (int32)
+  header                    Offer
+  lineCount                 integer  (int32)
+  totalQty                  number  (double)
+  subTotal                  number  (double)
+  totalDiscount             number  (double)
+  totalVAT                  number  (double)
+  grandTotal                number  (double)
+
+======================================
+  OfferListVM
+======================================
+Type: object
+additionalProperties: false
+
+Properties:
+  offers                    array of Offer  nullable: true
+  statusCounts              StatusCount
+  selectedCompanyId         integer  (int32)
+  companies                 array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
+  offerStatuses             array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
+  rowCnt                    integer  (int32)
+  rowNumber                 integer  (int32)
+
+======================================
+  Order
+======================================
+Type: object
+additionalProperties: false
+
+Properties:
+  id                        integer  (int32)
+  createdBy                 string  nullable: true
+  modifiedBy                string  nullable: true
+  createdDate               string  (date-time)  nullable: true
+  modifiedDate              string  (date-time)  nullable: true
+  isDeleted                 boolean
+  isNew                     boolean  readOnly: true
+  companyId                 integer  (int32)  nullable: true
+  company                   Companies
+  rowCnt                    integer  (int32)
+  rowNumber                 integer  (int32)
+  offerId                   integer  (int32)  nullable: true
+  offer                     Offer
+  partnerId                 integer  (int32)  nullable: true
+  partner                   Partner
+  partnerName               string  nullable: true
+  vesselName                string  nullable: true
+  orderStatus               string  nullable: true
+  purchaseOrderStatus       string  nullable: true
+  customerRefNo             string  nullable: true
+  projectNo                 string  nullable: true
+  transactionDate           string  (date-time)  nullable: true
+  deliveryLocation          string  nullable: true
+  outputWarehouseId         integer  (int32)  nullable: true
+  outputStoreName           string  nullable: true
+  deliveryTime              string  nullable: true
+  paymentPlan               string  nullable: true
+  currency                  string  nullable: true
+  rate                      number  (double)  nullable: true
+  inCustomArea              boolean  nullable: true
+  invoiceNo                 string  nullable: true
+  invoiceDate               string  (date-time)  nullable: true
+  portFee                   number  (double)  nullable: true
+  customFee                 number  (double)  nullable: true
+  transportation            number  (double)  nullable: true
+  deliveryType              string  nullable: true
+  deliveryPeriod            string  nullable: true
+  note                      string  nullable: true
+  amount                    number  (double)  nullable: true
+  dscAmount                 number  (double)  nullable: true
+  netAmount                 number  (double)  nullable: true
+  kdvAmount                 number  (double)  nullable: true
+  ttlAmount                 number  (double)  nullable: true
+  details                   array of OrderDetail  nullable: true
+  expectedDeliveryDate      string  (date-time)  nullable: true
+  delayDays                 integer  (int32)  nullable: true
+
+======================================
+  OrderDetail
+======================================
+Type: object
+additionalProperties: false
+
+Properties:
+  id                        integer  (int32)
+  createdBy                 string  nullable: true
+  modifiedBy                string  nullable: true
+  createdDate               string  (date-time)  nullable: true
+  modifiedDate              string  (date-time)  nullable: true
+  isDeleted                 boolean
+  isNew                     boolean  readOnly: true
+  companyId                 integer  (int32)
+  company                   Companies
+  rowCnt                    integer  (int32)
+  rowNumber                 integer  (int32)
+  orderId                   integer  (int32)  nullable: true
+  order                     Order
+  offerDetailId             integer  (int32)  nullable: true
+  rowNo                     integer  (int32)  nullable: true
+  warehouseId               integer  (int32)  nullable: true
+  warehouseName             string  nullable: true
+  stockId                   integer  (int32)  nullable: true
+  productId                 integer  (int32)  nullable: true
+  vesselRemark              string  nullable: true
+  supplierNote              string  nullable: true
+  stockCode                 string  nullable: true
+  stockName                 string  nullable: true
+  stockName2                string  nullable: true
+  qty                       integer  (int32)  nullable: true
+  unit                      string  nullable: true
+  price                     number  (double)  nullable: true
+  amount                    number  (double)  nullable: true
+  dsc                       number  (double)  nullable: true
+  dscAmount                 number  (double)  nullable: true
+  netAmount                 number  (double)  nullable: true
+  kdv                       number  (double)  nullable: true
+  kdvAmount                 number  (double)  nullable: true
+  ttlAmount                 number  (double)  nullable: true
+  deliveryDate              string  (date-time)  nullable: true
+  currency                  string  nullable: true
+  gtipCode                  string  nullable: true
+  turkishDescription        string  nullable: true
+  remark                    string  nullable: true
+
+======================================
+  OrderDetailsViewVM
+======================================
+Type: object
+additionalProperties: false
+
+Properties:
+  orderId                   integer  (int32)
+  header                    Order
+  lineCount                 integer  (int32)
+  totalQty                  number  (double)
+  subTotal                  number  (double)
+  totalDiscount             number  (double)
+  totalVAT                  number  (double)
+  grandTotal                number  (double)
+  stores                    array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
+  companies                 array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
+  vessels                   array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
+  users                     array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
+  deliveryTypes             array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
+
+======================================
+  OrderListVM
+======================================
+Type: object
+additionalProperties: false
+
+Properties:
+  order                     array of Order  nullable: true
+  companies                 array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
+  orderStatuses             array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
+  statusCounts              OrderStatusCount
+
+======================================
+  OrderStatusCount
+======================================
+Type: object
+additionalProperties: false
+
+Properties:
+  partMissingCount          integer  (int32)
+  warehouseDispatchedCount  integer  (int32)
+  waitingShipmentCount      integer  (int32)
+  shippedCount              integer  (int32)
+  deliveredCount            integer  (int32)
+  canceledCount             integer  (int32)
+  allCount                  integer  (int32)
+  waitingAcceptanceCount    integer  (int32)
+
+======================================
+  PagedResult`1[[EDModels.VoucherDto, EDModels, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+======================================
+Type: object
+additionalProperties: false
+
+Properties:
+  items                     array of VoucherDto  nullable: true
+  page                      integer  (int32)
+  pageSize                  integer  (int32)
+  totalCount                integer  (int32)
+  totalPages                integer  (int32)  readOnly: true
+  hasPreviousPage           boolean  readOnly: true
+  hasNextPage               boolean  readOnly: true
+
+======================================
+  PageParameter
+======================================
+Type: object
+additionalProperties: false
+
+Properties:
+  id                        integer  (int32)
+  companyId                 integer  (int32)
+  languge                   string  nullable: true
+  kriter                    string  nullable: true
+  startRow                  integer  (int32)
+  endRow                    integer  (int32)
+  page                      integer  (int32)
+  pageSize                  integer  (int32)
+  pageCount                 integer  (int32)
+  orderBy                   boolean
+  status                    string  nullable: true
+  language                  string  nullable: true
+  startDate                 string  (date-time)  nullable: true
+  endDate                   string  (date-time)  nullable: true
+  count                     integer  (int32)
+  refId                     integer  (int32)
+  rankId                    integer  (int32)
+  catalogueId               integer  (int32)
+  branchId                  integer  (int32)
+  periodId                  integer  (int32)
+  componentId               integer  (int32)
+  personelId                integer  (int32)
+  warehouseId               integer  (int32)
+  year                      integer  (int32)
+  offerId                   integer  (int32)
+  orderId                   integer  (int32)
+  partnerId                 integer  (int32)
+  debt                      number  (double)
+  credit                    number  (double)
+  userId                    string  nullable: true
+  position                  string  nullable: true
+  department                string  nullable: true
+  moduleName                string  nullable: true
+  typeName                  string  nullable: true
+  sector                    string  nullable: true
+  docType                   string  nullable: true
+  step                      string  nullable: true
+  tkey                      string  nullable: true
+  refNo                     string  nullable: true
+  system                    string  nullable: true
+  group                     string  nullable: true
+  category                  string  nullable: true
+  responPers                string  nullable: true
+  store                     string  nullable: true
+  sortColumn                string  nullable: true
+  sortOrder                 string  nullable: true
+  rankName                  string  nullable: true
+  country                   string  nullable: true
+  city                      string  nullable: true
+  port                      string  nullable: true
+  priority                  string  nullable: true
+  tableName                 string  nullable: true
+  actionType                string  nullable: true
+  level1                    string  nullable: true
+  level2                    string  nullable: true
+  level3                    string  nullable: true
+  level4                    string  nullable: true
+  budgetCode                string  nullable: true
+  period                    string  nullable: true
+  level1Id                  integer  (int32)
+  isLogistics               boolean
+  minDiff                   boolean
+  accountCode               string  nullable: true
+  accountType               string  nullable: true
+  responsibleUser           string  nullable: true
+  currencyType              string  nullable: true
+  trackingNumber            string  nullable: true
+  partSearch                string  nullable: true
+  requestingCompany         string  nullable: true
+  requestedCompany          string  nullable: true
+  action                    string  nullable: true
+  onlyDelayed               boolean
+
+======================================
+  Partner
+======================================
+Type: object
+additionalProperties: false
+
+Properties:
+  id                        integer  (int32)
+  createdBy                 string  nullable: true
+  modifiedBy                string  nullable: true
+  createdDate               string  (date-time)  nullable: true
+  modifiedDate              string  (date-time)  nullable: true
+  isDeleted                 boolean
+  isNew                     boolean  readOnly: true
+  companyId                 integer  (int32)
+  company                   Companies
+  rowCnt                    integer  (int32)
+  rowNumber                 integer  (int32)
+  identityNo                string  nullable: true
+  partnerType               integer  (int32)
+  partnerCode               string  nullable: true
+  partnerName               string  nullable: true
+  shortName                 string  nullable: true
+  ownerName                 string  nullable: true
+  accountCode               string  nullable: true
+  accountName               string  nullable: true
+  accountManager            string  nullable: true
+  contactPerson             string  nullable: true
+  contactPhone              string  nullable: true
+  contactTitle              string  nullable: true
+  contactEmail              string  nullable: true
+  currency                  string  nullable: true
+  sector                    string  nullable: true
+  active                    boolean  nullable: true
+  rating                    integer  (int32)  nullable: true
+  groupId                   integer  (int32)  nullable: true
+  sectorId                  integer  (int32)  nullable: true
+  subSectorId               integer  (int32)  nullable: true
+  comissier                 integer  (int32)  nullable: true
+  groupPartner              boolean  nullable: true
+  comissierActive           boolean  nullable: true
+  abroad                    boolean  nullable: true
+  paymentTerms              integer  (int32)  nullable: true
+  creditLimit               number  (double)  nullable: true
+  balance                   number  (double)  nullable: true
+  type                      string  nullable: true
+  country                   string  nullable: true
+  city                      string  nullable: true
+  district                  string  nullable: true
+  faxNo                     string  nullable: true
+  emailAddress              string  nullable: true
+  webAddress                string  nullable: true
+  status                    string  nullable: true
+  address1                  string  nullable: true
+  address2                  string  nullable: true
+  taxNumber                 string  nullable: true
+  taxOffice                 string  nullable: true
+  isSupplier                boolean  nullable: true
+  isAbroad                  boolean
+  approved                  boolean  nullable: true
+  approvedDate              string  (date-time)
+  mobilePhone               string  nullable: true
+  phone1                    string  nullable: true
+  phone2                    string  nullable: true
+  notes                     string  nullable: true
+  photo                     string  nullable: true
+  groupName                 string  nullable: true
+  photoUrl                  string  nullable: true  readOnly: true
+
+======================================
+  PartnerDashboardVM
+======================================
+Type: object
+additionalProperties: false
+
+Properties:
+  id                        integer  (int32)
+  customers                 integer  (int32)
+  suppliers                 integer  (int32)
+  makers                    integer  (int32)
+  partnerTypes              array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
+  partnerGroupList          array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
+
+======================================
+  PaymentDto
+======================================
+Type: object
+additionalProperties: false
+
+Properties:
+  id                        integer  (int32)
+  title                     string  nullable: true
+  companyId                 integer  (int32)
+  userName                  string  nullable: true
+  paymentType               EDUtility.PaymentType
+  voucherType               EDUtility.VoucherType
+  docNo                     string  nullable: true
+  transDate                 string  (date-time)
+  partnerId                 integer  (int32)  nullable: true
+  partnerName               string  nullable: true
+  cariAccountId             integer  (int32)  nullable: true
+  bankAccountId             integer  (int32)  nullable: true
+  cashAccountId             integer  (int32)  nullable: true
+  accountCode               string  nullable: true
+  accountName               string  nullable: true
+  bankAccountCode           string  nullable: true
+  bankAccountName           string  nullable: true
+  cashAccountCode           string  nullable: true
+  cashAccountName           string  nullable: true
+  currency                  string  nullable: true
+  currencyRate              number  (double)
+  amount                    number  (double)
+  amountTL                  number  (double)
+  remarks                   string  nullable: true
+  voucherId                 integer  (int32)  nullable: true
+  voucherNo                 string  nullable: true
+  currencyList              array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
+  partnerList               array of SelectListItemData  nullable: true
+  bankAccountList           array of SelectListItemData  nullable: true
+  cashAccountList           array of SelectListItemData  nullable: true
+
+======================================
+  PaymentListVM
+======================================
+Type: object
+additionalProperties: false
+
+Properties:
+  items                     array of PaymentDto  nullable: true
+  startDate                 string  (date-time)  nullable: true
+  endDate                   string  (date-time)  nullable: true
+  paymentType               EDUtility.PaymentType
+  currency                  string  nullable: true
+  kriter                    string  nullable: true
+  currentPage               integer  (int32)
+  totalPages                integer  (int32)
+  pageSize                  integer  (int32)
+  totalCount                integer  (int32)
+  paymentTypeList           array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
+  currencyList              array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
+  fromPurchase              boolean
+  returnUrl                 string  nullable: true
+  returnLabel               string  nullable: true
+
+======================================
+  PaymentPeriod
+======================================
+Type: integer int32
+Values: 1, 2, 3
+
+======================================
+  PerformancePeriodStatus
+======================================
+Type: integer int32
+Values: 1, 2, 3, 4
+
+======================================
+  PerformanceRating
+======================================
+Type: integer int32
+Values: 1, 2, 3, 4, 5
+
+======================================
+  PerformanceStatus
+======================================
+Type: integer int32
+Values: 1, 2, 3, 4, 5
+
+======================================
+  PhaseTaskCountRow
+======================================
+Type: object
+additionalProperties: false
+
+Properties:
+  phaseId                   integer  (int32)
+  projectNo                 string  nullable: true
+  phaseName                 string  nullable: true
+  projectName               string  nullable: true
+  taskCount                 integer  (int32)
+
+======================================
+  Product
+======================================
+Type: object
+additionalProperties: false
+
+Properties:
+  id                        integer  (int32)
+  createdBy                 string  nullable: true
+  modifiedBy                string  nullable: true
+  createdDate               string  (date-time)  nullable: true
+  modifiedDate              string  (date-time)  nullable: true
+  isDeleted                 boolean
+  isNew                     boolean  readOnly: true
+  companyId                 integer  (int32)
+  company                   Companies
+  rowCnt                    integer  (int32)
+  rowNumber                 integer  (int32)
+  active                    boolean
+  categoryID                integer  (int32)
+  catalogueId               integer  (int32)
+  category                  string  nullable: true
+  subCategory               string  nullable: true
+  refCode                   string  nullable: true
+  productCode               string  nullable: true
+  productName               string  nullable: true
+  description               string  nullable: true
+  brand                     string  nullable: true
+  model                     string  nullable: true
+  drawingNo                 string  nullable: true
+  partNo                    string  nullable: true
+  itemNo                    string  nullable: true
+  specialCode               string  nullable: true
+  issaCode                  string  nullable: true
+  impaCode                  string  nullable: true
+  barcode                   string  nullable: true
+  origin                    string  nullable: true
+  volume                    number  (double)
+  weight                    number  (double)
+  unit                      string  nullable: true
+  gtip                      integer  (int32)
+  showOnWeb                 boolean
+  saleActive                boolean
+  minQty                    number  (double)
+  minQtyControl             boolean
+  maxQty                    number  (double)
+  maxQtyControl             boolean
+  xml                       boolean
+  b2BActive                 boolean
+  rating                    number  (double)
+  favorite                  boolean
+  remarks                   string  nullable: true
+  foto                      string  nullable: true
+  fotoUrl                   string  nullable: true  readOnly: true
+  fotoUrlSm                 string  nullable: true  readOnly: true
+
+======================================
+  ProfitabilityListItem
+======================================
+Type: object
+additionalProperties: false
+
+Properties:
+  shipmentId                integer  (int32)
+  shipmentNo                string  nullable: true
+  shipmentDate              string  (date-time)
+  customerName              string  nullable: true
+  routeDisplay              string  nullable: true
+  revenue                   number  (double)  nullable: true
+  totalCost                 number  (double)  nullable: true
+  grossProfit               number  (double)  nullable: true
+  profitMargin              number  (double)  nullable: true
+
+======================================
+  Project
+======================================
+Type: object
+additionalProperties: false
+
+Properties:
+  id                        integer  (int32)
+  createdBy                 string  nullable: true
+  modifiedBy                string  nullable: true
+  createdDate               string  (date-time)  nullable: true
+  modifiedDate              string  (date-time)  nullable: true
+  isDeleted                 boolean
+  isNew                     boolean  readOnly: true
+  companyId                 integer  (int32)
+  company                   Companies
+  rowCnt                    integer  (int32)
+  rowNumber                 integer  (int32)
+  partnerId                 integer  (int32)  nullable: true
+  partner                   Partner
+  offerId                   integer  (int32)  nullable: true
+  orderId                   integer  (int32)  nullable: true
+  projectNo                 string  nullable: true
+  name                      string  nullable: true
+  description               string  nullable: true
+  startDate                 string  (date-time)  nullable: true
+  endDate                   string  (date-time)  nullable: true
+  plannedBudget             number  (double)  nullable: true
+  currencyId                integer  (int32)  nullable: true
+  status                    string  nullable: true
+  progressPercent           number  (double)  nullable: true
+  serviceLocation           string  nullable: true
+  countryCode               string  nullable: true
+  partnerName               string  nullable: true
+  partners                  array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
+  statusList                array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
+  companies                 array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
+  currencyList              array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
+  countryList               array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
+
+======================================
+  ProjectDashboardVM
+======================================
+Type: object
+additionalProperties: false
+
+Properties:
+  statusCounts              ProjectStatusCount
+  companyId                 integer  (int32)
+  companies                 array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
+
+======================================
+  ProjectDocumentsVM
+======================================
+Type: object
+additionalProperties: false
+
+Properties:
+  projectList               array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
+  companyList               array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
+  project                   Project
+  invoices                  array of Invoice  nullable: true
+  goodsReceipts             array of GoodsReceipt  nullable: true
+  goodsIssues               array of GoodsIssue  nullable: true
+  vouchers                  array of Voucher  nullable: true
+  attachments               array of Attachments  nullable: true
+
+======================================
+  ProjectListFilterDto
+======================================
+Type: object
+additionalProperties: false
+
+Properties:
+  companyId                 integer  (int32)
+  kriter                    string  nullable: true
+  companyList               array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
+
+======================================
+  ProjectListItemDto
+======================================
+Type: object
+additionalProperties: false
+
+Properties:
+  id                        integer  (int32)
+  companyId                 integer  (int32)
+  projectNo                 string  nullable: true
+  name                      string  nullable: true
+  partnerName               string  nullable: true
+  startDate                 string  (date-time)  nullable: true
+  endDate                   string  (date-time)  nullable: true
+  plannedBudget             number  (double)  nullable: true
+  progressPercent           number  (double)  nullable: true
+  status                    string  nullable: true
+  rowNumber                 integer  (int32)
+  rowCnt                    integer  (int32)
+
+======================================
+  ProjectListResponseDto
+======================================
+Type: object
+additionalProperties: false
+
+Properties:
+  items                     array of ProjectListItemDto  nullable: true
+  companyList               array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
+  rowCount                  integer  (int32)
+
+======================================
+  ProjectStatusCount
+======================================
+Type: object
+additionalProperties: false
+
+Properties:
+  draftCount                integer  (int32)
+  approvedCount             integer  (int32)
+  inProgressCount           integer  (int32)
+  onHoldCount               integer  (int32)
+  completedCount            integer  (int32)
+  cancelledCount            integer  (int32)
+  totalCount                integer  (int32)
+
+======================================
+  ProjectTaskStatusCount
+======================================
+Type: object
+additionalProperties: false
+
+Properties:
+  draftCount                integer  (int32)
+  inProgressCount           integer  (int32)
+  completedCount            integer  (int32)
+  onHoldCount               integer  (int32)
+  cancelledCount            integer  (int32)
+  totalCount                integer  (int32)
+
+======================================
+  ProjectTeamDistributionRow
+======================================
+Type: object
+additionalProperties: false
+
+Properties:
+  projectId                 integer  (int32)
+  projectNo                 string  nullable: true
+  projectName               string  nullable: true
+  projectStatus             string  nullable: true
+  teamMemberCount           integer  (int32)
+
+======================================
+  ProjectTeamWorkStatsVM
+======================================
+Type: object
+additionalProperties: false
+
+Properties:
+  companyId                 integer  (int32)
+  companies                 array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
+  teamByProject             array of ProjectTeamDistributionRow  nullable: true
+  employeeProjectCount      array of EmployeeProjectCountRow  nullable: true
+  taskByPhase               array of PhaseTaskCountRow  nullable: true
+  taskStatusCounts          ProjectTaskStatusCount
+  taskByAssignee            array of AssigneeTaskCountRow  nullable: true
+
+======================================
+  Request
+======================================
+Type: object
+additionalProperties: false
+
+Properties:
+  id                        integer  (int32)
+  createdBy                 string  nullable: true
+  modifiedBy                string  nullable: true
+  createdDate               string  (date-time)  nullable: true
+  modifiedDate              string  (date-time)  nullable: true
+  isDeleted                 boolean
+  isNew                     boolean  readOnly: true
+  companyId                 integer  (int32)
+  company                   Companies
+  rowCnt                    integer  (int32)
+  rowNumber                 integer  (int32)
+  vesselId                  integer  (int32)  nullable: true
+  vessel                    Vessel
+  partnerId                 integer  (int32)  nullable: true
+  partner                   Partner
+  requestNo                 string  nullable: true
+  makerType                 string  nullable: true
+  refType                   string  nullable: true
+  quality                   string  nullable: true
+  vesselRefNo               string  nullable: true
+  currency                  string  nullable: true
+  requestDate               string  (date-time)  nullable: true
+  dueDate                   string  (date-time)  nullable: true
+  responsiblePerson         string  nullable: true
+  documentNo                string  nullable: true
+  description               string  nullable: true
+  ttlAmount                 number  (double)  nullable: true
+  status                    string  nullable: true
+  partnerName               string  nullable: true
+  vesselName                string  nullable: true
+  supplierCount             integer  (int32)
+  stockCount                integer  (int32)
+  requestDetails            array of RequestDetail  nullable: true
+
+======================================
+  RequestDetail
+======================================
+Type: object
+additionalProperties: false
+
+Properties:
+  id                        integer  (int32)
+  createdBy                 string  nullable: true
+  modifiedBy                string  nullable: true
+  createdDate               string  (date-time)  nullable: true
+  modifiedDate              string  (date-time)  nullable: true
+  isDeleted                 boolean
+  isNew                     boolean  readOnly: true
+  companyId                 integer  (int32)
+  company                   Companies
+  rowCnt                    integer  (int32)
+  rowNumber                 integer  (int32)
+  requestId                 integer  (int32)
+  request                   Request
+  productId                 integer  (int32)  nullable: true
+  product                   Product
+  qty                       integer  (int32)
+  unit                      string  nullable: true
+  supplierNote              string  nullable: true
+  vesselRemark              string  nullable: true
+  purchasePrice             number  (double)  nullable: true
+  purchaseCurrency          string  nullable: true
+  salePrice                 number  (double)  nullable: true
+  saleCurrency              number  (double)  nullable: true
+  unitPrice                 number  (double)  nullable: true
+  currency                  string  nullable: true
+  amount                    number  (double)  nullable: true
+  dsc                       number  (double)  nullable: true
+  dscAmount                 number  (double)  nullable: true
+  netAmount                 number  (double)  nullable: true
+  kdv                       number  (double)  nullable: true
+  kdvAmount                 number  (double)  nullable: true
+  ttlAmount                 number  (double)  nullable: true
+  photo                     string  nullable: true
+  displayOrder              integer  (int32)  nullable: true
+  supplierGroupName         string  nullable: true
+  serviceAreaId             integer  (int32)  nullable: true
+  photoUrl                  string  nullable: true  readOnly: true
+  productCode               string  nullable: true
+  productName               string  nullable: true
+  photoUrl1                 string  nullable: true
+  supplierFileCount         integer  (int32)
+  vesselFileCount           integer  (int32)
+
+======================================
+  RequestListVM
+======================================
+Type: object
+additionalProperties: false
+
+Properties:
+  selectedCompanyId         integer  (int32)
+  requests                  array of Request  nullable: true
+  statusCounts              StatusCount
+  companies                 array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
+
+======================================
+  RequestVM
+======================================
+Type: object
+additionalProperties: false
+
+Properties:
+  requestId                 integer  (int32)
+  request                   Request
+  partners                  array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
+  vessels                   array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
+  companies                 array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
+  personels                 array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
+  countries                 array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
+  requestDetails            array of RequestDetail  nullable: true
+
+======================================
+  SelectListItemData
+======================================
+Type: object
+additionalProperties: false
+
+Properties:
+  value                     integer  (int32)
+  text                      string  nullable: true
+  code                      string  nullable: true
+
+======================================
+  StatusCount
+======================================
+Type: object
+additionalProperties: false
+
+Properties:
+  pendingCount              integer  (int32)
+  customPendingCount        integer  (int32)
+  revisionCount             integer  (int32)
+  approvedCount             integer  (int32)
+  confirmedCount            integer  (int32)
+  canceledCount             integer  (int32)
+  newCount                  integer  (int32)
+  allCount                  integer  (int32)
+  pendingAmount             number  (double)
+  customPendingAmount       number  (double)
+  revisionAmount            number  (double)
+  approvedAmount            number  (double)
+  confirmedAmount           number  (double)
+  canceledAmount            number  (double)
+  newAmount                 number  (double)
+  allAmount                 number  (double)
+
+======================================
+  Stock
+======================================
+Type: object
+additionalProperties: false
+
+Properties:
+  id                        integer  (int32)
+  createdBy                 string  nullable: true
+  modifiedBy                string  nullable: true
+  createdDate               string  (date-time)  nullable: true
+  modifiedDate              string  (date-time)  nullable: true
+  isDeleted                 boolean
+  isNew                     boolean  readOnly: true
+  companyId                 integer  (int32)
+  company                   Companies
+  rowCnt                    integer  (int32)
+  rowNumber                 integer  (int32)
+  refCode                   string  nullable: true
+  barCode                   string  nullable: true
+  active                    boolean
+  brand                     string  nullable: true
+  model                     string  nullable: true
+  drawingNo                 string  nullable: true
+  partNo                    string  nullable: true
+  itemNo                    string  nullable: true
+  stockCode                 string  nullable: true
+  stockName                 string  nullable: true
+  description               string  nullable: true
+  serialNo                  string  nullable: true
+  specialCode               string  nullable: true
+  issaCode                  string  nullable: true
+  impaCode                  string  nullable: true
+  grup                      string  nullable: true
+  category                  string  nullable: true
+  subCategory               string  nullable: true
+  subCategory2              string  nullable: true
+  shelfAddress              string  nullable: true
+  boxNo                     string  nullable: true
+  origin                    string  nullable: true
+  costCalculate             boolean
+  volume                    number  (double)
+  weight                    number  (double)
+  unit                      string  nullable: true
+  qty                       number  (double)
+  dsc                       number  (double)
+  currency                  string  nullable: true
+  currencyPurchase          string  nullable: true
+  currencyDealer            string  nullable: true
+  prchPrice                 number  (double)
+  afkdvRate                 number  (double)
+  afkdvAmount               number  (double)
+  salePrice                 number  (double)
+  sfkdvRate                 number  (double)
+  sfkdvAmount               number  (double)
+  dealerSalesPrice          number  (double)
+  bsfkdvRate                number  (double)
+  bsfkdvAmount              number  (double)
+  inventoryValue            number  (double)
+  inventoryCurrency         string  nullable: true
+  ttlAmount                 number  (double)
+  profit                    number  (double)
+  exprDate                  string  (date-time)  nullable: true
+  exprDateControl           boolean
+  gtip                      integer  (int32)
+  showOnWeb                 boolean
+  saleActive                boolean
+  serialNoActive            boolean
+  minQty                    number  (double)
+  minQtyControl             boolean
+  maxQty                    number  (double)
+  maxQtyControl             boolean
+  xml                       boolean
+  b2BActive                 boolean
+  rating                    number  (double)
+  favorite                  boolean
+  salesTaxCode              string  nullable: true
+  purcahseTaxCode           string  nullable: true
+  salesAccountCode          string  nullable: true
+  purcahseAccountCode       string  nullable: true
+  foto                      string  nullable: true
+  fotoUrl                   string  nullable: true  readOnly: true
+  fotoUrlSm                 string  nullable: true  readOnly: true
+  remarks                   string  nullable: true
+  warehouseId               integer  (int32)  nullable: true
+  warehouse                 Warehouse
+  units                     array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
+  stores                    array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
+  partners                  array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
+  product                   Product
+
+======================================
+  ToDo
+======================================
+Type: object
+additionalProperties: false
+
+Properties:
+  id                        integer  (int32)
+  createdBy                 string  nullable: true
+  modifiedBy                string  nullable: true
+  createdDate               string  (date-time)  nullable: true
+  modifiedDate              string  (date-time)  nullable: true
+  isDeleted                 boolean
+  isNew                     boolean  readOnly: true
+  companyId                 integer  (int32)
+  company                   Companies
+  rowCnt                    integer  (int32)
+  rowNumber                 integer  (int32)
+  vesselId                  integer  (int32)  nullable: true
+  vessel                    Vessel
+  imo                       string  nullable: true
+  companyName               string  nullable: true
+  portCode                  string  nullable: true
+  etaDate                   string  (date-time)  nullable: true
+  etaText                   string  nullable: true
+  title                     string
+  note                      string  nullable: true
+  status                    string
+  priority                  string  nullable: true
+  assignedTo                string  nullable: true
+  reminderDate              string  (date-time)  nullable: true
+  vessels                   array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
+  partners                  array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
+  vesselName                string  nullable: true
+
+======================================
+  ToDoListVM
+======================================
+Type: object
+additionalProperties: false
+
+Properties:
+  items                     array of ToDo  nullable: true
+  statusCounts              ToDoStatusCount
+  startDate                 string  (date-time)  nullable: true
+  endDate                   string  (date-time)  nullable: true
+  companyId                 integer  (int32)
+  status                    string  nullable: true
+  kriter                    string  nullable: true
+
+======================================
+  ToDoStatusCount
+======================================
+Type: object
+additionalProperties: false
+
+Properties:
+  newCount                  integer  (int32)
+  followUpCount             integer  (int32)
+  doneCount                 integer  (int32)
+  canceledCount             integer  (int32)
+  allCount                  integer  (int32)
+
+======================================
+  TrainingStatus
+======================================
+Type: integer int32
+Values: 1, 2, 3, 4, 5
+
+======================================
+  TrainingType
+======================================
+Type: integer int32
+Values: 1, 2, 3, 4, 5, 6
+
+======================================
+  Vessel
+======================================
+Type: object
+additionalProperties: false
+
+Properties:
+  id                        integer  (int32)
+  createdBy                 string  nullable: true
+  modifiedBy                string  nullable: true
+  createdDate               string  (date-time)  nullable: true
+  modifiedDate              string  (date-time)  nullable: true
+  isDeleted                 boolean
+  isNew                     boolean  readOnly: true
+  companyId                 integer  (int32)
+  company                   Companies
+  rowCnt                    integer  (int32)
+  rowNumber                 integer  (int32)
+  active                    boolean
+  poolId                    integer  (int32)
+  vesselSize                string  nullable: true
+  refCode                   string  nullable: true
+  ownerName                 string  nullable: true
+  vesselCode                string  nullable: true
+  vesselName                string  nullable: true
+  vesselType                string  nullable: true
+  imoNo                     string  nullable: true
+  description               string  nullable: true
+  eMail                     string  nullable: true
+  flag                      string  nullable: true
+  callSign                  string  nullable: true
+  portOfRegister            string  nullable: true
+  officialNumber            string  nullable: true
+  dockYard                  string  nullable: true
+  buildYard                 string  nullable: true
+  internationalNumber       string  nullable: true
+  hullNumber                string  nullable: true
+  class                     string  nullable: true
+  deadWeight                string  nullable: true
+  grossTonnage              string  nullable: true
+  buildDate                 string  nullable: true
+  vesselPhoto               string  nullable: true
+  remarks                   string  nullable: true
+  partnerId                 integer  (int32)
+  partner                   Partner
+  fotoUrl                   string  nullable: true  readOnly: true
+  flagUrl                   string  nullable: true  readOnly: true
+  partners                  array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
+  vesselTypes               array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
+  countries                 array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
+
+======================================
+  VesselVisit
+======================================
+Type: object
+additionalProperties: false
+
+Properties:
+  id                        integer  (int32)
+  createdBy                 string  nullable: true
+  modifiedBy                string  nullable: true
+  createdDate               string  (date-time)  nullable: true
+  modifiedDate              string  (date-time)  nullable: true
+  isDeleted                 boolean
+  isNew                     boolean  readOnly: true
+  companyId                 integer  (int32)
+  company                   Companies
+  rowCnt                    integer  (int32)
+  rowNumber                 integer  (int32)
+  vesselId                  integer  (int32)  nullable: true
+  vessel                    Vessel
+  imo                       string  nullable: true
+  companyName               string  nullable: true
+  portCode                  string  nullable: true
+  visitDate                 string  (date-time)  nullable: true
+  visitorName               string  nullable: true
+  salesNote                 string  nullable: true
+  fieldSalesNote            string  nullable: true
+  isVisited                 boolean
+  vessels                   array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
+  vesselName                string  nullable: true
+
+======================================
+  VesselVisitListVM
+======================================
+Type: object
+additionalProperties: false
+
+Properties:
+  items                     array of VesselVisit  nullable: true
+  startDate                 string  (date-time)  nullable: true
+  endDate                   string  (date-time)  nullable: true
+  companyId                 integer  (int32)
+  kriter                    string  nullable: true
+  companies                 array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
+  vessels                   array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
+  rowCount                  integer  (int32)
+
+======================================
+  Voucher
+======================================
+Type: object
+additionalProperties: false
+
+Properties:
+  id                        integer  (int32)
+  createdBy                 string  nullable: true
+  modifiedBy                string  nullable: true
+  createdDate               string  (date-time)  nullable: true
+  modifiedDate              string  (date-time)  nullable: true
+  isDeleted                 boolean
+  isNew                     boolean  readOnly: true
+  companyId                 integer  (int32)
+  company                   Companies
+  rowCnt                    integer  (int32)
+  rowNumber                 integer  (int32)
+  docNo                     string  nullable: true
+  refNo                     string  nullable: true
+  invoiceId                 integer  (int32)  nullable: true
+  voucherNo                 string  nullable: true
+  voucherType               EDUtility.VoucherType
+  voucherDate               string  (date-time)
+  description               string  nullable: true
+  remarks                   string  nullable: true
+  currency                  string  nullable: true
+  currencyRate              number  (double)
+  refModule                 EDUtility.ModuleType
+  refId                     integer  (int32)  nullable: true
+  status                    string  nullable: true
+  projectId                 integer  (int32)  nullable: true
+  project                   Project
+  totalDebit                number  (double)
+  totalCredit               number  (double)
+  isReversal                boolean
+  reversedVoucherId         integer  (int32)  nullable: true
+  isLocked                  boolean
+  isPosted                  boolean
+  lines                     array of VoucherLine  nullable: true
+
+======================================
+  VoucherDto
+======================================
+Type: object
+additionalProperties: false
+
+Properties:
+  id                        integer  (int32)
+  companyId                 integer  (int32)
+  voucherNo                 string  nullable: true
+  voucherDate               string  (date-time)
+  voucherType               EDUtility.VoucherType
+  accountCode               string  nullable: true
+  description               string  nullable: true
+  remarks                   string  nullable: true
+  invoiceId                 integer  (int32)  nullable: true
+  paymentId                 integer  (int32)  nullable: true
+  totalDebit                number  (double)
+  totalCredit               number  (double)
+  isReversal                boolean
+  isLocked                  boolean
+  isPosted                  boolean
+  reversedVoucherId         integer  (int32)  nullable: true
+  lines                     array of VoucherLineDto  nullable: true
+
+======================================
+  VoucherFilter
+======================================
+Type: object
+additionalProperties: false
+
+Properties:
+  companyId                 integer  (int32)
+  voucherType               EDUtility.VoucherType
+  startDate                 string  nullable: true
+  endDate                   string  nullable: true
+  status                    string  nullable: true
+  pagedVouchers             PagedResult`1[[EDModels.VoucherDto, EDModels, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+  voucherList               array of VoucherDto  nullable: true
+
+======================================
+  VoucherLine
+======================================
+Type: object
+additionalProperties: false
+
+Properties:
+  id                        integer  (int32)
+  createdBy                 string  nullable: true
+  modifiedBy                string  nullable: true
+  createdDate               string  (date-time)  nullable: true
+  modifiedDate              string  (date-time)  nullable: true
+  isDeleted                 boolean
+  isNew                     boolean  readOnly: true
+  companyId                 integer  (int32)
+  company                   Companies
+  rowCnt                    integer  (int32)
+  rowNumber                 integer  (int32)
+  voucherId                 integer  (int32)
+  voucher                   Voucher
+  accountPlanId             integer  (int32)
+  accountPlan               AccountPlan
+  accountCode               string  nullable: true
+  accountName               string  nullable: true
+  counterAccount            string  nullable: true
+  partnerId                 integer  (int32)  nullable: true
+  partner                   Partner
+  debit                     number  (double)
+  debitTL                   number  (double)
+  credit                    number  (double)
+  creditTL                  number  (double)
+  balance                   number  (double)
+  currency                  string  nullable: true
+  currencyRate              number  (double)
+  refModule                 EDUtility.ModuleType
+  refId                     integer  (int32)  nullable: true
+  explanation               string  nullable: true
+  remarks                   string  nullable: true
+
+======================================
+  VoucherLineDto
+======================================
+Type: object
+additionalProperties: false
+
+Properties:
+  id                        integer  (int32)
+  accountCode               string  nullable: true
+  accountName               string  nullable: true
+  counterAccountCode        string  nullable: true
+  counterAccountName        string  nullable: true
+  debit                     number  (double)  nullable: true
+  credit                    number  (double)  nullable: true
+  debitTL                   number  (double)  nullable: true
+  creditTL                  number  (double)  nullable: true
+  currency                  string  nullable: true
+  currencyRate              number  (double)
+  partnerId                 integer  (int32)  nullable: true
+  partnerName               string  nullable: true
+  refModule                 string  nullable: true
+  refId                     integer  (int32)  nullable: true
+  explanation               string  nullable: true
+  isCounterAccount          boolean
+
+======================================
+  Warehouse
+======================================
+Type: object
+additionalProperties: false
+
+Properties:
+  id                        integer  (int32)
+  createdBy                 string  nullable: true
+  modifiedBy                string  nullable: true
+  createdDate               string  (date-time)  nullable: true
+  modifiedDate              string  (date-time)  nullable: true
+  isDeleted                 boolean
+  isNew                     boolean  readOnly: true
+  companyId                 integer  (int32)
+  company                   Companies
+  rowCnt                    integer  (int32)
+  rowNumber                 integer  (int32)
+  warehouseCode             string
+  warehouseName             string
+  warehouseType             integer  (int32)
+  address                   string  nullable: true
+  country                   string  nullable: true
+  city                      string  nullable: true
+  town                      string  nullable: true
+  postalCode                string  nullable: true
+  email                     string  nullable: true
+  phone                     string  nullable: true
+  contactPerson             string  nullable: true
+  active                    boolean
+  remarks                   string  nullable: true
+  latitude                  string  nullable: true
+  longitude                 string  nullable: true
+  width                     number  (double)  nullable: true
+  length                    number  (double)  nullable: true
+  height                    number  (double)  nullable: true
+  capacity                  number  (double)  nullable: true
+  totalPurchaseCost         number  (double)
+  totalSalesCost            number  (double)
+  profit                    number  (double)
+  totalStockCount           integer  (int32)
+  activeItemCount           integer  (int32)
+  countries                 array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
+
+======================================
+  EDUtility.DeliveryStatus
+======================================
+Type: integer int32
+Values: 0, 1, 2, 3, 9
+
+======================================
+  EDUtility.DeliveryType
+======================================
+Type: integer int32
+Values: 1, 2, 3, 4
+
+======================================
+  EDUtility.InvoiceType
+======================================
+Type: integer int32
+Values: 1, 2, 3, 4
+
+======================================
+  EDUtility.ModuleType
+======================================
+Type: integer int32
+Values: 1, 2, 3, 4, 5, 6, 9
+
+======================================
+  EDUtility.PaymentType
+======================================
+Type: integer int32
+Values: 1, 2, 3, 4
+
+======================================
+  EDUtility.VoucherType
+======================================
+Type: integer int32
+Values: 0, 1, 2, 3, 4, 5, 6, 7, 8, 11, 12, 13, 14, 21, 22, 23, 24, 31, 32, 33, 34, 35, 36, 37
+
+======================================
+  Microsoft.AspNetCore.Mvc.Rendering.SelectListGroup
+======================================
+Type: object
+additionalProperties: false
+
+Properties:
+  disabled                  boolean
+  name                      string  nullable: true
+
+======================================
+  Microsoft.AspNetCore.Mvc.Rendering.SelectListItem
+======================================
+Type: object
+additionalProperties: false
+
+Properties:
+  disabled                  boolean
+  group                     Microsoft.AspNetCore.Mvc.Rendering.SelectListGroup
+  selected                  boolean
+  text                      string  nullable: true
+  value                     string  nullable: true
+

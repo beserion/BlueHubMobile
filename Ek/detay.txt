@@ -1,0 +1,2763 @@
+Bu döküman hangi sayfanın kartlarının detay bölümlerinde hangi içeriklerin olması gerektiğini gösteriyor.
+
+Satış/Talepler{
+    <div class="p-10 pb-0">
+                        <div class="row mb-10">
+                            <div class="col-md-4">
+                                <label class="m-0">Talep Eden Firma</label>
+                                <div class="input-group mb-0 border rounded">
+                                    <label class="input-group-text bg-transparent border-right-0 rounded-start">
+                                        <i class="fat fa-handshake"></i>
+                                    </label>
+                                    <input type="hidden" id="PartnerId" name="Request.PartnerId" value="816">
+                                    <input type="text" id="PartnerName" class="form-control text-uppercase" readonly="" placeholder="Müşteri seçiniz..." value="AAI GEMICILIK LTD STI">
+                                    <button type="button" class="btn btn-soft-info" onclick="OpenPartnerSelectModal(event); return false;" title="Müşteri Seç">
+                                        <i class="far fa-search"></i>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="col-md-2">
+                                <label class="m-0">Talep Eden Gemi</label>
+                                <div class="input-group">
+                                    <label class="input-group-text bg-transparent border-right-0">
+                                        <i class="fat fa-ship"></i>
+                                    </label>
+                                    <select id="VesselId" class="form-select text-uppercase" name="Request.VesselId">
+                                        <option value="">?</option>
+                                    <option value="13"> RAFFLES PROSPERITY</option>
+<option value="55">9088524</option>
+<option value="3">AL UDEID</option>
+<option value="60">ANDREI TITOV</option>
+<option value="29">ANIKA</option>
+<option value="24">ASTRO CYGNUS</option>
+<option value="30">ASTRO SAGITTARIUS</option>
+<option value="66">Astro Sextans</option>
+<option value="73">beyza</option>
+<option value="74">beyza</option>
+<option value="78">beyza</option>
+<option value="26">BOGAZICI</option>
+<option value="35">CARACARA 6401</option>
+<option value="20">CHANDRA</option>
+<option value="36">CHARMINAR</option>
+<option value="17">CL HUAIHUA</option>
+<option value="45">COOL MAGNUS</option>
+<option value="52">COOL ROYAL</option>
+<option value="39">CYGNI</option>
+<option value="46">DHANU</option>
+<option value="37">EA GANNET</option>
+<option value="32">EASTERN PEARL</option>
+<option value="18">ENDEAVOUR</option>
+<option value="43">ENDURANCE</option>
+<option selected="selected" value="85">ERDAL1</option>
+<option value="86">ERDAL2</option>
+<option value="14">EVOLUTION</option>
+<option value="58">GEMINI PEARL</option>
+<option value="62">GHIBLI</option>
+<option value="34">GMS ENTERPRISE</option>
+<option value="54">GURUDEV</option>
+<option value="44">JALDHARA</option>
+<option value="4">KAMIKAZE</option>
+<option value="53">KIRAN AFRICA</option>
+<option value="64">Kirkuk</option>
+<option value="2">KRISTINA</option>
+<option value="23">LODESTAR DE MAR</option>
+<option value="5">Lodestar Way</option>
+<option value="19">Lodestar_Bingo</option>
+<option value="63">M K A </option>
+<option value="87">MARIN1</option>
+<option value="88">MARIN2</option>
+<option value="21">MARINE FORTUNE I </option>
+<option value="11">NIMBA-2</option>
+<option value="12">Nicostasia</option>
+<option value="57">NORD MIYABI</option>
+<option value="6">OMNI</option>
+<option value="56">Pacific Pearl</option>
+<option value="27">PASCO ODIN</option>
+<option value="31">PASCO STAR</option>
+<option value="61">PELICAN MARINER</option>
+<option value="47">PEPPER</option>
+<option value="42">Phantom </option>
+<option value="25">PIONEER SAM</option>
+<option value="15">PRIMA DHARMA</option>
+<option value="41">PRIMA LAUTAN I</option>
+<option value="59">PUMBA</option>
+<option value="10">REGINA</option>
+<option value="1">ROB</option>
+<option value="49">SABAEK</option>
+<option value="48">SALVIN PRINCESS ( ex. Astro Aries )</option>
+<option value="7">SANDHYA</option>
+<option value="33">SC Enterprise LIX</option>
+<option value="28">SHAMAL</option>
+<option value="50">SHARQI</option>
+<option value="8">ST OSLO</option>
+<option value="22">STONEFISH</option>
+<option value="51">SWIFTSEA RIDER</option>
+<option value="40">TELERIG</option>
+<option value="9">TORX</option>
+<option value="16">UDAYA</option>
+<option value="38">YM URANUS</option>
+<option value="65">ZALE</option>
+</select>
+                                </div>
+                            </div>
+
+                            <div class="col-md-2">
+                                <label class="m-0">Ref No </label>
+                                <div class="input-group">
+                                    <label class="input-group-text bg-transparent border-right-0">
+                                        <i class="fat fa-file-alt"></i>
+                                    </label>
+                                    <input id="VesselRefNo" type="text" class="form-control mb-0" name="Request.VesselRefNo" value="ERD-0001">
+                                </div>
+                            </div>
+
+                            <div class="col-md-2">
+                                <label class="m-0">Talep Tarihi</label>
+                                <div class="input-group">
+                                    <label class="input-group-text bg-transparent border-right-0">
+                                        <i class="fat fa-calendar-check"></i>
+                                    </label>
+                                    <input id="DueDate" type="date" class="form-control dateformat  mb-0" name="Request.RequestDate" value="2026-02-18">
+                                </div>
+                            </div>
+
+                            <div class="col-md-2">
+                                <label class="m-0">Geçerlilik Tarihi</label>
+                                <div class="input-group">
+                                    <label class="input-group-text bg-transparent border-right-0">
+                                        <i class="fat fa-align-left"></i>
+                                    </label>
+                                    <input type="date" multiple="true" class="form-control dateformat  mb-0" id="Request_DueDate" name="Request.DueDate" value="2026-02-25">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Row 2 -->
+                        <div class="row mb-10">
+                            <div class="col-md-2">
+                                <label class="m-0">Sorumlu Kullanıcı</label>
+                                <div class="input-group">
+                                    <label class="input-group-text bg-transparent border-right-0">
+                                        <i class="fat fa-credit-card"></i>
+                                    </label>
+                                    <select id="PaymentTerms" class="form-select" onchange="ToggleCustomDaysInput(event)" name="Request.ResponsiblePerson">
+                                        <option selected="" value="0">Erdal Demiryol</option>
+                                        <option value="0,01">Elif Perçin</option>
+                                    </select>
+                                </div>
+                            </div>
+
+
+                            <div class="col-md-2">
+                                <label class="m-0">Talep Durumu</label>
+                                <div class="input-group">
+                                    <label class="input-group-text bg-transparent border-right-0">
+                                        <i class="fat fa-user"></i>
+                                    </label>
+                                    <select id="Status" class="form-select" name="Request.Status">
+                                        <option value="">Seç</option>
+                                        <option value="Açık" selected="selected">Open</option>
+                                        <option value="Tamamlandı">Completed</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-md-1">
+                                <label class="m-0">Döviz Cinsi</label>
+                                <div class="input-group">
+                                    <label class="input-group-text bg-transparent border-right-0">
+                                        <i class="fat fa-dollar-sign"></i>
+                                    </label>
+                                    <select id="GCurrency" class="form-select" style="color: green;" name="Request.Currency">
+                                        <option value="TRY" selected="selected">TRY</option>
+                                        <option value="USD">USD</option>
+                                        <option value="EUR">EUR</option>
+                                        <option value="GBP">GBP</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-md-1">
+                                <label class="m-0"><span class="text-danger">*</span> Alış Döviz Cinsi</label>
+                                <div class="input-group">
+                                    <label class="input-group-text bg-transparent border-right-0">
+                                        <i class="fat fa-coins"></i>
+                                    </label>
+                                    <select id="PurchaseCurrency" class="form-select" data-initial="TRY" style="color: #0d6efd;">
+                                        <option value="TRY">TRY</option>
+                                        <option value="USD">USD</option>
+                                        <option value="EUR">EUR</option>
+                                        <option value="GBP">GBP</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <script>
+                                (function () {
+                                    var el = document.getElementById('PurchaseCurrency');
+                                    if (!el) return;
+                                    var initial = el.getAttribute('data-initial') || 'TRY';
+                                    el.value = initial;
+                                })();
+                            </script>
+
+
+                            <div class="col-md-4">
+                                <label class="m-0">Açıklama</label>
+                                <div class="input-group">
+                                    <label class="input-group-text bg-transparent border-right-0"> <i class="fa fa-info-circle"></i>   </label>
+                                    <input id="Description" type="text" class="form-control  mb-0" name="Request.Description" value="TEST ERDAL">
+                                </div>
+                            </div>
+
+                            <div class="col-md-2">
+                                <label class="m-0">Talep No </label>
+                                <div class="input-group">
+                                    <label class="input-group-text bg-transparent border-right-0">
+                                        <i class="fat fa-file-alt"></i>
+                                    </label>
+                                    <input id="RequestNo" type="text" class="form-control mb-0" readonly="" name="Request.RequestNo" value="20267172-816">
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- Row 3 -->
+
+                    </div>
+}
+
+Satış/Teklifler{
+    <div class="card shadow-lg border-blues w-100 mb-10 p-10">
+                <div class="row g-2">
+                    <div class="row mb-10">
+                        <!-- Teklif No -->
+                        <div class="col-md-2">
+                            <label class="m-0">Teklif No</label>
+                            <div class="input-group">
+                                <label class="input-group-text bg-transparent border-right-0">
+                                    <i class="fa fa-file-alt"></i>
+                                </label>
+                                <input id="OfferCode" class="form-control" value="OFR-20260216232019" readonly="">
+                            </div>
+                        </div>
+
+                        <div class="col-md-2">
+                            <label class="m-0">Revizyon No</label>
+                            <div class="input-group">
+                                <label class="input-group-text bg-transparent border-right-0">
+                                    <i class="fa fa-file-alt"></i>
+                                </label>
+                                <input id="RevisionNo" class="form-control" readonly="">
+                            </div>
+                        </div>
+
+                        <div class="col-md-1">
+                            <label class="m-0">Döviz Cinsi</label>
+                            <div class="input-group">
+                                <label class="input-group-text bg-transparent border-right-0">
+                                    <i class="fa fa-dollar-sign"></i>
+                                </label>
+                                <select id="Currency" class="form-select text-uppercase" style="color: green; max-width:100px!important">
+                                    <option value="USD">USD</option>
+                                    <option value="EUR" selected="selected">EUR</option>
+                                    <option value="TRY">TRY</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="col-md-2">
+                            <label class="m-0">Firma Ünvanı</label>
+                            <div class="input-group">
+                                <label class="input-group-text bg-transparent border-right-0">
+                                    <i class="fa fa-handshake"></i>
+                                </label>
+                                <select id="CompanyId" class="form-select text-uppercase">
+                                    <option value="">-- Select --</option>
+                                <option value="1">ARK SHIP SUPPLY</option>
+<option value="2">FENERBAHCE MARIN</option>
+</select>
+                            </div>
+                        </div>
+
+                        <!-- Customer Ref -->
+                        <div class="col-md-3">
+                            <label class="m-0">Customer Ref</label>
+                            <div class="input-group">
+                                <label class="input-group-text bg-transparent border-right-0">
+                                    <i class="fa fa-user"></i>
+                                </label>
+                                <input id="CustomerRef" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="col-md-2">
+                            <label class="m-0">İşlem Tarihi</label>
+                            <div class="input-group">
+                                <label class="input-group-text bg-transparent border-right-0">
+                                    <i class="fa fa-calendar"></i>
+                                </label>
+                                <input id="OfferDate" type="date" class="form-control" value="2026-02-16">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-10">
+                        <div class="col-md-2">
+                            <label class="m-0">Geçerlilik Süresi (GÜN)</label>
+                            <div class="input-group">
+                                <label class="input-group-text bg-transparent border-right-0">
+                                    <i class="fa fa-hashtag"></i>
+                                </label>
+                                <input id="ValidityDays" type="number" class="form-control">
+                            </div>
+                        </div>
+                    
+
+                        <!-- satır 3 -->
+                        <div class="col-md-3">
+                            <label class="m-0">Teslim Yeri</label>
+                            <div class="input-group">
+                                <label class="input-group-text bg-transparent border-right-0">
+                                    <i class="fa fa-building"></i>
+                                </label>
+                                <input id="DeliveryPlace" class="form-control">
+                            </div>
+                        </div>
+                      
+                        <div class="col-md-2">
+                            <label class="m-0">Teslim Zamanı</label>
+                            <div class="input-group">
+                                <label class="input-group-text bg-transparent border-right-0">
+                                    <i class="fa fa-align-left"></i>
+                                </label>
+                                <input id="DeliveryTime" type="date" class="form-control" value="">
+                            </div>
+                        </div>
+                      
+
+                        <div class="col-md-3">
+                            <label class="m-0">Teslim Şekli</label>
+                            <div class="input-group">
+                                <label class="input-group-text bg-transparent border-right-0">
+                                    <i class="fa fa-building"></i>
+                                </label>
+                                <select id="DeliveryType" class="form-select">
+                                    <option value="">?</option>
+                                <option value="1">Kargo</option>
+<option value="2">Firma Kendisi Alacak</option>
+<option value="3">Sevkiyat Bize Ait</option>
+<option value="4">Moto Kurye</option>
+</select>
+                            </div>
+                        </div>
+
+                        <div class="col-md-2">
+                            <label class="m-0">Ödeme Planı</label>
+                            <div class="input-group">
+                                <label class="input-group-text bg-transparent border-right-0">
+                                    <i class="fa fa-credit-card"></i>
+                                </label>
+                                <select id="PaymentTerms" class="form-select">
+                                    <option value="0" selected="selected">Prepayment</option>
+                                    <option value="0.01">To Be Discussed</option>
+                                    <option value="15">15 DAYS</option>
+                                    <option value="30">30 DAYS</option>
+                                    <option value="60">60 DAYS</option>
+                                </select>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-10">
+                        <div class="col-md-3">
+                            <label class="m-0">Sorumlu Kullanıcı</label>
+                            <div class="input-group">
+                                <label class="input-group-text bg-transparent border-right-0">
+                                    <i class="fa fa-user"></i>
+                                </label>
+                                <select id="PreparedBy" class="form-select">
+                                    <option value="">Seçiniz</option>
+                                <option value="5">ADHIL SHAH</option>
+<option value="6">AVINASH MENON</option>
+<option value="16">Beyza Nur Özdin</option>
+<option value="12">CAGATAY ARSLAN</option>
+<option value="7">CAN ARSLAN</option>
+<option value="8">ECE YILDIRIM</option>
+<option value="11">EMRE HELVACI</option>
+<option value="1">JUSTIN SOLOMON</option>
+<option value="9">MERT SEREF</option>
+<option value="4">METE TURKAY KARAKULLUKCU</option>
+<option value="10">MUHAMMET NAMA</option>
+<option value="2">SANDRA SNIZHKO</option>
+</select>
+                            </div>
+                        </div>
+
+                        <!-- Port Fee -->
+                        <div class="col-md-2">
+                            <label class="m-0">Port Fee</label>
+                            <div class="input-group">
+                                <label class="input-group-text bg-transparent border-right-0">
+                                    <i class="fa fa-hashtag"></i>
+                                </label>
+                                <input id="PortFee" type="number" step="0.01" class="form-control">
+                            </div>
+                        </div>
+                    
+                        <div class="col-md-2">
+                            <label class="m-0">Custom Fee</label>
+                            <div class="input-group">
+                                <label class="input-group-text bg-transparent border-right-0">
+                                    <i class="fa fa-hashtag"></i>
+                                </label>
+                                <input id="CustomFee" type="number" step="0.01" class="form-control">
+                            </div>
+                        </div>
+                   
+                        <div class="col-md-2">
+                            <label class="m-0">Transportation</label>
+                            <div class="input-group">
+                                <label class="input-group-text bg-transparent border-right-0">
+                                    <i class="fa fa-hashtag"></i>
+                                </label>
+                                <input id="Transportation" type="number" step="0.01" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <label class="m-0">Status</label>
+                            <div class="input-group">
+                                <label class="input-group-text bg-transparent border-right-0">
+                                    <i class="fa fa-building"></i>
+                                </label>
+                                <input id="Status" type="text" class="form-control text-danger font-bold" value="Müşteriden Onay Bekleyenler" readonly="">
+                            </div>
+                        </div>
+
+                        <div class="col-md-1 d-flex align-items-end">
+                            <button id="btnSaveHeader" type="button" class="btn btn-soft-success btn-label border w-100" onclick="saveOfferHeader()">
+                                <i class="fa fa-save mr-10 label-icon"></i>Kaydet
+                            </button>
+                        </div>
+
+                    </div>
+
+                    <div class="col-12">
+                        <div class="input-group">
+                            <label class="input-group-text bg-transparent border-right-0">Remark</label>
+                            <input id="Note" class="form-control">
+                            <label class="input-group-text bg-transparent border-right-0">
+                                <i class="fa fa-building"></i>
+                            </label>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+}
+
+Satış/Ürünler{
+    <div class="tab-content p-2">
+
+            <!-- 1. General Tab -->
+            <div id="tabGeneral" class="tab-pane fade active show" role="tabpanel">
+                <div id="flock" class="row formlock mp-0">
+
+                    <!-- ProductName -->
+                    <div class="col-md-12 mb-10">
+                        <div class="input-group">
+                            <div class="input-group-text wd-110 font-bold">
+                                <span>Ürün Adı</span>
+                            </div>
+
+                            <input id="ProductName" type="text" class="form-control wd-0" placeholder="Ürün Adı" name="Product.ProductName" value="&quot; MARINE BINOCULAR  (BRAND:STEINER 8x50)&quot;">
+
+                            <input id="ProductCode" type="text" class="form-control" placeholder="Ürün Kodu" style="width:100px; min-width:100px; max-width:100px; flex:0 0 100px;" name="Product.ProductCode" value="">
+
+                            <div class="input-group-text wd-50">
+                                <i class="fat fa-box-open"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Category -->
+                    <div class="col-md-6 mb-10">
+                        <div class="input-group">
+                            <div class="input-group-text wd-110 font-bold"><span>Kategori</span></div>
+                            <select id="Category" class="form-select" name="Product.Category">
+                                <option value="">-- Select --</option>
+                            </select>
+                            <div class="input-group-text wd-50"><i class="fat fa-tags"></i></div>
+                        </div>
+                    </div>
+
+                    <!-- SubCategory -->
+                    <div class="col-md-6 mb-10">
+                        <div class="input-group">
+                            <div class="input-group-text wd-110 font-bold"><span>Alt Kategori</span></div>
+                            <input id="SubCategory" type="text" class="form-control" placeholder="Alt Kategori" name="Product.SubCategory" value="">
+                            <div class="input-group-text wd-50"><i class="fat fa-tag"></i></div>
+                        </div>
+                    </div>
+
+
+                    <!-- Brand -->
+                    <div class="col-md-6 mb-10">
+                        <div class="input-group">
+                            <div class="input-group-text wd-110 font-bold"><span>Marka</span></div>
+                            <input id="Brand" type="text" class="form-control" placeholder="Marka" name="Product.Brand" value="">
+                            <div class="input-group-text wd-50"><i class="fat fa-certificate"></i></div>
+                        </div>
+                    </div>
+
+                    <!-- Model -->
+                    <div class="col-md-6 mb-10">
+                        <div class="input-group">
+                            <div class="input-group-text wd-110 font-bold"><span>Model</span></div>
+                            <input id="Model" type="text" class="form-control" placeholder="Model" name="Product.Model" value="">
+                            <div class="input-group-text wd-50"><i class="fat fa-cube"></i></div>
+                        </div>
+                    </div>
+
+                    <!-- DrawingNo -->
+                    <div class="col-md-6 mb-10">
+                        <div class="input-group">
+                            <div class="input-group-text wd-110 font-bold"><span>Çizim No</span></div>
+                            <input id="DrawingNo" type="text" class="form-control" placeholder="Çizim No" name="Product.DrawingNo" value="">
+                            <div class="input-group-text wd-50"><i class="fat fa-drafting-compass"></i></div>
+                        </div>
+                    </div>
+
+                    <!-- PartNo -->
+                    <div class="col-md-6 mb-10">
+                        <div class="input-group">
+                            <div class="input-group-text wd-110 font-bold"><span>Parça No</span></div>
+                            <input id="PartNo" type="text" class="form-control" placeholder="Parça No" name="Product.PartNo" value="">
+                            <div class="input-group-text wd-50"><i class="fat fa-puzzle-piece"></i></div>
+                        </div>
+                    </div>
+
+                    <!-- ItemNo -->
+                    <div class="col-md-6 mb-10">
+                        <div class="input-group">
+                            <div class="input-group-text wd-110 font-bold"><span>Item No</span></div>
+                            <input id="ItemNo" type="text" class="form-control" placeholder="Item No" name="Product.ItemNo" value="">
+                            <div class="input-group-text wd-50"><i class="fat fa-hashtag"></i></div>
+                        </div>
+                    </div>
+
+                    <!-- Unit -->
+                    <div class="col-md-6 mb-10">
+                        <div class="input-group">
+                            <div class="input-group-text wd-110 font-bold"><span>Birim</span></div>
+                            <select id="Unit" class="form-select" name="Product.Unit">
+                                <option value="">-- Select --</option>
+                            <option value="1">PIECE</option>
+<option value="2">Liter</option>
+<option value="3">Kg</option>
+<option value="4">Meter</option>
+<option value="5">Day</option>
+<option value="6">TRIP</option>
+<option value="7">MAN/DAY</option>
+<option value="8">PCS</option>
+<option value="9">SET</option>
+</select>
+                            <div class="input-group-text wd-50"><i class="fat fa-ruler"></i></div>
+                        </div>
+                    </div>
+
+                    <!-- Weight -->
+                    <div class="col-md-6 mb-10">
+                        <div class="input-group">
+                            <div class="input-group-text wd-110 font-bold"><span>Ağırlık (KG)</span></div>
+                            <input id="Weight" type="text" class="form-control text-end" placeholder="0.00" data-val="true" data-val-number="The field Weight must be a number." data-val-required="The Weight field is required." name="Product.Weight" value="0">
+                            <div class="input-group-text wd-50"><i class="fat fa-weight"></i></div>
+                        </div>
+                    </div>
+
+                    <!-- Volume -->
+                    <div class="col-md-6 mb-10">
+                        <div class="input-group">
+                            <div class="input-group-text wd-110 font-bold"><span>Hacim (M3)</span></div>
+                            <input id="Volume" type="text" class="form-control text-end" placeholder="0.00" data-val="true" data-val-number="The field Volume must be a number." data-val-required="The Volume field is required." name="Product.Volume" value="0">
+                            <div class="input-group-text wd-50"><i class="fat fa-cube"></i></div>
+                        </div>
+                    </div>
+
+                    <!-- Origin -->
+                    <div class="col-md-6 mb-10">
+                        <div class="input-group">
+                            <div class="input-group-text wd-110 font-bold"><span>Menşei</span></div>
+                            <select id="Origin" class="form-select" name="Product.Origin">
+                                <option value="">-- Select --</option>
+                            <option value="ABD Virjin Adaları">ABD Virjin Adaları</option>
+<option value="Afganistan">Afganistan</option>
+<option value="Almanya">Almanya</option>
+<option value="Amerika Birleşik Devletleri">Amerika Birleşik Devletleri</option>
+<option value="Amerikan Samoası">Amerikan Samoası</option>
+<option value="Andorra">Andorra</option>
+<option value="Angora">Angora</option>
+<option value="Anguilla">Anguilla</option>
+<option value="Antigua ve Barbuda">Antigua ve Barbuda</option>
+<option value="Arjantin">Arjantin</option>
+<option value="Arnavutluk">Arnavutluk</option>
+<option value="Aruba">Aruba</option>
+<option value="Avustralya">Avustralya</option>
+<option value="Avusturya">Avusturya</option>
+<option value="Azerbeycan">Azerbeycan</option>
+<option value="Aziz Pierre ve Miquelon">Aziz Pierre ve Miquelon</option>
+<option value="Bahamalar">Bahamalar</option>
+<option value="Bahreyn">Bahreyn</option>
+<option value="Bangladeş">Bangladeş</option>
+<option value="Barbados">Barbados</option>
+<option value="Belçika">Belçika</option>
+<option value="Belize">Belize</option>
+<option value="Benin">Benin</option>
+<option value="Beyaz rusya">Beyaz rusya</option>
+<option value="Bhutan">Bhutan</option>
+<option value="Birleşik Arap Emirlikleri">Birleşik Arap Emirlikleri</option>
+<option value="Bolivya">Bolivya</option>
+<option value="Bosna Hersek">Bosna Hersek</option>
+<option value="Botsvana">Botsvana</option>
+<option value="Brezilya">Brezilya</option>
+<option value="Britanya Virjin Adaları">Britanya Virjin Adaları</option>
+<option value="Brunei">Brunei</option>
+<option value="Buğdan">Buğdan</option>
+<option value="Bulgaristan">Bulgaristan</option>
+<option value="Burkina Faso">Burkina Faso</option>
+<option value="Burundi">Burundi</option>
+<option value="Büyük Britanya">Büyük Britanya</option>
+<option value="Cayman adaları">Cayman adaları</option>
+<option value="Cebelitarık">Cebelitarık</option>
+<option value="Cezayir">Cezayir</option>
+<option value="Cibuti">Cibuti</option>
+<option value="Cocos Adaları">Cocos Adaları</option>
+<option value="Cook Adaları">Cook Adaları</option>
+<option value="Curacao">Curacao</option>
+<option value="Çad">Çad</option>
+<option value="Çek Cumhuriyeti">Çek Cumhuriyeti</option>
+<option value="Çin">Çin</option>
+<option value="Danimarka">Danimarka</option>
+<option value="Dem. Cum. Kongo">Dem. Cum. Kongo</option>
+<option value="Doğu Timor">Doğu Timor</option>
+<option value="Dominik Cumhuriyeti">Dominik Cumhuriyeti</option>
+<option value="Dominika">Dominika</option>
+<option value="Ekvador">Ekvador</option>
+<option value="Ekvator Ginesi">Ekvator Ginesi</option>
+<option value="Endonezya">Endonezya</option>
+<option value="Eritre">Eritre</option>
+<option value="Ermenistan">Ermenistan</option>
+<option value="Estonya">Estonya</option>
+<option value="Etiyopya">Etiyopya</option>
+<option value="Falkland">Falkland</option>
+<option value="Faroe Adaları">Faroe Adaları</option>
+<option value="Fas">Fas</option>
+<option value="Fiji">Fiji</option>
+<option value="Fildişi Sahilleri">Fildişi Sahilleri</option>
+<option value="Filipinler">Filipinler</option>
+<option value="Filistin">Filistin</option>
+<option value="Finlandiya">Finlandiya</option>
+<option value="Fransa">Fransa</option>
+<option value="Fransız Polinezyası">Fransız Polinezyası</option>
+<option value="Gabon">Gabon</option>
+<option value="Gambiya">Gambiya</option>
+<option value="Gana">Gana</option>
+<option value="Georgia">Georgia</option>
+<option value="Gine">Gine</option>
+<option value="Gine-Bissau">Gine-Bissau</option>
+<option value="Grenada">Grenada</option>
+<option value="Grönland">Grönland</option>
+<option value="Guadeloupe">Guadeloupe</option>
+<option value="Guam">Guam</option>
+<option value="Guatemala">Guatemala</option>
+<option value="Guyana">Guyana</option>
+<option value="Guyanası">Guyanası</option>
+<option value="Güney Afrika">Güney Afrika</option>
+<option value="Güney Kore">Güney Kore</option>
+<option value="Güney Sudan'ın">Güney Sudan'ın</option>
+<option value="Haiti">Haiti</option>
+<option value="Hırvatistan">Hırvatistan</option>
+<option value="Hindistan">Hindistan</option>
+<option value="Hollanda">Hollanda</option>
+<option value="Honduras">Honduras</option>
+<option value="Hong Kong">Hong Kong</option>
+<option value="Irak">Irak</option>
+<option value="İngiltere">İngiltere</option>
+<option value="İran">İran</option>
+<option value="İrlanda">İrlanda</option>
+<option value="İspanya">İspanya</option>
+<option value="İsrail">İsrail</option>
+<option value="İsveç">İsveç</option>
+<option value="İsviçre">İsviçre</option>
+<option value="İtalya">İtalya</option>
+<option value="İzlanda">İzlanda</option>
+<option value="Jamaika">Jamaika</option>
+<option value="Japonya">Japonya</option>
+<option value="Jersey">Jersey</option>
+<option value="Kamboçya">Kamboçya</option>
+<option value="Kamerun">Kamerun</option>
+<option value="Kanada">Kanada</option>
+<option value="Kanarya Adaları">Kanarya Adaları</option>
+<option value="Karadağ">Karadağ</option>
+<option value="Karayip Hollandası">Karayip Hollandası</option>
+<option value="Katar">Katar</option>
+<option value="Kazakistan">Kazakistan</option>
+<option value="Kenya">Kenya</option>
+<option value="Kıbrıs">Kıbrıs</option>
+<option value="Kırgızistan">Kırgızistan</option>
+<option value="Kiribati">Kiribati</option>
+<option value="Kolombiya">Kolombiya</option>
+<option value="Komorlar">Komorlar</option>
+<option value="Kongo Cumhuriyeti">Kongo Cumhuriyeti</option>
+<option value="Kosova">Kosova</option>
+<option value="Kostarika">Kostarika</option>
+<option value="Kuveyt">Kuveyt</option>
+<option value="Kuzey Kore">Kuzey Kore</option>
+<option value="Kuzey Mariana Adaları">Kuzey Mariana Adaları</option>
+<option value="Küba">Küba</option>
+<option value="Laos">Laos</option>
+<option value="Letonya">Letonya</option>
+<option value="Liberya">Liberya</option>
+<option value="Libya">Libya</option>
+<option value="Lihtenştayn">Lihtenştayn</option>
+<option value="Litvanya">Litvanya</option>
+<option value="Lucia">Lucia</option>
+<option value="Lübnan">Lübnan</option>
+<option value="Lüksemburg">Lüksemburg</option>
+<option value="Macaristan">Macaristan</option>
+<option value="Madagaskar">Madagaskar</option>
+<option value="Madeira">Madeira</option>
+<option value="Makao">Makao</option>
+<option value="Makedonya">Makedonya</option>
+<option value="Malawi">Malawi</option>
+<option value="Maldivler">Maldivler</option>
+<option value="Malezya">Malezya</option>
+<option value="Mali">Mali</option>
+<option value="Malta">Malta</option>
+<option value="Man Adası">Man Adası</option>
+<option value="Marshall Adaları">Marshall Adaları</option>
+<option value="Martinik">Martinik</option>
+<option value="Mauritius">Mauritius</option>
+<option value="Mayotte">Mayotte</option>
+<option value="Meksika">Meksika</option>
+<option value="Mısır">Mısır</option>
+<option value="Mikronezya">Mikronezya</option>
+<option value="Moğolistan">Moğolistan</option>
+<option value="Monako">Monako</option>
+<option value="Montserrat">Montserrat</option>
+<option value="Moritanya">Moritanya</option>
+<option value="Mozambik">Mozambik</option>
+<option value="Myanmar">Myanmar</option>
+<option value="Namibya">Namibya</option>
+<option value="Nauru">Nauru</option>
+<option value="Nepal">Nepal</option>
+<option value="Nijer">Nijer</option>
+<option value="Nijerya">Nijerya</option>
+<option value="Nikaragua">Nikaragua</option>
+<option value="Niue">Niue</option>
+<option value="Noel ada">Noel ada</option>
+<option value="Norfolk Adası">Norfolk Adası</option>
+<option value="Norveç">Norveç</option>
+<option value="Orta Afrika">Orta Afrika</option>
+<option value="Özbekistan">Özbekistan</option>
+<option value="Pakistan">Pakistan</option>
+<option value="Palau">Palau</option>
+<option value="Panama">Panama</option>
+<option value="Papua">Papua</option>
+<option value="Paraguay">Paraguay</option>
+<option value="Peru">Peru</option>
+<option value="Pitcairn ada">Pitcairn ada</option>
+<option value="Polonya">Polonya</option>
+<option value="Portekiz">Portekiz</option>
+<option value="Porto-Riko">Porto-Riko</option>
+<option value="Réunion">Réunion</option>
+<option value="Romanya">Romanya</option>
+<option value="Ruanda">Ruanda</option>
+<option value="Rusya">Rusya</option>
+<option value="Saint Helena, Ascension ve Tristan da Cunha">Saint Helena, Ascension ve Tristan da Cunha</option>
+<option value="Saint Kitts and Nevis">Saint Kitts and Nevis</option>
+<option value="Saint Vincent ve Grenadinler">Saint Vincent ve Grenadinler</option>
+<option value="Saint-Barthelemy">Saint-Barthelemy</option>
+<option value="Saint-Martin">Saint-Martin</option>
+<option value="Salvador">Salvador</option>
+<option value="Samoa">Samoa</option>
+<option value="San Marino">San Marino</option>
+<option value="Sao Tome ve Principe">Sao Tome ve Principe</option>
+<option value="SDAC">SDAC</option>
+<option value="Senegal">Senegal</option>
+<option value="Seyşeller">Seyşeller</option>
+<option value="Sırbistan">Sırbistan</option>
+<option value="Sierra Leone">Sierra Leone</option>
+<option value="Singapur">Singapur</option>
+<option value="Sint Maarten">Sint Maarten</option>
+<option value="Slovakya">Slovakya</option>
+<option value="Slovenya">Slovenya</option>
+<option value="Solomon Adaları">Solomon Adaları</option>
+<option value="Somali">Somali</option>
+<option value="Sri Lanka">Sri Lanka</option>
+<option value="Sudan">Sudan</option>
+<option value="Surinam">Surinam</option>
+<option value="Suriye">Suriye</option>
+<option value="Suudi Arabistan">Suudi Arabistan</option>
+<option value="Svaziland">Svaziland</option>
+<option value="Şili">Şili</option>
+<option value="Tacikistan">Tacikistan</option>
+<option value="Tanzanya">Tanzanya</option>
+<option value="Tayland">Tayland</option>
+<option value="Tayvan">Tayvan</option>
+<option value="Togo">Togo</option>
+<option value="Tokelau">Tokelau</option>
+<option value="Tonga">Tonga</option>
+<option value="Transdinyester">Transdinyester</option>
+<option value="Trinidad ve Tobago">Trinidad ve Tobago</option>
+<option value="Tunus">Tunus</option>
+<option value="Turks ve Caicos">Turks ve Caicos</option>
+<option value="Tuvalu">Tuvalu</option>
+<option value="TÜRKİYE">TÜRKİYE</option>
+<option value="Türkmenistan">Türkmenistan</option>
+<option value="Uganda">Uganda</option>
+<option value="Ukrayna">Ukrayna</option>
+<option value="Umman">Umman</option>
+<option value="Uruguay">Uruguay</option>
+<option value="uzun şort">uzun şort</option>
+<option value="Ürdün">Ürdün</option>
+<option value="Vanuatu">Vanuatu</option>
+<option value="Vatikan">Vatikan</option>
+<option value="Venezuela">Venezuela</option>
+<option value="Vietnam">Vietnam</option>
+<option value="Wallis ve Futuna">Wallis ve Futuna</option>
+<option value="Yemen">Yemen</option>
+<option value="yeni Kaledonya">yeni Kaledonya</option>
+<option value="yeni Zelanda">yeni Zelanda</option>
+<option value="Yeşil burun">Yeşil burun</option>
+<option value="Yunanistan">Yunanistan</option>
+<option value="Zambiya">Zambiya</option>
+<option value="Zimbabve">Zimbabve</option>
+</select>
+                            <div class="input-group-text wd-50"><i class="fat fa-flag"></i></div>
+                        </div>
+                    </div>
+
+                    <!-- Barcode -->
+                    <div class="col-md-6 mb-10">
+                        <div class="input-group">
+                            <div class="input-group-text wd-110 font-bold"><span>Barkod</span></div>
+                            <input id="Barcode" type="text" class="form-control" placeholder="Barkod" name="Product.Barcode" value="">
+                            <div class="input-group-text wd-50"><i class="fat fa-barcode"></i></div>
+                        </div>
+                    </div>
+
+                    <!-- Description -->
+                    <div class="col-md-12 mb-10">
+                        <div class="input-group align-items-stretch">
+                            <div class="input-group-text wd-110 font-bold">
+                                <span>Açıklama</span>
+                            </div>
+                            <textarea id="Description" class="form-control textarea" placeholder="Açıklama" style="height:100px; resize:none; color:var(--bs-body-color); border-color:var(--bs-input-border-color)" name="Product.Description"></textarea>
+                            <div class="input-group-text wd-50 d-flex align-items-center justify-content-center">
+                                <i class="fat fa-align-left"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Remarks -->
+                    <div class="col-md-12 mb-10">
+                        <div class="input-group align-items-stretch">
+                            <div class="input-group-text wd-110 font-bold">
+                                <span>Notlar</span>
+                            </div>
+                            <textarea id="Remarks" class="form-control textarea" placeholder="Notlar" style="height:100px; resize:none; color:var(--bs-body-color); border-color:var(--bs-input-border-color)" name="Product.Remarks"></textarea>
+                            <div class="input-group-text wd-50 d-flex align-items-center justify-content-center">
+                                <i class="fat fa-comment-dots"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Active -->
+                    <div class="col-md-3 mb-10">
+                        <div class="input-group align-items-stretch">
+                            <div class="input-group-text wd-110 font-bold">
+                                <span>Aktif</span>
+                            </div>
+                            <div class="form-control d-flex align-items-center">
+                                <input id="Active" type="checkbox" class="form-check-input input-group-text" style="width: 1.7rem; height: 1.7rem; margin-left: 5px; padding:0px" data-val="true" data-val-required="The Active field is required." name="Product.Active" value="true">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- 2. Suppliers Tab -->
+            <div id="tabSuppliers" class="tab-pane fade" role="tabpanel">
+                    <div class="col-12 mb-1">
+
+                        <!-- Inner Tabs for Suppliers -->
+                        <ul class="nav nav-tabs mb-1 align-items-center" role="tablist">
+
+                            <li class="nav-item" role="presentation">
+                                <a class="nav-link active" id="selectedSuppliersTab" data-bs-toggle="tab" href="#selectedSuppliersPane" role="tab" aria-controls="selectedSuppliersPane" aria-selected="true">
+                                    <i class="fa-thin fa-ballot-check me-2"></i>
+                                    Selected Suppliers
+                                    <span id="selectedSuppliersCountBadge" class="badge bg-primary ms-1">2</span>
+                                </a>
+                            </li>
+
+                            <li class="nav-item" role="presentation">
+                                <a class="nav-link" id="supplierListTab" data-bs-toggle="tab" href="#supplierListPane" role="tab" aria-controls="supplierListPane" aria-selected="false">
+                                    <i class="fas fa-list me-2"></i>
+                                    Supplier List
+                                    <span id="totalSuppliersCount" class="badge bg-primary ms-1">923</span>
+                                </a>
+                            </li>
+
+                            <li class="nav-item ms-auto">
+                                <button class="btn btn-soft-success btn-label border btn-sm" onclick="SaveProductSuppliers()">
+                                    <i class="fas fa-save label-icon"></i>
+                                    Save selected suppliers
+                                </button>
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                <div class="tab-content">
+                    <!-- 1. Selected Suppliers Tab (First, Default Active) -->
+                    <div class="tab-pane fade show active" id="selectedSuppliersPane" role="tabpanel" aria-labelledby="selectedSuppliersTab">
+
+                        <!-- Selected Suppliers Table -->
+                        <div id="selectedSuppliersTableContainer">
+                            <div class="table-responsive card rounded" style="max-height: calc(100vh - 250px); overflow-y: auto;">
+                                <table class="table table-sm table-stripped table-hover align-middle mb-0">
+                                    <thead class="table-light sticky-top">
+                                        <tr>
+                                            <th class="text-center" style="width: 60px;">Sıra</th>
+                                            <th class="wd-0">Cari Adı</th>
+                                            <th class="wd-100">Hizmet Alanı</th>
+                                            <th class="wd-150">Ülke / Şehir</th>
+                                            <th class="wd-80 text-center">Eylem</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="selectedSuppliersTableBody"><tr><td class="text-center"><strong>1</strong></td><td>2M HIRDAVAT</td><td>EL MALZEMELERI VE HIRDAVAT</td><td>-</td><td class="text-center"><button type="button" class="btn btn-sm btn-soft-danger" onclick="RemoveSupplier(629)" title="Kaldır"><i class="fas fa-trash-alt"></i></button></td></tr><tr><td class="text-center"><strong>2</strong></td><td>2M KABLO</td><td>???</td><td>-</td><td class="text-center"><button type="button" class="btn btn-sm btn-soft-danger" onclick="RemoveSupplier(189)" title="Kaldır"><i class="fas fa-trash-alt"></i></button></td></tr></tbody>
+                                </table>
+                            </div>
+
+                            <!-- Empty state -->
+                            <div id="selectedSuppliersEmpty" class="text-center text-muted py-5" style="display:none;">
+                                <i class="fas fa-inbox fa-3x mb-3"></i>
+                                <p>Henüz tedarikçi seçilmedi.</p>
+                                <p class="small">Supplier List sekmesinden tedarikçi seçebilirsiniz.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2. Supplier List Tab (Second, Lazy Load) -->
+                    <div class="tab-pane fade" id="supplierListPane" role="tabpanel" aria-labelledby="supplierListTab">
+                        <!-- Search and Filter -->
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <div class="input-group border rounded shadow-lg">
+                                    <span class="input-group-text border-0 bg-light">
+                                        <i class="fas fa-users"></i>
+                                    </span>
+                                    <select id="supplierGroupFilter" class="form-select border-0">
+                                        <option value="">Tüm Gruplar</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="input-group border rounded shadow-lg mp-0">
+                                    <button id="btnClearSupplierSearch" class="btn btn-outline-secondary border-0"><i class="far fa-trash-alt"></i></button>
+                                    <input id="searchSupplierText" class="form-control text-center border-0" placeholder="Ara">
+                                    <button id="btnFilterSupplier" class="btn btn-outline-secondary border-0"><i class="fa fa-search"></i></button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Suppliers Table -->
+                        <div class="table-responsive shadow-lg rounded" style="height: calc(100vh - 288px) !important">
+                            <table class="table table-hover table-striped align-middle table-sm rounded" style="cursor:pointer;">
+                                <thead class="sticky-header">
+                                    <tr>
+                                        <th class="text-center" style="width: 50px;">
+                                            <input class="bg-light" type="checkbox" id="chkSelectAllSuppliers" title="Tümünü seç">
+                                        </th>
+                                        <th class="wd-50">Foto</th>
+                                        <th class="wd-0">Cari Adı</th>
+                                        <th class="wd-150">Ülke / Şehir</th>
+                                        <th class="wd-150">Hizmet Alanı</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="suppliersTableBody">
+                                    <!-- Suppliers will be loaded here -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- 3. Product Images Tab -->
+            <div id="tabProductImages" class="tab-pane fade" role="tabpanel">
+                <div class="row p-1">
+                    <div class="col-12 mb-1">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <h5 class="text-secondary mb-0">Ürün Resimleri</h5>
+                            <div>
+                                <input type="file" id="productFileUpload" multiple="" accept="image/*,.pdf,.doc,.docx,.xls,.xlsx" style="display:none;">
+                                <button type="button" class="btn btn-soft-info btn-sm" onclick="document.getElementById('productFileUpload').click()">
+                                    <i class="fas fa-upload"></i> Dosya Yükle
+                                </button>
+                            </div>
+                        </div>
+
+                        <div id="productFilesContainer" class="d-flex flex-wrap gap-3" style="min-height: 150px;"><div class="product-image-wrapper"><img src="/images/productfiles/9922166_479726c8-d2f7-4dcc-a4fe-1389311c3c3c_10665268_10152502954043460_4440321357671818755_n.jpg" class="product-image-thumb " alt="10665268_10152502954043460_4440321357671818755_n.jpg" onclick="openFullscreenImage(0); return false;" data-file-id="155" data-file-url="/images/productfiles/9922166_479726c8-d2f7-4dcc-a4fe-1389311c3c3c_10665268_10152502954043460_4440321357671818755_n.jpg" data-file-title="10665268_10152502954043460_4440321357671818755_n.jpg" onerror="console.error('Image load error:', this.src); this.style.display='none';" loading="lazy" style="display: none;"><div class="product-image-actions"><button type="button" class="btn btn-sm btn-soft-danger text-end" onclick="event.stopPropagation(); DeleteProductFile(155)" title="Sil"><i class="fas fa-trash-alt"></i></button></div><div class="product-image-main-btn"><button type="button" class="btn btn-sm btn-soft-warning text-end" onclick="event.stopPropagation(); SetMainPhoto(155)" title="Ana Fotoğraf"><i class="fa-regular fa-star"></i></button></div></div><div class="product-image-wrapper"><img src="/images/productfiles/9922166_70f5d4b7-9898-4db9-bccc-60e3ecde5c70_18517992_10154750281218460_5469554198182167517_o.jpg" class="product-image-thumb " alt="18517992_10154750281218460_5469554198182167517_o.jpg" onclick="openFullscreenImage(1); return false;" data-file-id="156" data-file-url="/images/productfiles/9922166_70f5d4b7-9898-4db9-bccc-60e3ecde5c70_18517992_10154750281218460_5469554198182167517_o.jpg" data-file-title="18517992_10154750281218460_5469554198182167517_o.jpg" onerror="console.error('Image load error:', this.src); this.style.display='none';" loading="lazy" style="display: none;"><div class="product-image-actions"><button type="button" class="btn btn-sm btn-soft-danger text-end" onclick="event.stopPropagation(); DeleteProductFile(156)" title="Sil"><i class="fas fa-trash-alt"></i></button></div><div class="product-image-main-btn"><button type="button" class="btn btn-sm btn-soft-warning text-end" onclick="event.stopPropagation(); SetMainPhoto(156)" title="Ana Fotoğraf"><i class="fa-regular fa-star"></i></button></div></div><div class="product-image-wrapper"><img src="/images/productfiles/9922166_d6d98c60-9764-4583-ac75-248caeab0122_18558696_10154750270093460_4941006972706719164_o.jpg" class="product-image-thumb " alt="18558696_10154750270093460_4941006972706719164_o.jpg" onclick="openFullscreenImage(2); return false;" data-file-id="157" data-file-url="/images/productfiles/9922166_d6d98c60-9764-4583-ac75-248caeab0122_18558696_10154750270093460_4941006972706719164_o.jpg" data-file-title="18558696_10154750270093460_4941006972706719164_o.jpg" onerror="console.error('Image load error:', this.src); this.style.display='none';" loading="lazy" style="display: none;"><div class="product-image-actions"><button type="button" class="btn btn-sm btn-soft-danger text-end" onclick="event.stopPropagation(); DeleteProductFile(157)" title="Sil"><i class="fas fa-trash-alt"></i></button></div><div class="product-image-main-btn"><button type="button" class="btn btn-sm btn-soft-warning text-end" onclick="event.stopPropagation(); SetMainPhoto(157)" title="Ana Fotoğraf"><i class="fa-regular fa-star"></i></button></div></div><div class="product-image-wrapper"><img src="/images/productfiles/9922166_a10ddde5-bb17-4047-af98-f5542e8f619d_18814506_10154786328223460_4399136567596606647_o.jpg" class="product-image-thumb " alt="18814506_10154786328223460_4399136567596606647_o.jpg" onclick="openFullscreenImage(3); return false;" data-file-id="158" data-file-url="/images/productfiles/9922166_a10ddde5-bb17-4047-af98-f5542e8f619d_18814506_10154786328223460_4399136567596606647_o.jpg" data-file-title="18814506_10154786328223460_4399136567596606647_o.jpg" onerror="console.error('Image load error:', this.src); this.style.display='none';" loading="lazy" style="display: none;"><div class="product-image-actions"><button type="button" class="btn btn-sm btn-soft-danger text-end" onclick="event.stopPropagation(); DeleteProductFile(158)" title="Sil"><i class="fas fa-trash-alt"></i></button></div><div class="product-image-main-btn"><button type="button" class="btn btn-sm btn-soft-warning text-end" onclick="event.stopPropagation(); SetMainPhoto(158)" title="Ana Fotoğraf"><i class="fa-regular fa-star"></i></button></div></div><div class="product-image-wrapper"><img src="/images/productfiles/9922166_46663205-ac64-4479-af8c-9046e192f3bf_18768506_10154786328513460_7170399264108393690_o.jpg" class="product-image-thumb main-photo" alt="18768506_10154786328513460_7170399264108393690_o.jpg" onclick="openFullscreenImage(4); return false;" data-file-id="154" data-file-url="/images/productfiles/9922166_46663205-ac64-4479-af8c-9046e192f3bf_18768506_10154786328513460_7170399264108393690_o.jpg" data-file-title="18768506_10154786328513460_7170399264108393690_o.jpg" onerror="console.error('Image load error:', this.src); this.style.display='none';" loading="lazy" style="display: none;"><div class="product-image-actions"><button type="button" class="btn btn-sm btn-soft-danger text-end" onclick="event.stopPropagation(); DeleteProductFile(154)" title="Sil"><i class="fas fa-trash-alt"></i></button></div><div class="product-image-main-btn"><button type="button" class="btn btn-sm btn-soft-warning text-end" onclick="event.stopPropagation(); SetMainPhoto(154)" title="Ana Fotoğraf"><i class="fa-solid fa-star text-warning"></i></button></div></div></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+}
+
+Satın Alma/Siparişler{
+    <div class="card shadow-lg border-blues w-100 mb-10 p-10">
+            <div class="row g-2">
+
+                <div class="row mb-10">
+                    <div class="col-md-3">
+                        <label class="m-0 small">Firma Ünvanı</label>
+                        <div class="input-group input-group-sm">
+                            <span class="input-group-text bg-transparent border-right-0">
+                                <i class="fa fa-building"></i>
+                            </span>
+                            <select id="CompanyId" class="form-select form-select-sm">
+                                <option value="">Seçiniz</option>
+                            <option value="1">ARK SHIP SUPPLY</option>
+<option value="2">FENERBAHCE MARIN</option>
+</select>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <label class="m-0 small">Customer Ref</label>
+                        <div class="input-group input-group-sm">
+                            <span class="input-group-text bg-transparent border-right-0">
+                                <i class="fa fa-hashtag"></i>
+                            </span>
+                            <input id="CustomerRefNo" class="form-control form-control-sm">
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <label class="m-0 small">Proje Numarası</label>
+                        <div class="input-group input-group-sm">
+                            <span class="input-group-text bg-transparent border-right-0">
+                                <i class="fa fa-briefcase"></i>
+                            </span>
+                            <input id="ProjectNo" class="form-control form-control-sm">
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <label class="m-0 small">Talep Eden Gemi</label>
+                        <div class="input-group input-group-sm">
+                            <span class="input-group-text bg-transparent border-right-0">
+                                <i class="fa fa-ship"></i>
+                            </span>
+                            <input id="VesselName" class="form-control form-control-sm">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mb-10">
+                    <div class="col-md-3">
+                        <label class="m-0 small">Sorumlu Kullanıcı</label>
+                        <div class="input-group input-group-sm">
+                            <span class="input-group-text bg-transparent border-right-0">
+                                <i class="fa fa-user"></i>
+                            </span>
+                            <select id="ResponsibleUser" class="form-select form-select-sm">
+                                <option value="">Seçiniz</option>
+                            <option value="5">ADHIL SHAH</option>
+<option value="6">AVINASH MENON</option>
+<option value="16">Beyza Nur Özdin</option>
+<option value="12">CAGATAY ARSLAN</option>
+<option value="7">CAN ARSLAN</option>
+<option value="8">ECE YILDIRIM</option>
+<option value="11">EMRE HELVACI</option>
+<option value="1">JUSTIN SOLOMON</option>
+<option value="9">MERT SEREF</option>
+<option value="4">METE TURKAY KARAKULLUKCU</option>
+<option value="10">MUHAMMET NAMA</option>
+<option value="2">SANDRA SNIZHKO</option>
+</select>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <label class="m-0 small">Sipariş / Ödeme Durumu</label>
+                        <div class="input-group input-group-sm">
+                            <span class="input-group-text bg-transparent border-right-0">
+                                <i class="fa fa-info-circle"></i>
+                            </span>
+                            <input id="OrderStatus" class="form-control form-control-sm text-danger" value="Sipariş Oluşturuldu">
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <label class="m-0 small">İşlem Tarihi</label>
+                        <div class="input-group input-group-sm">
+                            <span class="input-group-text bg-transparent border-right-0">
+                                <i class="fa fa-calendar"></i>
+                            </span>
+                            <input id="TransactionDate" type="date" class="form-control form-control-sm" value="2026-02-10">
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <label class="m-0 small">Döviz Cinsi</label>
+                        <div class="input-group input-group-sm">
+                            <span class="input-group-text bg-transparent border-right-0">
+                                <i class="fa fa-dollar-sign"></i>
+                            </span>
+                            <select id="Currency" class="form-select form-select-sm text-uppercase">
+                                <option value="USD">USD</option>
+                                <option value="EUR" selected="selected">EUR</option>
+                                <option value="TRY">TRY</option>
+                            </select>
+                        </div>
+                    </div>
+
+                   
+                </div>
+
+                <div class="row mb-10">
+                    <div class="col-md-3">
+                        <label class="m-0 small">Teslim Yeri</label>
+                        <div class="input-group input-group-sm">
+                            <span class="input-group-text bg-transparent border-right-0">
+                                <i class="fa fa-map-marker-alt"></i>
+                            </span>
+                            <input id="DeliveryLocation" class="form-control form-control-sm">
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <label class="m-0 small">Çıkış Deposu</label>
+                        <div class="input-group input-group-sm">
+                            <span class="input-group-text bg-transparent border-right-0">
+                                <i class="fa fa-warehouse"></i>
+                            </span>
+                            <select id="OutputWarehouseId" class="form-select form-select-sm">
+                                <option value="">Seçiniz</option>
+                            <option value="1">Merkez İstanbul-Tuzla</option>
+<option value="2">FB DEPO - İST/FB</option>
+</select>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <label class="m-0 small">Teslim Zamanı</label>
+                        <div class="input-group input-group-sm">
+                            <span class="input-group-text bg-transparent border-right-0">
+                                <i class="fa fa-calendar-check"></i>
+                            </span>
+                            <input id="DeliveryTime" type="text" class="form-control form-control-sm">
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <label class="m-0 small">Teslim Şekli</label>
+                        <div class="input-group input-group-sm">
+                            <span class="input-group-text bg-transparent border-right-0">
+                                <i class="fa fa-truck"></i>
+                            </span>
+                            <select id="DeliveryType" class="form-select form-select-sm">
+                                <option value="">Seçiniz</option>
+                            <option value="1">Kargo</option>
+<option value="2">Firma Kendisi Alacak</option>
+<option value="3">Sevkiyat Bize Ait</option>
+<option value="4">Moto Kurye</option>
+</select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mb-10">
+                    <div class="col-md-2">
+                        <label class="m-0 small">Ödeme Planı</label>
+                        <div class="input-group input-group-sm">
+                            <span class="input-group-text bg-transparent border-right-0">
+                                <i class="fa fa-credit-card"></i>
+                            </span>
+                            <input id="PaymentPlan" class="form-control form-control-sm" value="0">
+                        </div>
+                    </div>
+
+                    <div class="col-md-2">
+                        <label class="m-0 small">Custom Fee</label>
+                        <div class="input-group input-group-sm">
+                            <span class="input-group-text bg-transparent border-right-0">
+                                <i class="fa fa-dollar-sign"></i>
+                            </span>
+                            <input id="CustomFee" type="number" step="0.01" class="form-control form-control-sm">
+                        </div>
+                    </div>
+
+                    <div class="col-md-2">
+                        <label class="m-0 small">Transportation</label>
+                        <div class="input-group input-group-sm">
+                            <span class="input-group-text bg-transparent border-right-0">
+                                <i class="fa fa-truck-moving"></i>
+                            </span>
+                            <input id="Transportation" type="number" step="0.01" class="form-control form-control-sm">
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <label class="m-0 small">Fatura Numarası</label>
+                        <div class="input-group input-group-sm">
+                            <span class="input-group-text bg-transparent border-right-0">
+                                <i class="fa fa-file-invoice"></i>
+                            </span>
+                            <input id="InvoiceNo" class="form-control form-control-sm">
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <label class="m-0 small">Fatura Tarihi</label>
+                        <div class="input-group input-group-sm">
+                            <span class="input-group-text bg-transparent border-right-0">
+                                <i class="fa fa-calendar"></i>
+                            </span>
+                            <input id="InvoiceDate" type="date" class="form-control form-control-sm">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12">
+                    <div class="input-group input-group-sm">
+                        <span class="input-group-text bg-transparent border-right-0">
+                            Not
+                        </span>
+                        <input id="Note" class="form-control form-control-sm">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+}
+
+Satın Alma/Takip{
+    <tr>
+                            <td>
+                                10.02.2026
+                                <div class="small text-muted">
+                                    Takip No: 
+                                </div>
+                            </td>
+                            <td>4</td> 
+                            <td></td>
+                            <td>
+                                ACA SHIPMANAGEMENT SA
+                                <div class="small text-muted"></div>
+                            </td>
+                            <td>01.01.0001</td>
+                            <td class="text-center">
+                                    <span class="badge bg-danger">739664</span>
+                            </td>
+                            <td>
+                                <div class="dropdown">
+                                    <button class="btn btn-soft-secondary btn-sm dropdown-toggle w-100 status-dropdown-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <span class="badge  font-10 w-100">
+                                            Açık
+                                        </span>
+                                    </button>
+
+                                    <ul class="dropdown-menu">
+                                            <li>
+                                                <a class="dropdown-item order-status-item" data-id="4" data-status="Teslim Alındı">
+                                                    <i class="fa fa-check me-1 text-dark"></i> Teslim Alındı
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item order-status-item" data-id="4" data-status="İptal">
+                                                    <i class="fa fa-undo me-1 text-dark"></i> İptal
+                                                </a>
+                                            </li>
+                                    </ul>
+                                </div>
+                            </td>
+
+                            <td class="text-end">
+                                0,00
+                                <span class="text-muted">EUR</span>
+                            </td>
+
+                            <td class="text-center">
+                                <div class="btn-group btn-group-sm" role="group">
+                                    <button type="button" class="btn btn-soft-warning btn-sm dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                        İşlemler
+                                    </button>
+                                    <ul class="dropdown-menu dropdown-menu-end" style="">
+                                        <li>
+                                            <a class="dropdown-item" href="javascript:void(0);" onclick="OrderDetails(4)">
+                                                <i class="fa fa-pen me-2"></i>Düzenle
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="javascript:void(0);" onclick="OrderDelete(4)">
+                                                <i class="fa fa-trash me-2"></i>Sil
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="javascript:void(0);" onclick="CreateOrderForm(4)">
+                                                <i class="fa fa-file-alt me-2"></i>Sipariş Formu Oluştur
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="javascript:void(0);" onclick="GoToOffer(9)">
+                                                <i class="fa fa-arrow-right me-2"></i>Teklife Git
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </td>
+
+                        </tr>
+}
+
+Satın Alma/Geciken{
+    <tr>
+                            <td>
+                                10.02.2026
+                                <div class="small text-muted">
+                                    Takip No: 
+                                </div>
+                            </td>
+                            <td>4</td> 
+                            <td></td>
+                            <td>
+                                ACA SHIPMANAGEMENT SA
+                                <div class="small text-muted"></div>
+                            </td>
+                            <td>01.01.0001</td>
+                            <td class="text-center">
+                                    <span class="badge bg-danger">739664</span>
+                            </td>
+                            <td>
+                                <div class="dropdown">
+                                    <button class="btn btn-soft-secondary btn-sm dropdown-toggle w-100 status-dropdown-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <span class="badge  font-10 w-100">
+                                            Açık
+                                        </span>
+                                    </button>
+
+                                    <ul class="dropdown-menu">
+                                            <li>
+                                                <a class="dropdown-item order-status-item" data-id="4" data-status="Teslim Alındı">
+                                                    <i class="fa fa-check me-1 text-dark"></i> Teslim Alındı
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item order-status-item" data-id="4" data-status="İptal">
+                                                    <i class="fa fa-undo me-1 text-dark"></i> İptal
+                                                </a>
+                                            </li>
+                                    </ul>
+                                </div>
+                            </td>
+
+                            <td class="text-end">
+                                0,00
+                                <span class="text-muted">EUR</span>
+                            </td>
+
+                            <td class="text-center">
+                                <div class="btn-group btn-group-sm" role="group">
+                                    <button type="button" class="btn btn-soft-warning btn-sm dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                        İşlemler
+                                    </button>
+                                    <ul class="dropdown-menu dropdown-menu-end">
+                                        <li>
+                                            <a class="dropdown-item" href="javascript:void(0);" onclick="OrderDetails(4)">
+                                                <i class="fa fa-pen me-2"></i>Düzenle
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="javascript:void(0);" onclick="OrderDelete(4)">
+                                                <i class="fa fa-trash me-2"></i>Sil
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="javascript:void(0);" onclick="CreateOrderForm(4)">
+                                                <i class="fa fa-file-alt me-2"></i>Sipariş Formu Oluştur
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="javascript:void(0);" onclick="GoToOffer(9)">
+                                                <i class="fa fa-arrow-right me-2"></i>Teklife Git
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </td>
+
+                        </tr>
+}
+
+Satın Alma/Tedarikçiler{
+    <div class="tab-content">
+
+            <!-- 1-General -->
+            <div id="General" class="tab-pane fade show active">
+
+                <div class="row p-1">
+
+                    <!-- PartnerName -->
+                    <div class="col-md-12 mb-2">
+                        <div class="input-group">
+                            <div class="input-group-text wd-120"><span>Cari Adı</span></div>
+                            <input type="text" class="form-control font-bold" placeholder="Cari Adı" id="Partner_PartnerName" name="Partner.PartnerName" value="2M GEMİ VE HIRDAVAT MALZ.SAN.VE TİC.LTD.ŞTİ MEHMET">
+                            <input type="text" class="form-control text-center" style="max-width:150px!important" readonly="" id="Partner_PartnerCode" name="Partner.PartnerCode" value="320.01.0369">
+                        </div>
+                    </div>
+
+                    <!-- ShortName -->
+                    <div class="col-md-12 mb-2">
+                        <div class="input-group">
+                            <div class="input-group-text wd-120">Kısa Ad</div>
+                            <input type="text" class="form-control" placeholder="Kısa Ad" id="Partner_ShortName" name="Partner.ShortName" value="2M GEMİ VE HIRDAVAT MALZ.SAN.VE TİC.LTD.ŞTİ MEHMET">
+                        </div>
+                    </div>
+
+                    <!-- OwnerName -->
+                    <div class="col-md-12 mb-2">
+                        <div class="input-group">
+                            <div class="input-group-text wd-120">Sahibinin Adı</div>
+                            <input type="text" class="form-control" placeholder="Sahibinin Adı" id="Partner_OwnerName" name="Partner.OwnerName" value="">
+                            <input type="text" class="form-control text-center" style="max-width:150px!important" readonly="" id="Partner_AccountCode" name="Partner.AccountCode" value="320.01.0369">
+                        </div>
+                    </div>
+
+                    <!-- ContactName + Yurtdışı -->
+                    <div class="col-md-12 mb-2">
+                        <div class="input-group">
+                            <div class="input-group-text wd-120">Kişi Adı</div>
+
+                            <input type="text" class="form-control" placeholder="Kişi Adı" id="Partner_ContactPerson" name="Partner.ContactPerson" value="">
+
+                            <!-- Yurtdışı checkbox -->
+                            <div class="input-group-text" style="min-width:150px;">
+                                <div class="form-check m-0 d-flex align-items-center gap-2">
+                                    <input class="form-check-input m-0" type="checkbox" id="Partner_IsAbroad" data-val="true" data-val-required="The IsAbroad field is required." name="Partner.IsAbroad" value="true">
+                                    <label class="form-check-label mb-0" for="Partner_IsAbroad">
+                                        Yurtdışı
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <!-- PartnerTypes -->
+                    <div class="col-md-6 mb-2">
+                        <div class="input-group">
+                            <div class="input-group-text wd-120">Tip</div>
+                            <select id="partnertype" class="form-select" name="Partner.Type">
+                                <option value="">?</option>
+                            <option value="Agent">Agent</option>
+<option value="Customer">Customer</option>
+<option value="Maker">Maker</option>
+<option selected="selected" value="Supplier">Supplier</option>
+</select>
+                        </div>
+                    </div>
+
+                    <!-- Grup -->
+                    <div class="col-md-6 mb-2">
+                        <div class="input-group">
+                            <div class="input-group-text wd-120">Grup</div>
+                            <select class="form-select" id="Partner_GroupId" name="Partner.GroupId">
+                            <option value="">Hepsi</option>
+<option value="449">KABLOCU</option>
+<option value="450">ELEKTRIK</option>
+<option value="451">MOTOR VE POMPA EKIPMANLARI</option>
+<option value="452">FILTRE</option>
+<option value="454">OTOMASYON</option>
+<option value="455">GAZ</option>
+<option value="458">SPOTCULAR</option>
+<option value="459">CIVATA</option>
+<option value="460">RULMAN</option>
+<option value="461">KUMLAMA</option>
+<option value="462">Gaz ve Ölçüm Cihazları</option>
+<option value="463">KUMANYA</option>
+<option value="464">HARITA BAYRAK IMO</option>
+<option value="466">KUMANYA SARKUTERI</option>
+<option value="467">YUMURTA KUMANYA </option>
+<option value="468">KISISEL DONANIM URUNLERI</option>
+<option value="469">AMBALAJCILAR TEMIZLIK</option>
+<option value="470">TELSIZ VE HABERLESME</option>
+<option value="471">YEDEK PARCA</option>
+<option value="472">AKU</option>
+<option value="473">ILAC VE REVIR EKIPMANLARI</option>
+<option value="474">CAM GEMI</option>
+<option value="475">METAL URUNLER</option>
+<option value="476">HORTUM VE EKIPMANLARI</option>
+<option value="477">TUTYA</option>
+<option value="478">ORMAN URUNLERI</option>
+<option value="479">KARTUS YAZICI </option>
+<option value="481">KAYNAK MALZEMELERİ</option>
+<option value="482">SPOR MALZEMELERI</option>
+<option value="483">Askeri ve Av Malzemeleri</option>
+<option value="484">MOBILYA</option>
+<option value="485">PIL </option>
+<option value="486">IZOLASYON ve YALITIM EKIPMANLAR</option>
+<option value="487">BALATA FREN</option>
+<option value="488">BASINC GOSTERGELERI </option>
+<option value="489">KONTEYNER EKIPMANLARI</option>
+<option value="490">MEYVE SEBZE KUMANYA</option>
+<option value="491">YANGIN SAFETY</option>
+<option value="492">INSAAT URUNLERI</option>
+<option value="493">KOMPROSOR</option>
+<option value="494">BORU HIDROLIK</option>
+<option value="495">PVC KAPLAMA</option>
+<option value="496">IZGARA</option>
+<option value="499">OYUN</option>
+<option value="500">SARI METAL URUNLER</option>
+<option value="501">BAGLANTI EKIPMANLARI METAL</option>
+<option value="502">SERVIS SAFETY</option>
+<option value="503">İZOLASYON</option>
+<option value="504">YAĞ</option>
+<option value="505">ÇÖP KONTEYNIR</option>
+<option value="506">SEGMAN</option>
+<option value="507">KONTRAPLAK</option>
+<option value="508">YANGIN TÜPÜ</option>
+<option value="509">SU JETİ</option>
+<option value="510">KALİBRASYON</option>
+<option value="511">TEL</option>
+<option value="512">KIYAFET</option>
+<option value="429">Mutfak</option>
+<option value="448">Souğutma Grubu</option>
+<option value="430">Temizlik</option>
+<option value="431">Halat ve güverte ekipmanları</option>
+<option value="432">Kumlama Ekipmanları</option>
+<option value="433">BOYA Gemi </option>
+<option value="434">Yapıştırıcı ve grupları</option>
+<option value="435">Safety</option>
+<option value="436">Petrol ve yakıt</option>
+<option value="437">Kırtasiye</option>
+<option value="438">Hırdavat ve El malzemeleri  </option>
+<option value="439">Kımyasal Gemi</option>
+<option value="440">Hidrolikçiler</option>
+<option value="441">Ölçüm saatleri ve ekipmanlar</option>
+<option value="442">Borular</option>
+<option value="443">Vana ve bağlantı ekipmanları</option>
+<option value="444">Sızdırmazlık ürünleri</option>
+<option value="445">İmalatcılar</option>
+<option value="446">Paslanmazcılar</option>
+<option value="447">Bakır ürünleri</option>
+</select>
+                        </div>
+                    </div>
+
+                    <!-- Currency -->
+                    <div class="col-md-6 mb-2">
+                        <div class="input-group mb-10">
+                            <div class="input-group-text wd-120">PB</div>
+                            <select class="form-select" id="Partner_Currency" name="Partner.Currency">
+                                <option value="TL">TL</option>
+                                <option value="USD">USD</option>
+                                <option value="EUR">EUR</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Rating -->
+                    <div class="col-md-6 mb-2">
+                        <div class="input-group mb-10">
+                            <div class="input-group-text wd-120">DeÄŸerlendirme</div>
+                            <select class="form-select" id="Partner_Rating" name="Partner.Rating">
+                                <option value="1">Bad</option>
+                                <option value="2">Poor</option>
+                                <option value="3">Fair</option>
+                                <option value="4">Good</option>
+                                <option value="5">Excellent</option>
+                            </select>
+                        </div>
+                    </div>
+
+
+                    <!-- TaxNumber -->
+                    <div class="col-md-6 mb-2">
+                        <div class="input-group">
+                            <div class="input-group-text wd-120">Vergi No</div>
+                            <input type="text" class="form-control" placeholder="Vergi No" id="Partner_TaxNumber" name="Partner.TaxNumber" value="">
+                        </div>
+                    </div>
+
+                    <!-- TaxOffice -->
+                    <div class="col-md-6 mb-2">
+                        <div class="input-group">
+                            <div class="input-group-text wd-120">Vergi Dairesi</div>
+                            <input type="text" class="form-control" placeholder="Vergi Dairesi" id="Partner_TaxOffice" name="Partner.TaxOffice" value="">
+                        </div>
+                    </div>
+
+
+                    <!-- JoiningDate -->
+                    <div class="col-md-6 mb-2">
+                        <div class="input-group">
+                            <div class="input-group-text wd-120">Katılış Tarihi</div>
+                            <input type="date" class="form-control" data-val="true" data-val-required="The ApprovedDate field is required." id="Partner_ApprovedDate" name="Partner.ApprovedDate" value="2026-02-17">
+                        </div>
+                    </div>
+                    <!-- ApprovedDate -->
+                    <div class="col-md-6 mb-2">
+                        <div class="input-group">
+                            <div class="input-group-text wd-120">Onay Tarihi</div>
+                            <input type="date" class="form-control" id="Partner_ApprovedDate" name="Partner.ApprovedDate" value="2026-02-17">
+                        </div>
+                    </div>
+
+                    <!-- OfficePhone1 -->
+                    <div class="col-md-6 mb-2">
+                        <div class="input-group">
+                            <div class="input-group-text wd-120">Telefon 1</div>
+                            <input type="text" class="form-control" placeholder="Ofis Telefonu 1" id="Partner_Phone1" name="Partner.Phone1" value="">
+                        </div>
+                    </div>
+
+                    <!-- OfficePhone2 -->
+                    <div class="col-md-6 mb-2">
+                        <div class="input-group">
+                            <div class="input-group-text wd-120">Telefon 2</div>
+                            <input type="text" class="form-control" placeholder="Ofis Telefonu 2" id="Partner_Phone2" name="Partner.Phone2" value="">
+                        </div>
+                    </div>
+
+                    <!-- Country -->
+                    <div class="col-md-6 mb-2">
+                        <div class="input-group">
+                            <div class="input-group-text wd-120">Ülke</div>
+                            <select id="ddlCountry" class="form-select text-uppercase" name="Partner.Country">
+                                <option value="">?</option>
+                            <option value="ABD Virjin Adaları">ABD Virjin Adaları</option>
+<option value="Afganistan">Afganistan</option>
+<option value="Almanya">Almanya</option>
+<option value="Amerika Birleşik Devletleri">Amerika Birleşik Devletleri</option>
+<option value="Amerikan Samoası">Amerikan Samoası</option>
+<option value="Andorra">Andorra</option>
+<option value="Angora">Angora</option>
+<option value="Anguilla">Anguilla</option>
+<option value="Antigua ve Barbuda">Antigua ve Barbuda</option>
+<option value="Arjantin">Arjantin</option>
+<option value="Arnavutluk">Arnavutluk</option>
+<option value="Aruba">Aruba</option>
+<option value="Avustralya">Avustralya</option>
+<option value="Avusturya">Avusturya</option>
+<option value="Azerbeycan">Azerbeycan</option>
+<option value="Aziz Pierre ve Miquelon">Aziz Pierre ve Miquelon</option>
+<option value="Bahamalar">Bahamalar</option>
+<option value="Bahreyn">Bahreyn</option>
+<option value="Bangladeş">Bangladeş</option>
+<option value="Barbados">Barbados</option>
+<option value="Belçika">Belçika</option>
+<option value="Belize">Belize</option>
+<option value="Benin">Benin</option>
+<option value="Beyaz rusya">Beyaz rusya</option>
+<option value="Bhutan">Bhutan</option>
+<option value="Birleşik Arap Emirlikleri">Birleşik Arap Emirlikleri</option>
+<option value="Bolivya">Bolivya</option>
+<option value="Bosna Hersek">Bosna Hersek</option>
+<option value="Botsvana">Botsvana</option>
+<option value="Brezilya">Brezilya</option>
+<option value="Britanya Virjin Adaları">Britanya Virjin Adaları</option>
+<option value="Brunei">Brunei</option>
+<option value="Buğdan">Buğdan</option>
+<option value="Bulgaristan">Bulgaristan</option>
+<option value="Burkina Faso">Burkina Faso</option>
+<option value="Burundi">Burundi</option>
+<option value="Büyük Britanya">Büyük Britanya</option>
+<option value="Cayman adaları">Cayman adaları</option>
+<option value="Cebelitarık">Cebelitarık</option>
+<option value="Cezayir">Cezayir</option>
+<option value="Cibuti">Cibuti</option>
+<option value="Cocos Adaları">Cocos Adaları</option>
+<option value="Cook Adaları">Cook Adaları</option>
+<option value="Curacao">Curacao</option>
+<option value="Çad">Çad</option>
+<option value="Çek Cumhuriyeti">Çek Cumhuriyeti</option>
+<option value="Çin">Çin</option>
+<option value="Danimarka">Danimarka</option>
+<option value="Dem. Cum. Kongo">Dem. Cum. Kongo</option>
+<option value="Doğu Timor">Doğu Timor</option>
+<option value="Dominik Cumhuriyeti">Dominik Cumhuriyeti</option>
+<option value="Dominika">Dominika</option>
+<option value="Ekvador">Ekvador</option>
+<option value="Ekvator Ginesi">Ekvator Ginesi</option>
+<option value="Endonezya">Endonezya</option>
+<option value="Eritre">Eritre</option>
+<option value="Ermenistan">Ermenistan</option>
+<option value="Estonya">Estonya</option>
+<option value="Etiyopya">Etiyopya</option>
+<option value="Falkland">Falkland</option>
+<option value="Faroe Adaları">Faroe Adaları</option>
+<option value="Fas">Fas</option>
+<option value="Fiji">Fiji</option>
+<option value="Fildişi Sahilleri">Fildişi Sahilleri</option>
+<option value="Filipinler">Filipinler</option>
+<option value="Filistin">Filistin</option>
+<option value="Finlandiya">Finlandiya</option>
+<option value="Fransa">Fransa</option>
+<option value="Fransız Polinezyası">Fransız Polinezyası</option>
+<option value="Gabon">Gabon</option>
+<option value="Gambiya">Gambiya</option>
+<option value="Gana">Gana</option>
+<option value="Georgia">Georgia</option>
+<option value="Gine">Gine</option>
+<option value="Gine-Bissau">Gine-Bissau</option>
+<option value="Grenada">Grenada</option>
+<option value="Grönland">Grönland</option>
+<option value="Guadeloupe">Guadeloupe</option>
+<option value="Guam">Guam</option>
+<option value="Guatemala">Guatemala</option>
+<option value="Guyana">Guyana</option>
+<option value="Guyanası">Guyanası</option>
+<option value="Güney Afrika">Güney Afrika</option>
+<option value="Güney Kore">Güney Kore</option>
+<option value="Güney Sudan'ın">Güney Sudan'ın</option>
+<option value="Haiti">Haiti</option>
+<option value="Hırvatistan">Hırvatistan</option>
+<option value="Hindistan">Hindistan</option>
+<option value="Hollanda">Hollanda</option>
+<option value="Honduras">Honduras</option>
+<option value="Hong Kong">Hong Kong</option>
+<option value="Irak">Irak</option>
+<option value="İngiltere">İngiltere</option>
+<option value="İran">İran</option>
+<option value="İrlanda">İrlanda</option>
+<option value="İspanya">İspanya</option>
+<option value="İsrail">İsrail</option>
+<option value="İsveç">İsveç</option>
+<option value="İsviçre">İsviçre</option>
+<option value="İtalya">İtalya</option>
+<option value="İzlanda">İzlanda</option>
+<option value="Jamaika">Jamaika</option>
+<option value="Japonya">Japonya</option>
+<option value="Jersey">Jersey</option>
+<option value="Kamboçya">Kamboçya</option>
+<option value="Kamerun">Kamerun</option>
+<option value="Kanada">Kanada</option>
+<option value="Kanarya Adaları">Kanarya Adaları</option>
+<option value="Karadağ">Karadağ</option>
+<option value="Karayip Hollandası">Karayip Hollandası</option>
+<option value="Katar">Katar</option>
+<option value="Kazakistan">Kazakistan</option>
+<option value="Kenya">Kenya</option>
+<option value="Kıbrıs">Kıbrıs</option>
+<option value="Kırgızistan">Kırgızistan</option>
+<option value="Kiribati">Kiribati</option>
+<option value="Kolombiya">Kolombiya</option>
+<option value="Komorlar">Komorlar</option>
+<option value="Kongo Cumhuriyeti">Kongo Cumhuriyeti</option>
+<option value="Kosova">Kosova</option>
+<option value="Kostarika">Kostarika</option>
+<option value="Kuveyt">Kuveyt</option>
+<option value="Kuzey Kore">Kuzey Kore</option>
+<option value="Kuzey Mariana Adaları">Kuzey Mariana Adaları</option>
+<option value="Küba">Küba</option>
+<option value="Laos">Laos</option>
+<option value="Letonya">Letonya</option>
+<option value="Liberya">Liberya</option>
+<option value="Libya">Libya</option>
+<option value="Lihtenştayn">Lihtenştayn</option>
+<option value="Litvanya">Litvanya</option>
+<option value="Lucia">Lucia</option>
+<option value="Lübnan">Lübnan</option>
+<option value="Lüksemburg">Lüksemburg</option>
+<option value="Macaristan">Macaristan</option>
+<option value="Madagaskar">Madagaskar</option>
+<option value="Madeira">Madeira</option>
+<option value="Makao">Makao</option>
+<option value="Makedonya">Makedonya</option>
+<option value="Malawi">Malawi</option>
+<option value="Maldivler">Maldivler</option>
+<option value="Malezya">Malezya</option>
+<option value="Mali">Mali</option>
+<option value="Malta">Malta</option>
+<option value="Man Adası">Man Adası</option>
+<option value="Marshall Adaları">Marshall Adaları</option>
+<option value="Martinik">Martinik</option>
+<option value="Mauritius">Mauritius</option>
+<option value="Mayotte">Mayotte</option>
+<option value="Meksika">Meksika</option>
+<option value="Mısır">Mısır</option>
+<option value="Mikronezya">Mikronezya</option>
+<option value="Moğolistan">Moğolistan</option>
+<option value="Monako">Monako</option>
+<option value="Montserrat">Montserrat</option>
+<option value="Moritanya">Moritanya</option>
+<option value="Mozambik">Mozambik</option>
+<option value="Myanmar">Myanmar</option>
+<option value="Namibya">Namibya</option>
+<option value="Nauru">Nauru</option>
+<option value="Nepal">Nepal</option>
+<option value="Nijer">Nijer</option>
+<option value="Nijerya">Nijerya</option>
+<option value="Nikaragua">Nikaragua</option>
+<option value="Niue">Niue</option>
+<option value="Noel ada">Noel ada</option>
+<option value="Norfolk Adası">Norfolk Adası</option>
+<option value="Norveç">Norveç</option>
+<option value="Orta Afrika">Orta Afrika</option>
+<option value="Özbekistan">Özbekistan</option>
+<option value="Pakistan">Pakistan</option>
+<option value="Palau">Palau</option>
+<option value="Panama">Panama</option>
+<option value="Papua">Papua</option>
+<option value="Paraguay">Paraguay</option>
+<option value="Peru">Peru</option>
+<option value="Pitcairn ada">Pitcairn ada</option>
+<option value="Polonya">Polonya</option>
+<option value="Portekiz">Portekiz</option>
+<option value="Porto-Riko">Porto-Riko</option>
+<option value="Réunion">Réunion</option>
+<option value="Romanya">Romanya</option>
+<option value="Ruanda">Ruanda</option>
+<option value="Rusya">Rusya</option>
+<option value="Saint Helena, Ascension ve Tristan da Cunha">Saint Helena, Ascension ve Tristan da Cunha</option>
+<option value="Saint Kitts and Nevis">Saint Kitts and Nevis</option>
+<option value="Saint Vincent ve Grenadinler">Saint Vincent ve Grenadinler</option>
+<option value="Saint-Barthelemy">Saint-Barthelemy</option>
+<option value="Saint-Martin">Saint-Martin</option>
+<option value="Salvador">Salvador</option>
+<option value="Samoa">Samoa</option>
+<option value="San Marino">San Marino</option>
+<option value="Sao Tome ve Principe">Sao Tome ve Principe</option>
+<option value="SDAC">SDAC</option>
+<option value="Senegal">Senegal</option>
+<option value="Seyşeller">Seyşeller</option>
+<option value="Sırbistan">Sırbistan</option>
+<option value="Sierra Leone">Sierra Leone</option>
+<option value="Singapur">Singapur</option>
+<option value="Sint Maarten">Sint Maarten</option>
+<option value="Slovakya">Slovakya</option>
+<option value="Slovenya">Slovenya</option>
+<option value="Solomon Adaları">Solomon Adaları</option>
+<option value="Somali">Somali</option>
+<option value="Sri Lanka">Sri Lanka</option>
+<option value="Sudan">Sudan</option>
+<option value="Surinam">Surinam</option>
+<option value="Suriye">Suriye</option>
+<option value="Suudi Arabistan">Suudi Arabistan</option>
+<option value="Svaziland">Svaziland</option>
+<option value="Şili">Şili</option>
+<option value="Tacikistan">Tacikistan</option>
+<option value="Tanzanya">Tanzanya</option>
+<option value="Tayland">Tayland</option>
+<option value="Tayvan">Tayvan</option>
+<option value="Togo">Togo</option>
+<option value="Tokelau">Tokelau</option>
+<option value="Tonga">Tonga</option>
+<option value="Transdinyester">Transdinyester</option>
+<option value="Trinidad ve Tobago">Trinidad ve Tobago</option>
+<option value="Tunus">Tunus</option>
+<option value="Turks ve Caicos">Turks ve Caicos</option>
+<option value="Tuvalu">Tuvalu</option>
+<option value="TÜRKİYE">TÜRKİYE</option>
+<option value="Türkmenistan">Türkmenistan</option>
+<option value="Uganda">Uganda</option>
+<option value="Ukrayna">Ukrayna</option>
+<option value="Umman">Umman</option>
+<option value="Uruguay">Uruguay</option>
+<option value="uzun şort">uzun şort</option>
+<option value="Ürdün">Ürdün</option>
+<option value="Vanuatu">Vanuatu</option>
+<option value="Vatikan">Vatikan</option>
+<option value="Venezuela">Venezuela</option>
+<option value="Vietnam">Vietnam</option>
+<option value="Wallis ve Futuna">Wallis ve Futuna</option>
+<option value="Yemen">Yemen</option>
+<option value="yeni Kaledonya">yeni Kaledonya</option>
+<option value="yeni Zelanda">yeni Zelanda</option>
+<option value="Yeşil burun">Yeşil burun</option>
+<option value="Yunanistan">Yunanistan</option>
+<option value="Zambiya">Zambiya</option>
+<option value="Zimbabve">Zimbabve</option>
+</select>
+                        </div>
+                    </div>
+
+                    <!-- City -->
+                    <div class="col-md-6 mb-2">
+                        <div class="input-group">
+                            <div class="input-group-text wd-120">Şehir</div>
+                            <select id="ddlCities" class="form-select text-uppercase" name="Partner.City">
+                                <option value="">?</option>
+                            <option value="ADANA">ADANA</option>
+<option value="ADIYAMAN">ADIYAMAN</option>
+<option value="AFYON">AFYON</option>
+<option value="AĞRI">AĞRI</option>
+<option value="AKSARAY">AKSARAY</option>
+<option value="AMASYA">AMASYA</option>
+<option value="ANKARA">ANKARA</option>
+<option value="ANTALYA">ANTALYA</option>
+<option value="ARDAHAN">ARDAHAN</option>
+<option value="ARTVİN">ARTVİN</option>
+<option value="AYDIN">AYDIN</option>
+<option value="BALIKESİR">BALIKESİR</option>
+<option value="BARTIN">BARTIN</option>
+<option value="BATMAN">BATMAN</option>
+<option value="BAYBURT">BAYBURT</option>
+<option value="BİLECİK">BİLECİK</option>
+<option value="BİNGÖL">BİNGÖL</option>
+<option value="BİTLİS">BİTLİS</option>
+<option value="BOLU">BOLU</option>
+<option value="BURDUR">BURDUR</option>
+<option value="BURSA">BURSA</option>
+<option value="ÇANAKKALE">ÇANAKKALE</option>
+<option value="ÇANKIRI">ÇANKIRI</option>
+<option value="ÇORUM">ÇORUM</option>
+<option value="DENİZLİ">DENİZLİ</option>
+<option value="DİYARBAKIR">DİYARBAKIR</option>
+<option value="DÜZCE">DÜZCE</option>
+<option value="EDİRNE">EDİRNE</option>
+<option value="ELAZIĞ">ELAZIĞ</option>
+<option value="ERZİNCAN">ERZİNCAN</option>
+<option value="ERZURUM">ERZURUM</option>
+<option value="ESKİŞEHİR">ESKİŞEHİR</option>
+<option value="GAZİANTEP">GAZİANTEP</option>
+<option value="GİRESUN">GİRESUN</option>
+<option value="GÜMÜŞHANE">GÜMÜŞHANE</option>
+<option value="HAKKARİ">HAKKARİ</option>
+<option value="HATAY">HATAY</option>
+<option value="IĞDIR">IĞDIR</option>
+<option value="ISPARTA">ISPARTA</option>
+<option value="İSTANBUL">İSTANBUL</option>
+<option value="İZMİR">İZMİR</option>
+<option value="K.MARAŞ">K.MARAŞ</option>
+<option value="KARABÜK">KARABÜK</option>
+<option value="KARAMAN">KARAMAN</option>
+<option value="KARS">KARS</option>
+<option value="KASTAMONU">KASTAMONU</option>
+<option value="KAYSERİ">KAYSERİ</option>
+<option value="KIRIKKALE">KIRIKKALE</option>
+<option value="KIRKLARELİ">KIRKLARELİ</option>
+<option value="KIRŞEHİR">KIRŞEHİR</option>
+<option value="KİLİS">KİLİS</option>
+<option value="KOCAELİ">KOCAELİ</option>
+<option value="KONYA">KONYA</option>
+<option value="KÜTAHYA">KÜTAHYA</option>
+<option value="MALATYA">MALATYA</option>
+<option value="MANİSA">MANİSA</option>
+<option value="MARDİN">MARDİN</option>
+<option value="MERSİN">MERSİN</option>
+<option value="MUĞLA">MUĞLA</option>
+<option value="MUŞ">MUŞ</option>
+<option value="NEVŞEHİR">NEVŞEHİR</option>
+<option value="NİĞDE">NİĞDE</option>
+<option value="ORDU">ORDU</option>
+<option value="OSMANİYE">OSMANİYE</option>
+<option value="RİZE">RİZE</option>
+<option value="SAKARYA">SAKARYA</option>
+<option value="SAMSUN">SAMSUN</option>
+<option value="SİİRT">SİİRT</option>
+<option value="SİNOP">SİNOP</option>
+<option value="SİVAS">SİVAS</option>
+<option value="Ş.URFA">Ş.URFA</option>
+<option value="ŞIRNAK">ŞIRNAK</option>
+<option value="TEKİRDAĞ">TEKİRDAĞ</option>
+<option value="TOKAT">TOKAT</option>
+<option value="TRABZON">TRABZON</option>
+<option value="TUNCELİ">TUNCELİ</option>
+<option value="UŞAK">UŞAK</option>
+<option value="VAN">VAN</option>
+<option value="YALOVA">YALOVA</option>
+<option value="YOZGAT">YOZGAT</option>
+<option value="ZONGULDAK">ZONGULDAK</option>
+</select>
+                        </div>
+                    </div>
+
+                    <!-- EMail -->
+                    <div class="col-md-12 mb-2">
+                        <div class="input-group">
+                            <div class="input-group-text wd-120">E-Posta</div>
+                            <input type="text" class="form-control" placeholder="E-Posta" id="Partner_EmailAddress" name="Partner.EmailAddress" value="">
+                        </div>
+                    </div>
+
+                    <!-- WebAddress -->
+                    <div class="input-group mb-2">
+                        <div class="input-group-text wd-120">Web Adresi</div>
+                        <input type="text" class="form-control" placeholder="WebAddress" id="Partner_WebAddress" name="Partner.WebAddress" value="">
+                    </div>
+
+                    <!-- Description -->
+                    <div class="input-group mb-2">
+                        <div class="input-group-text wd-120">Açıklama</div>
+                        <input type="text" class="form-control h-100px" placeholder="Notes" id="Partner_Notes" name="Partner.Notes" value="">
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- 2-ServiceArea -->
+            <div id="ServiceArea" class="tab-pane fade show">
+            </div>
+
+            <!-- 2b-Vessels (cariye ait gemiler) -->
+            <div id="Vessels" class="tab-pane fade show">
+            </div>
+
+            <!-- 3-Accounts -->
+            <div id="Accounts" class="tab-pane fade show">
+            </div>
+
+            <!-- 4-Documents -->
+            <div id="Documents" class="tab-pane fade show">
+                <div id="PartnerDocumentsContainer" class="p-2">
+                    <p class="text-muted text-center py-4 mb-0">Dökümanlar sekmesi — döküman listesi için sekmeye tıklayın.</p>
+                </div>
+            </div>
+
+            <!-- 5-Logo -->
+            <div id="Logo" class="tab-pane fade show">
+
+                <!-- file  -->
+                <input id="selectfile" type="hidden" name="Partner.Photo" value="">
+
+                <div class="d-flex gap-1  mb-3">
+
+                    <!-- image select -->
+                    <input id="selectfiles" type="file" class="form-control" accept="image/png,image/jpeg">
+
+                    <!-- image delete -->
+                    <button id="deleteImg" class="btn btn-soft-danger border btn-sm rounded">
+                        <i class="fa fa-trash"></i>
+                    </button>
+
+                </div>
+
+                <div class="mp-0">
+                    <!-- image source -->
+                    <img src="/images/nophoto.png" id="selectimage" alt="" class="carcard borders" style="border: 1px solid var(--bs-dark); border-radius:4px; object-fit:contain; width: 100%; height: 400px; padding: 4px;margin-bottom:4px; ">
+
+                </div>
+
+
+            </div>
+
+            <!-- 4-Status -->
+            <div id="Status" class="tab-pane fade show">
+                <div class="row">
+                    <!-- CreatedDate -->
+                    <div class="col-md-4 mt-2">
+                        <div class="form-group">
+                            <label class="control-label">Oluşturma Tarihi</label>
+                            <div class="input-group">
+                                <div class="input-group-text"><i class="fad fa-calendar"></i></div>
+                                <input type="date" class="form-control" readonly="" id="Partner_CreatedDate" name="Partner.CreatedDate" value="2026-02-17">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- CreatedBy -->
+                    <div class="col-md-8 mt-2">
+                        <div class="form-group">
+                            <label class="control-label">Oluşturan</label>
+                            <div class="input-group">
+                                <div class="input-group-text"><i class="fad fa-user"></i></div>
+                                <input type="text" class="form-control" readonly="" id="Partner_CreatedBy" name="Partner.CreatedBy" value="SYSTEM">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ModifiedDate -->
+                    <div class="col-md-4 mt-2">
+                        <div class="form-group">
+                            <label class="control-label">Değiştirilme Tarihi</label>
+                            <div class="input-group">
+                                <div class="input-group-text"><i class="fad fa-calendar"></i></div>
+                                <input type="date" class="form-control" readonly="" id="Partner_ModifiedDate" name="Partner.ModifiedDate" value="">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ModifiedBy -->
+                    <div class="col-md-8 mt-2">
+                        <div class="form-group">
+                            <label class="control-label">Değiştiren</label>
+                            <div class="input-group">
+                                <div class="input-group-text"><i class="fad fa-user"></i></div>
+                                <input type="text" class="form-control" readonly="" id="Partner_ModifiedBy" name="Partner.ModifiedBy" value="">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <!-- 6-Remarks -->
+            <div id="Remarks" class="tab-pane fade show">
+                <div id="summernote" style="display: none;"></div><div class="note-editor note-frame"><div class="note-dropzone"><div class="note-dropzone-message"></div></div><div class="note-toolbar" role="toolbar"><div class="note-btn-group note-style"><button type="button" class="note-btn note-btn-bold" tabindex="-1"><i class="note-icon-bold"></i></button><button type="button" class="note-btn note-btn-italic" tabindex="-1"><i class="note-icon-italic"></i></button><button type="button" class="note-btn note-btn-underline" tabindex="-1"><i class="note-icon-underline"></i></button><button type="button" class="note-btn" tabindex="-1"><i class="note-icon-eraser"></i></button></div><div class="note-btn-group note-font"><button type="button" class="note-btn note-btn-strikethrough" tabindex="-1"><i class="note-icon-strikethrough"></i></button><button type="button" class="note-btn note-btn-superscript" tabindex="-1"><i class="note-icon-superscript"></i></button><button type="button" class="note-btn note-btn-subscript" tabindex="-1"><i class="note-icon-subscript"></i></button></div><div class="note-btn-group note-fontsize"><div class="note-btn-group"><button type="button" class="note-btn dropdown-toggle" tabindex="-1" data-toggle="dropdown"><span class="note-current-fontsize">14</span> <span class="note-icon-caret"></span></button><div class="note-dropdown-menu note-check dropdown-fontsize" role="list" aria-label="Font Size"><a class="note-dropdown-item" href="#" data-value="8" role="listitem" aria-label="8"><i class="note-icon-menu-check"></i> 8</a><a class="note-dropdown-item" href="#" data-value="9" role="listitem" aria-label="9"><i class="note-icon-menu-check"></i> 9</a><a class="note-dropdown-item" href="#" data-value="10" role="listitem" aria-label="10"><i class="note-icon-menu-check"></i> 10</a><a class="note-dropdown-item" href="#" data-value="11" role="listitem" aria-label="11"><i class="note-icon-menu-check"></i> 11</a><a class="note-dropdown-item" href="#" data-value="12" role="listitem" aria-label="12"><i class="note-icon-menu-check"></i> 12</a><a class="note-dropdown-item checked" href="#" data-value="14" role="listitem" aria-label="14"><i class="note-icon-menu-check"></i> 14</a><a class="note-dropdown-item" href="#" data-value="18" role="listitem" aria-label="18"><i class="note-icon-menu-check"></i> 18</a><a class="note-dropdown-item" href="#" data-value="24" role="listitem" aria-label="24"><i class="note-icon-menu-check"></i> 24</a><a class="note-dropdown-item" href="#" data-value="36" role="listitem" aria-label="36"><i class="note-icon-menu-check"></i> 36</a></div></div></div><div class="note-btn-group note-color"><div class="note-btn-group note-color note-color-all"><button type="button" class="note-btn note-current-color-button" tabindex="-1" data-backcolor="#FFFF00" data-forecolor="#000000"><i class="note-icon-font note-recent-color" style="background-color: rgb(255, 255, 0); color: rgb(0, 0, 0);"></i></button><button type="button" class="note-btn dropdown-toggle" tabindex="-1" data-toggle="dropdown"> <span class="note-icon-caret"></span></button><div class="note-dropdown-menu" role="list"><div class="note-palette"><div class="note-palette-title">Background Color</div><div><button type="button" class="note-color-reset btn btn-light btn-default" data-event="backColor" data-value="transparent">Transparent</button></div><div class="note-holder" data-event="backColor"><!-- back colors --><div class="note-color-palette"><div class="note-color-row"><button type="button" class="note-btn note-color-btn" style="background-color:#000000" data-event="backColor" data-value="#000000" data-title="Black" aria-label="Black" data-toggle="button" tabindex="-1"></button><button type="button" class="note-btn note-color-btn" style="background-color:#424242" data-event="backColor" data-value="#424242" data-title="Tundora" aria-label="Tundora" data-toggle="button" tabindex="-1"></button><button type="button" class="note-btn note-color-btn" style="background-color:#636363" data-event="backColor" data-value="#636363" data-title="Dove Gray" aria-label="Dove Gray" data-toggle="button" tabindex="-1"></button><button type="button" class="note-btn note-color-btn" style="background-color:#9C9C94" data-event="backColor" data-value="#9C9C94" data-title="Star Dust" aria-label="Star Dust" data-toggle="button" tabindex="-1"></button><button type="button" class="note-btn note-color-btn" style="background-color:#CEC6CE" data-event="backColor" data-value="#CEC6CE" data-title="Pale Slate" aria-label="Pale Slate" data-toggle="button" tabindex="-1"></button><button type="button" class="note-btn note-color-btn" style="background-color:#EFEFEF" data-event="backColor" data-value="#EFEFEF" data-title="Gallery" aria-label="Gallery" data-toggle="button" tabindex="-1"></button><button type="button" class="note-btn note-color-btn" style="background-color:#F7F7F7" data-event="backColor" data-value="#F7F7F7" data-title="Alabaster" aria-label="Alabaster" data-toggle="button" tabindex="-1"></button><button type="button" class="note-btn note-color-btn" style="background-color:#FFFFFF" data-event="backColor" data-value="#FFFFFF" data-title="White" aria-label="White" data-toggle="button" tabindex="-1"></button></div><div class="note-color-row"><button type="button" class="note-btn note-color-btn" style="background-color:#FF0000" data-event="backColor" data-value="#FF0000" data-title="Red" aria-label="Red" data-toggle="button" tabindex="-1"></button><button type="button" class="note-btn note-color-btn" style="background-color:#FF9C00" data-event="backColor" data-value="#FF9C00" data-title="Orange Peel" aria-label="Orange Peel" data-toggle="button" tabindex="-1"></button><button type="button" class="note-btn note-color-btn" style="background-color:#FFFF00" data-event="backColor" data-value="#FFFF00" data-title="Yellow" aria-label="Yellow" data-toggle="button" tabindex="-1"></button><button type="button" class="note-btn note-color-btn" style="background-color:#00FF00" data-event="backColor" data-value="#00FF00" data-title="Green" aria-label="Green" data-toggle="button" tabindex="-1"></button><button type="button" class="note-btn note-color-btn" style="background-color:#00FFFF" data-event="backColor" data-value="#00FFFF" data-title="Cyan" aria-label="Cyan" data-toggle="button" tabindex="-1"></button><button type="button" class="note-btn note-color-btn" style="background-color:#0000FF" data-event="backColor" data-value="#0000FF" data-title="Blue" aria-label="Blue" data-toggle="button" tabindex="-1"></button><button type="button" class="note-btn note-color-btn" style="background-color:#9C00FF" data-event="backColor" data-value="#9C00FF" data-title="Electric Violet" aria-label="Electric Violet" data-toggle="button" tabindex="-1"></button><button type="button" class="note-btn note-color-btn" style="background-color:#FF00FF" data-event="backColor" data-value="#FF00FF" data-title="Magenta" aria-label="Magenta" data-toggle="button" tabindex="-1"></button></div><div class="note-color-row"><button type="button" class="note-btn note-color-btn" style="background-color:#F7C6CE" data-event="backColor" data-value="#F7C6CE" data-title="Azalea" aria-label="Azalea" data-toggle="button" tabindex="-1"></button><button type="button" class="note-btn note-color-btn" style="background-color:#FFE7CE" data-event="backColor" data-value="#FFE7CE" data-title="Karry" aria-label="Karry" data-toggle="button" tabindex="-1"></button><button type="button" class="note-btn note-color-btn" style="background-color:#FFEFC6" data-event="backColor" data-value="#FFEFC6" data-title="Egg White" aria-label="Egg White" data-toggle="button" tabindex="-1"></button><button type="button" class="note-btn note-color-btn" style="background-color:#D6EFD6" data-event="backColor" data-value="#D6EFD6" data-title="Zanah" aria-label="Zanah" data-toggle="button" tabindex="-1"></button><button type="button" class="note-btn note-color-btn" style="background-color:#CEDEE7" data-event="backColor" data-value="#CEDEE7" data-title="Botticelli" aria-label="Botticelli" data-toggle="button" tabindex="-1"></button><button type="button" class="note-btn note-color-btn" style="background-color:#CEE7F7" data-event="backColor" data-value="#CEE7F7" data-title="Tropical Blue" aria-label="Tropical Blue" data-toggle="button" tabindex="-1"></button><button type="button" class="note-btn note-color-btn" style="background-color:#D6D6E7" data-event="backColor" data-value="#D6D6E7" data-title="Mischka" aria-label="Mischka" data-toggle="button" tabindex="-1"></button><button type="button" class="note-btn note-color-btn" style="background-color:#E7D6DE" data-event="backColor" data-value="#E7D6DE" data-title="Twilight" aria-label="Twilight" data-toggle="button" tabindex="-1"></button></div><div class="note-color-row"><button type="button" class="note-btn note-color-btn" style="background-color:#E79C9C" data-event="backColor" data-value="#E79C9C" data-title="Tonys Pink" aria-label="Tonys Pink" data-toggle="button" tabindex="-1"></button><button type="button" class="note-btn note-color-btn" style="background-color:#FFC69C" data-event="backColor" data-value="#FFC69C" data-title="Peach Orange" aria-label="Peach Orange" data-toggle="button" tabindex="-1"></button><button type="button" class="note-btn note-color-btn" style="background-color:#FFE79C" data-event="backColor" data-value="#FFE79C" data-title="Cream Brulee" aria-label="Cream Brulee" data-toggle="button" tabindex="-1"></button><button type="button" class="note-btn note-color-btn" style="background-color:#B5D6A5" data-event="backColor" data-value="#B5D6A5" data-title="Sprout" aria-label="Sprout" data-toggle="button" tabindex="-1"></button><button type="button" class="note-btn note-color-btn" style="background-color:#A5C6CE" data-event="backColor" data-value="#A5C6CE" data-title="Casper" aria-label="Casper" data-toggle="button" tabindex="-1"></button><button type="button" class="note-btn note-color-btn" style="background-color:#9CC6EF" data-event="backColor" data-value="#9CC6EF" data-title="Perano" aria-label="Perano" data-toggle="button" tabindex="-1"></button><button type="button" class="note-btn note-color-btn" style="background-color:#B5A5D6" data-event="backColor" data-value="#B5A5D6" data-title="Cold Purple" aria-label="Cold Purple" data-toggle="button" tabindex="-1"></button><button type="button" class="note-btn note-color-btn" style="background-color:#D6A5BD" data-event="backColor" data-value="#D6A5BD" data-title="Careys Pink" aria-label="Careys Pink" data-toggle="button" tabindex="-1"></button></div><div class="note-color-row"><button type="button" class="note-btn note-color-btn" style="background-color:#E76363" data-event="backColor" data-value="#E76363" data-title="Mandy" aria-label="Mandy" data-toggle="button" tabindex="-1"></button><button type="button" class="note-btn note-color-btn" style="background-color:#F7AD6B" data-event="backColor" data-value="#F7AD6B" data-title="Rajah" aria-label="Rajah" data-toggle="button" tabindex="-1"></button><button type="button" class="note-btn note-color-btn" style="background-color:#FFD663" data-event="backColor" data-value="#FFD663" data-title="Dandelion" aria-label="Dandelion" data-toggle="button" tabindex="-1"></button><button type="button" class="note-btn note-color-btn" style="background-color:#94BD7B" data-event="backColor" data-value="#94BD7B" data-title="Olivine" aria-label="Olivine" data-toggle="button" tabindex="-1"></button><button type="button" class="note-btn note-color-btn" style="background-color:#73A5AD" data-event="backColor" data-value="#73A5AD" data-title="Gulf Stream" aria-label="Gulf Stream" data-toggle="button" tabindex="-1"></button><button type="button" class="note-btn note-color-btn" style="background-color:#6BADDE" data-event="backColor" data-value="#6BADDE" data-title="Viking" aria-label="Viking" data-toggle="button" tabindex="-1"></button><button type="button" class="note-btn note-color-btn" style="background-color:#8C7BC6" data-event="backColor" data-value="#8C7BC6" data-title="Blue Marguerite" aria-label="Blue Marguerite" data-toggle="button" tabindex="-1"></button><button type="button" class="note-btn note-color-btn" style="background-color:#C67BA5" data-event="backColor" data-value="#C67BA5" data-title="Puce" aria-label="Puce" data-toggle="button" tabindex="-1"></button></div><div class="note-color-row"><button type="button" class="note-btn note-color-btn" style="background-color:#CE0000" data-event="backColor" data-value="#CE0000" data-title="Guardsman Red" aria-label="Guardsman Red" data-toggle="button" tabindex="-1"></button><button type="button" class="note-btn note-color-btn" style="background-color:#E79439" data-event="backColor" data-value="#E79439" data-title="Fire Bush" aria-label="Fire Bush" data-toggle="button" tabindex="-1"></button><button type="button" class="note-btn note-color-btn" style="background-color:#EFC631" data-event="backColor" data-value="#EFC631" data-title="Golden Dream" aria-label="Golden Dream" data-toggle="button" tabindex="-1"></button><button type="button" class="note-btn note-color-btn" style="background-color:#6BA54A" data-event="backColor" data-value="#6BA54A" data-title="Chelsea Cucumber" aria-label="Chelsea Cucumber" data-toggle="button" tabindex="-1"></button><button type="button" class="note-btn note-color-btn" style="background-color:#4A7B8C" data-event="backColor" data-value="#4A7B8C" data-title="Smalt Blue" aria-label="Smalt Blue" data-toggle="button" tabindex="-1"></button><button type="button" class="note-btn note-color-btn" style="background-color:#3984C6" data-event="backColor" data-value="#3984C6" data-title="Boston Blue" aria-label="Boston Blue" data-toggle="button" tabindex="-1"></button><button type="button" class="note-btn note-color-btn" style="background-color:#634AA5" data-event="backColor" data-value="#634AA5" data-title="Butterfly Bush" aria-label="Butterfly Bush" data-toggle="button" tabindex="-1"></button><button type="button" class="note-btn note-color-btn" style="background-color:#A54A7B" data-event="backColor" data-value="#A54A7B" data-title="Cadillac" aria-label="Cadillac" data-toggle="button" tabindex="-1"></button></div><div class="note-color-row"><button type="button" class="note-btn note-color-btn" style="background-color:#9C0000" data-event="backColor" data-value="#9C0000" data-title="Sangria" aria-label="Sangria" data-toggle="button" tabindex="-1"></button><button type="button" class="note-btn note-color-btn" style="background-color:#B56308" data-event="backColor" data-value="#B56308" data-title="Mai Tai" aria-label="Mai Tai" data-toggle="button" tabindex="-1"></button><button type="button" class="note-btn note-color-btn" style="background-color:#BD9400" data-event="backColor" data-value="#BD9400" data-title="Buddha Gold" aria-label="Buddha Gold" data-toggle="button" tabindex="-1"></button><button type="button" class="note-btn note-color-btn" style="background-color:#397B21" data-event="backColor" data-value="#397B21" data-title="Forest Green" aria-label="Forest Green" data-toggle="button" tabindex="-1"></button><button type="button" class="note-btn note-color-btn" style="background-color:#104A5A" data-event="backColor" data-value="#104A5A" data-title="Eden" aria-label="Eden" data-toggle="button" tabindex="-1"></button><button type="button" class="note-btn note-color-btn" style="background-color:#085294" data-event="backColor" data-value="#085294" data-title="Venice Blue" aria-label="Venice Blue" data-toggle="button" tabindex="-1"></button><button type="button" class="note-btn note-color-btn" style="background-color:#311873" data-event="backColor" data-value="#311873" data-title="Meteorite" aria-label="Meteorite" data-toggle="button" tabindex="-1"></button><button type="button" class="note-btn note-color-btn" style="background-color:#731842" data-event="backColor" data-value="#731842" data-title="Claret" aria-label="Claret" data-toggle="button" tabindex="-1"></button></div><div class="note-color-row"><button type="button" class="note-btn note-color-btn" style="background-color:#630000" data-event="backColor" data-value="#630000" data-title="Rosewood" aria-label="Rosewood" data-toggle="button" tabindex="-1"></button><button type="button" class="note-btn note-color-btn" style="background-color:#7B3900" data-event="backColor" data-value="#7B3900" data-title="Cinnamon" aria-label="Cinnamon" data-toggle="button" tabindex="-1"></button><button type="button" class="note-btn note-color-btn" style="background-color:#846300" data-event="backColor" data-value="#846300" data-title="Olive" aria-label="Olive" data-toggle="button" tabindex="-1"></button><button type="button" class="note-btn note-color-btn" style="background-color:#295218" data-event="backColor" data-value="#295218" data-title="Parsley" aria-label="Parsley" data-toggle="button" tabindex="-1"></button><button type="button" class="note-btn note-color-btn" style="background-color:#083139" data-event="backColor" data-value="#083139" data-title="Tiber" aria-label="Tiber" data-toggle="button" tabindex="-1"></button><button type="button" class="note-btn note-color-btn" style="background-color:#003163" data-event="backColor" data-value="#003163" data-title="Midnight Blue" aria-label="Midnight Blue" data-toggle="button" tabindex="-1"></button><button type="button" class="note-btn note-color-btn" style="background-color:#21104A" data-event="backColor" data-value="#21104A" data-title="Valentino" aria-label="Valentino" data-toggle="button" tabindex="-1"></button><button type="button" class="note-btn note-color-btn" style="background-color:#4A1031" data-event="backColor" data-value="#4A1031" data-title="Loulou" aria-label="Loulou" data-toggle="button" tabindex="-1"></button></div></div></div><div><button type="button" class="note-color-select btn btn-light btn-default" data-event="openPalette" data-value="backColorPicker-17714399354301">Select</button><input type="color" id="backColorPicker-17714399354301" class="note-btn note-color-select-btn" value="#FFFF00" data-event="backColorPalette-17714399354301"></div><div class="note-holder-custom" id="backColorPalette-17714399354301" data-event="backColor"><div class="note-color-palette"><div class="note-color-row"><button type="button" class="note-btn note-color-btn" style="background-color:#FFFFFF" data-event="backColor" data-value="#FFFFFF" data-title="#FFFFFF" aria-label="#FFFFFF" data-toggle="button" tabindex="-1"></button><button type="button" class="note-btn note-color-btn" style="background-color:#FFFFFF" data-event="backColor" data-value="#FFFFFF" data-title="#FFFFFF" aria-label="#FFFFFF" data-toggle="button" tabindex="-1"></button><button type="button" class="note-btn note-color-btn" style="background-color:#FFFFFF" data-event="backColor" data-value="#FFFFFF" data-title="#FFFFFF" aria-label="#FFFFFF" data-toggle="button" tabindex="-1"></button><button type="button" class="note-btn note-color-btn" style="background-color:#FFFFFF" data-event="backColor" data-value="#FFFFFF" data-title="#FFFFFF" aria-label="#FFFFFF" data-toggle="button" tabindex="-1"></button><button type="button" class="note-btn note-color-btn" style="background-color:#FFFFFF" data-event="backColor" data-value="#FFFFFF" data-title="#FFFFFF" aria-label="#FFFFFF" data-toggle="button" tabindex="-1"></button><button type="button" class="note-btn note-color-btn" style="background-color:#FFFFFF" data-event="backColor" data-value="#FFFFFF" data-title="#FFFFFF" aria-label="#FFFFFF" data-toggle="button" tabindex="-1"></button><button type="button" class="note-btn note-color-btn" style="background-color:#FFFFFF" data-event="backColor" data-value="#FFFFFF" data-title="#FFFFFF" aria-label="#FFFFFF" data-toggle="button" tabindex="-1"></button><button type="button" class="note-btn note-color-btn" style="background-color:#FFFFFF" data-event="backColor" data-value="#FFFFFF" data-title="#FFFFFF" aria-label="#FFFFFF" data-toggle="button" tabindex="-1"></button></div></div></div></div><div class="note-palette"><div class="note-palette-title">Text Color</div><div><button type="button" class="note-color-reset btn btn-light btn-default" data-event="removeFormat" data-value="foreColor">Reset to default</button></div><div class="note-holder" data-event="foreColor"><!-- fore colors --><div class="note-color-palette"><div class="note-color-row"><button type="button" class="note-btn note-color-btn" style="background-color:#000000" data-event="foreColor" data-value="#000000" data-title="Black" aria-label="Black" data-toggle="button" tabindex="-1"></button><button type="button" class="note-btn note-color-btn" style="background-color:#424242" data-event="foreColor" data-value="#424242" data-title="Tundora" aria-label="Tundora" data-toggle="button" tabindex="-1"></button><button type="button" class="note-btn note-color-btn" style="background-color:#636363" data-event="foreColor" data-value="#636363" data-title="Dove Gray" aria-label="Dove Gray" data-toggle="button" tabindex="-1"></button><button type="button" class="note-btn note-color-btn" style="background-color:#9C9C94" data-event="foreColor" data-value="#9C9C94" data-title="Star Dust" aria-label="Star Dust" data-toggle="button" tabindex="-1"></button><button type="button" class="note-btn note-color-btn" style="background-color:#CEC6CE" data-event="foreColor" data-value="#CEC6CE" data-title="Pale Slate" aria-label="Pale Slate" data-toggle="button" tabindex="-1"></button><button type="button" class="note-btn note-color-btn" style="background-color:#EFEFEF" data-event="foreColor" data-value="#EFEFEF" data-title="Gallery" aria-label="Gallery" data-toggle="button" tabindex="-1"></button><button type="button" class="note-btn note-color-btn" style="background-color:#F7F7F7" data-event="foreColor" data-value="#F7F7F7" data-title="Alabaster" aria-label="Alabaster" data-toggle="button" tabindex="-1"></button><button type="button" class="note-btn note-color-btn" style="background-color:#FFFFFF" data-event="foreColor" data-value="#FFFFFF" data-title="White" aria-label="White" data-toggle="button" tabindex="-1"></button></div><div class="note-color-row"><button type="button" class="note-btn note-color-btn" style="background-color:#FF0000" data-event="foreColor" data-value="#FF0000" data-title="Red" aria-label="Red" data-toggle="button" tabindex="-1"></button><button type="button" class="note-btn note-color-btn" style="background-color:#FF9C00" data-event="foreColor" data-value="#FF9C00" data-title="Orange Peel" aria-label="Orange Peel" data-toggle="button" tabindex="-1"></button><button type="button" class="note-btn note-color-btn" style="background-color:#FFFF00" data-event="foreColor" data-value="#FFFF00" data-title="Yellow" aria-label="Yellow" data-toggle="button" tabindex="-1"></button><button type="button" class="note-btn note-color-btn" style="background-color:#00FF00" data-event="foreColor" data-value="#00FF00" data-title="Green" aria-label="Green" data-toggle="button" tabindex="-1"></button><button type="button" class="note-btn note-color-btn" style="background-color:#00FFFF" data-event="foreColor" data-value="#00FFFF" data-title="Cyan" aria-label="Cyan" data-toggle="button" tabindex="-1"></button><button type="button" class="note-btn note-color-btn" style="background-color:#0000FF" data-event="foreColor" data-value="#0000FF" data-title="Blue" aria-label="Blue" data-toggle="button" tabindex="-1"></button><button type="button" class="note-btn note-color-btn" style="background-color:#9C00FF" data-event="foreColor" data-value="#9C00FF" data-title="Electric Violet" aria-label="Electric Violet" data-toggle="button" tabindex="-1"></button><button type="button" class="note-btn note-color-btn" style="background-color:#FF00FF" data-event="foreColor" data-value="#FF00FF" data-title="Magenta" aria-label="Magenta" data-toggle="button" tabindex="-1"></button></div><div class="note-color-row"><button type="button" class="note-btn note-color-btn" style="background-color:#F7C6CE" data-event="foreColor" data-value="#F7C6CE" data-title="Azalea" aria-label="Azalea" data-toggle="button" tabindex="-1"></button><button type="button" class="note-btn note-color-btn" style="background-color:#FFE7CE" data-event="foreColor" data-value="#FFE7CE" data-title="Karry" aria-label="Karry" data-toggle="button" tabindex="-1"></button><button type="button" class="note-btn note-color-btn" style="background-color:#FFEFC6" data-event="foreColor" data-value="#FFEFC6" data-title="Egg White" aria-label="Egg White" data-toggle="button" tabindex="-1"></button><button type="button" class="note-btn note-color-btn" style="background-color:#D6EFD6" data-event="foreColor" data-value="#D6EFD6" data-title="Zanah" aria-label="Zanah" data-toggle="button" tabindex="-1"></button><button type="button" class="note-btn note-color-btn" style="background-color:#CEDEE7" data-event="foreColor" data-value="#CEDEE7" data-title="Botticelli" aria-label="Botticelli" data-toggle="button" tabindex="-1"></button><button type="button" class="note-btn note-color-btn" style="background-color:#CEE7F7" data-event="foreColor" data-value="#CEE7F7" data-title="Tropical Blue" aria-label="Tropical Blue" data-toggle="button" tabindex="-1"></button><button type="button" class="note-btn note-color-btn" style="background-color:#D6D6E7" data-event="foreColor" data-value="#D6D6E7" data-title="Mischka" aria-label="Mischka" data-toggle="button" tabindex="-1"></button><button type="button" class="note-btn note-color-btn" style="background-color:#E7D6DE" data-event="foreColor" data-value="#E7D6DE" data-title="Twilight" aria-label="Twilight" data-toggle="button" tabindex="-1"></button></div><div class="note-color-row"><button type="button" class="note-btn note-color-btn" style="background-color:#E79C9C" data-event="foreColor" data-value="#E79C9C" data-title="Tonys Pink" aria-label="Tonys Pink" data-toggle="button" tabindex="-1"></button><button type="button" class="note-btn note-color-btn" style="background-color:#FFC69C" data-event="foreColor" data-value="#FFC69C" data-title="Peach Orange" aria-label="Peach Orange" data-toggle="button" tabindex="-1"></button><button type="button" class="note-btn note-color-btn" style="background-color:#FFE79C" data-event="foreColor" data-value="#FFE79C" data-title="Cream Brulee" aria-label="Cream Brulee" data-toggle="button" tabindex="-1"></button><button type="button" class="note-btn note-color-btn" style="background-color:#B5D6A5" data-event="foreColor" data-value="#B5D6A5" data-title="Sprout" aria-label="Sprout" data-toggle="button" tabindex="-1"></button><button type="button" class="note-btn note-color-btn" style="background-color:#A5C6CE" data-event="foreColor" data-value="#A5C6CE" data-title="Casper" aria-label="Casper" data-toggle="button" tabindex="-1"></button><button type="button" class="note-btn note-color-btn" style="background-color:#9CC6EF" data-event="foreColor" data-value="#9CC6EF" data-title="Perano" aria-label="Perano" data-toggle="button" tabindex="-1"></button><button type="button" class="note-btn note-color-btn" style="background-color:#B5A5D6" data-event="foreColor" data-value="#B5A5D6" data-title="Cold Purple" aria-label="Cold Purple" data-toggle="button" tabindex="-1"></button><button type="button" class="note-btn note-color-btn" style="background-color:#D6A5BD" data-event="foreColor" data-value="#D6A5BD" data-title="Careys Pink" aria-label="Careys Pink" data-toggle="button" tabindex="-1"></button></div><div class="note-color-row"><button type="button" class="note-btn note-color-btn" style="background-color:#E76363" data-event="foreColor" data-value="#E76363" data-title="Mandy" aria-label="Mandy" data-toggle="button" tabindex="-1"></button><button type="button" class="note-btn note-color-btn" style="background-color:#F7AD6B" data-event="foreColor" data-value="#F7AD6B" data-title="Rajah" aria-label="Rajah" data-toggle="button" tabindex="-1"></button><button type="button" class="note-btn note-color-btn" style="background-color:#FFD663" data-event="foreColor" data-value="#FFD663" data-title="Dandelion" aria-label="Dandelion" data-toggle="button" tabindex="-1"></button><button type="button" class="note-btn note-color-btn" style="background-color:#94BD7B" data-event="foreColor" data-value="#94BD7B" data-title="Olivine" aria-label="Olivine" data-toggle="button" tabindex="-1"></button><button type="button" class="note-btn note-color-btn" style="background-color:#73A5AD" data-event="foreColor" data-value="#73A5AD" data-title="Gulf Stream" aria-label="Gulf Stream" data-toggle="button" tabindex="-1"></button><button type="button" class="note-btn note-color-btn" style="background-color:#6BADDE" data-event="foreColor" data-value="#6BADDE" data-title="Viking" aria-label="Viking" data-toggle="button" tabindex="-1"></button><button type="button" class="note-btn note-color-btn" style="background-color:#8C7BC6" data-event="foreColor" data-value="#8C7BC6" data-title="Blue Marguerite" aria-label="Blue Marguerite" data-toggle="button" tabindex="-1"></button><button type="button" class="note-btn note-color-btn" style="background-color:#C67BA5" data-event="foreColor" data-value="#C67BA5" data-title="Puce" aria-label="Puce" data-toggle="button" tabindex="-1"></button></div><div class="note-color-row"><button type="button" class="note-btn note-color-btn" style="background-color:#CE0000" data-event="foreColor" data-value="#CE0000" data-title="Guardsman Red" aria-label="Guardsman Red" data-toggle="button" tabindex="-1"></button><button type="button" class="note-btn note-color-btn" style="background-color:#E79439" data-event="foreColor" data-value="#E79439" data-title="Fire Bush" aria-label="Fire Bush" data-toggle="button" tabindex="-1"></button><button type="button" class="note-btn note-color-btn" style="background-color:#EFC631" data-event="foreColor" data-value="#EFC631" data-title="Golden Dream" aria-label="Golden Dream" data-toggle="button" tabindex="-1"></button><button type="button" class="note-btn note-color-btn" style="background-color:#6BA54A" data-event="foreColor" data-value="#6BA54A" data-title="Chelsea Cucumber" aria-label="Chelsea Cucumber" data-toggle="button" tabindex="-1"></button><button type="button" class="note-btn note-color-btn" style="background-color:#4A7B8C" data-event="foreColor" data-value="#4A7B8C" data-title="Smalt Blue" aria-label="Smalt Blue" data-toggle="button" tabindex="-1"></button><button type="button" class="note-btn note-color-btn" style="background-color:#3984C6" data-event="foreColor" data-value="#3984C6" data-title="Boston Blue" aria-label="Boston Blue" data-toggle="button" tabindex="-1"></button><button type="button" class="note-btn note-color-btn" style="background-color:#634AA5" data-event="foreColor" data-value="#634AA5" data-title="Butterfly Bush" aria-label="Butterfly Bush" data-toggle="button" tabindex="-1"></button><button type="button" class="note-btn note-color-btn" style="background-color:#A54A7B" data-event="foreColor" data-value="#A54A7B" data-title="Cadillac" aria-label="Cadillac" data-toggle="button" tabindex="-1"></button></div><div class="note-color-row"><button type="button" class="note-btn note-color-btn" style="background-color:#9C0000" data-event="foreColor" data-value="#9C0000" data-title="Sangria" aria-label="Sangria" data-toggle="button" tabindex="-1"></button><button type="button" class="note-btn note-color-btn" style="background-color:#B56308" data-event="foreColor" data-value="#B56308" data-title="Mai Tai" aria-label="Mai Tai" data-toggle="button" tabindex="-1"></button><button type="button" class="note-btn note-color-btn" style="background-color:#BD9400" data-event="foreColor" data-value="#BD9400" data-title="Buddha Gold" aria-label="Buddha Gold" data-toggle="button" tabindex="-1"></button><button type="button" class="note-btn note-color-btn" style="background-color:#397B21" data-event="foreColor" data-value="#397B21" data-title="Forest Green" aria-label="Forest Green" data-toggle="button" tabindex="-1"></button><button type="button" class="note-btn note-color-btn" style="background-color:#104A5A" data-event="foreColor" data-value="#104A5A" data-title="Eden" aria-label="Eden" data-toggle="button" tabindex="-1"></button><button type="button" class="note-btn note-color-btn" style="background-color:#085294" data-event="foreColor" data-value="#085294" data-title="Venice Blue" aria-label="Venice Blue" data-toggle="button" tabindex="-1"></button><button type="button" class="note-btn note-color-btn" style="background-color:#311873" data-event="foreColor" data-value="#311873" data-title="Meteorite" aria-label="Meteorite" data-toggle="button" tabindex="-1"></button><button type="button" class="note-btn note-color-btn" style="background-color:#731842" data-event="foreColor" data-value="#731842" data-title="Claret" aria-label="Claret" data-toggle="button" tabindex="-1"></button></div><div class="note-color-row"><button type="button" class="note-btn note-color-btn" style="background-color:#630000" data-event="foreColor" data-value="#630000" data-title="Rosewood" aria-label="Rosewood" data-toggle="button" tabindex="-1"></button><button type="button" class="note-btn note-color-btn" style="background-color:#7B3900" data-event="foreColor" data-value="#7B3900" data-title="Cinnamon" aria-label="Cinnamon" data-toggle="button" tabindex="-1"></button><button type="button" class="note-btn note-color-btn" style="background-color:#846300" data-event="foreColor" data-value="#846300" data-title="Olive" aria-label="Olive" data-toggle="button" tabindex="-1"></button><button type="button" class="note-btn note-color-btn" style="background-color:#295218" data-event="foreColor" data-value="#295218" data-title="Parsley" aria-label="Parsley" data-toggle="button" tabindex="-1"></button><button type="button" class="note-btn note-color-btn" style="background-color:#083139" data-event="foreColor" data-value="#083139" data-title="Tiber" aria-label="Tiber" data-toggle="button" tabindex="-1"></button><button type="button" class="note-btn note-color-btn" style="background-color:#003163" data-event="foreColor" data-value="#003163" data-title="Midnight Blue" aria-label="Midnight Blue" data-toggle="button" tabindex="-1"></button><button type="button" class="note-btn note-color-btn" style="background-color:#21104A" data-event="foreColor" data-value="#21104A" data-title="Valentino" aria-label="Valentino" data-toggle="button" tabindex="-1"></button><button type="button" class="note-btn note-color-btn" style="background-color:#4A1031" data-event="foreColor" data-value="#4A1031" data-title="Loulou" aria-label="Loulou" data-toggle="button" tabindex="-1"></button></div></div></div><div><button type="button" class="note-color-select btn btn-light btn-default" data-event="openPalette" data-value="foreColorPicker-17714399354301">Select</button><input type="color" id="foreColorPicker-17714399354301" class="note-btn note-color-select-btn" value="#000000" data-event="foreColorPalette-17714399354301"></div><div class="note-holder-custom" id="foreColorPalette-17714399354301" data-event="foreColor"><div class="note-color-palette"><div class="note-color-row"><button type="button" class="note-btn note-color-btn" style="background-color:#FFFFFF" data-event="foreColor" data-value="#FFFFFF" data-title="#FFFFFF" aria-label="#FFFFFF" data-toggle="button" tabindex="-1"></button><button type="button" class="note-btn note-color-btn" style="background-color:#FFFFFF" data-event="foreColor" data-value="#FFFFFF" data-title="#FFFFFF" aria-label="#FFFFFF" data-toggle="button" tabindex="-1"></button><button type="button" class="note-btn note-color-btn" style="background-color:#FFFFFF" data-event="foreColor" data-value="#FFFFFF" data-title="#FFFFFF" aria-label="#FFFFFF" data-toggle="button" tabindex="-1"></button><button type="button" class="note-btn note-color-btn" style="background-color:#FFFFFF" data-event="foreColor" data-value="#FFFFFF" data-title="#FFFFFF" aria-label="#FFFFFF" data-toggle="button" tabindex="-1"></button><button type="button" class="note-btn note-color-btn" style="background-color:#FFFFFF" data-event="foreColor" data-value="#FFFFFF" data-title="#FFFFFF" aria-label="#FFFFFF" data-toggle="button" tabindex="-1"></button><button type="button" class="note-btn note-color-btn" style="background-color:#FFFFFF" data-event="foreColor" data-value="#FFFFFF" data-title="#FFFFFF" aria-label="#FFFFFF" data-toggle="button" tabindex="-1"></button><button type="button" class="note-btn note-color-btn" style="background-color:#FFFFFF" data-event="foreColor" data-value="#FFFFFF" data-title="#FFFFFF" aria-label="#FFFFFF" data-toggle="button" tabindex="-1"></button><button type="button" class="note-btn note-color-btn" style="background-color:#FFFFFF" data-event="foreColor" data-value="#FFFFFF" data-title="#FFFFFF" aria-label="#FFFFFF" data-toggle="button" tabindex="-1"></button></div></div></div></div></div></div></div><div class="note-btn-group note-para"><button type="button" class="note-btn" tabindex="-1"><i class="note-icon-unorderedlist"></i></button><button type="button" class="note-btn" tabindex="-1"><i class="note-icon-orderedlist"></i></button><div class="note-btn-group"><button type="button" class="note-btn dropdown-toggle" tabindex="-1" data-toggle="dropdown"><i class="note-icon-align-left"></i> <span class="note-icon-caret"></span></button><div class="note-dropdown-menu" role="list"><div class="note-btn-group note-align"><button type="button" class="note-btn" tabindex="-1"><i class="note-icon-align-left"></i></button><button type="button" class="note-btn" tabindex="-1"><i class="note-icon-align-center"></i></button><button type="button" class="note-btn" tabindex="-1"><i class="note-icon-align-right"></i></button><button type="button" class="note-btn" tabindex="-1"><i class="note-icon-align-justify"></i></button></div><div class="note-btn-group note-list"><button type="button" class="note-btn" tabindex="-1"><i class="note-icon-align-outdent"></i></button><button type="button" class="note-btn" tabindex="-1"><i class="note-icon-align-indent"></i></button></div></div></div></div><div class="note-btn-group note-height"><div class="note-btn-group"><button type="button" class="note-btn dropdown-toggle" tabindex="-1" data-toggle="dropdown"><i class="note-icon-text-height"></i> <span class="note-icon-caret"></span></button><div class="note-dropdown-menu note-check dropdown-line-height" role="list" aria-label="Line Height"><a class="note-dropdown-item" href="#" data-value="1.0" role="listitem" aria-label="1.0"><i class="note-icon-menu-check"></i> 1.0</a><a class="note-dropdown-item" href="#" data-value="1.2" role="listitem" aria-label="1.2"><i class="note-icon-menu-check"></i> 1.2</a><a class="note-dropdown-item" href="#" data-value="1.4" role="listitem" aria-label="1.4"><i class="note-icon-menu-check"></i> 1.4</a><a class="note-dropdown-item" href="#" data-value="1.5" role="listitem" aria-label="1.5"><i class="note-icon-menu-check"></i> 1.5</a><a class="note-dropdown-item" href="#" data-value="1.6" role="listitem" aria-label="1.6"><i class="note-icon-menu-check"></i> 1.6</a><a class="note-dropdown-item" href="#" data-value="1.8" role="listitem" aria-label="1.8"><i class="note-icon-menu-check"></i> 1.8</a><a class="note-dropdown-item" href="#" data-value="2.0" role="listitem" aria-label="2.0"><i class="note-icon-menu-check"></i> 2.0</a><a class="note-dropdown-item" href="#" data-value="3.0" role="listitem" aria-label="3.0"><i class="note-icon-menu-check"></i> 3.0</a></div></div></div><div class="note-btn-group note-view"></div></div><div class="note-editing-area"><div class="note-placeholder" style="display: block;">remarks...</div><div class="note-handle"><div class="note-control-selection" style="display: none;"><div class="note-control-selection-bg"></div><div class="note-control-holder note-control-nw"></div><div class="note-control-holder note-control-ne"></div><div class="note-control-holder note-control-sw"></div><div class="note-control-sizing note-control-se"></div><div class="note-control-selection-info"></div></div></div><textarea class="note-codable" aria-multiline="true"></textarea><div class="note-editable" contenteditable="true" role="textbox" aria-multiline="true" spellcheck="true" autocorrect="true" style="height: calc(-200px + 100vh);"></div></div><output class="note-status-output" role="status" aria-live="polite"></output><div class="note-statusbar" role="status"><div class="note-resizebar" aria-label="resize"><div class="note-icon-bar"></div><div class="note-icon-bar"></div><div class="note-icon-bar"></div></div></div><div class="note-modal link-dialog" aria-hidden="false" tabindex="-1" role="dialog" aria-label="Insert Link"><div class="note-modal-content"><div class="note-modal-header"><button type="button" class="close" aria-label="Close" aria-hidden="true"><i class="note-icon-close"></i></button><h4 class="note-modal-title">Insert Link</h4></div><div class="note-modal-body"><div class="form-group note-form-group"><label for="note-dialog-link-txt-17714399354301" class="note-form-label">Text to display</label><input id="note-dialog-link-txt-17714399354301" class="note-link-text form-control note-form-control note-input" type="text"></div><div class="form-group note-form-group"><label for="note-dialog-link-url-17714399354301" class="note-form-label">To what URL should this link go?</label><input id="note-dialog-link-url-17714399354301" class="note-link-url form-control note-form-control note-input" type="text" value="http://"></div><div class="checkbox sn-checkbox-open-in-new-window"><label><input role="checkbox" type="checkbox" checked="" aria-checked="true">Open in new window</label></div><div class="checkbox sn-checkbox-use-protocol"><label><input role="checkbox" type="checkbox" checked="" aria-checked="true">Use default protocol</label></div></div><div class="note-modal-footer"><input type="button" href="#" class="btn btn-primary note-btn note-btn-primary note-link-btn" value="Insert Link" disabled=""></div></div></div><div class="note-popover bottom note-link-popover" style="display: none;"><div class="note-popover-arrow"></div><div class="popover-content note-children-container"><span><a target="_blank"></a>&nbsp;</span><div class="note-btn-group note-link"><button type="button" class="note-btn" tabindex="-1"><i class="note-icon-link"></i></button><button type="button" class="note-btn" tabindex="-1"><i class="note-icon-chain-broken"></i></button></div></div></div><div class="note-modal" aria-hidden="false" tabindex="-1" role="dialog" aria-label="Insert Image"><div class="note-modal-content"><div class="note-modal-header"><button type="button" class="close" aria-label="Close" aria-hidden="true"><i class="note-icon-close"></i></button><h4 class="note-modal-title">Insert Image</h4></div><div class="note-modal-body"><div class="form-group note-form-group note-group-select-from-files"><label for="note-dialog-image-file-17714399354301" class="note-form-label">Select from files</label><input id="note-dialog-image-file-17714399354301" class="note-image-input form-control-file note-form-control note-input" type="file" name="files" accept="image/*" multiple="multiple"></div><div class="form-group note-group-image-url"><label for="note-dialog-image-url-17714399354301" class="note-form-label">Image URL</label><input id="note-dialog-image-url-17714399354301" class="note-image-url form-control note-form-control note-input" type="text"></div></div><div class="note-modal-footer"><input type="button" href="#" class="btn btn-primary note-btn note-btn-primary note-image-btn" value="Insert Image" disabled=""></div></div></div><div class="note-popover bottom note-image-popover" style="display: none;"><div class="note-popover-arrow"></div><div class="popover-content note-children-container"><div class="note-btn-group note-resize"><button type="button" class="note-btn" tabindex="-1"><span class="note-fontsize-10">100%</span></button><button type="button" class="note-btn" tabindex="-1"><span class="note-fontsize-10">50%</span></button><button type="button" class="note-btn" tabindex="-1"><span class="note-fontsize-10">25%</span></button><button type="button" class="note-btn" tabindex="-1"><i class="note-icon-rollback"></i></button></div><div class="note-btn-group note-float"><button type="button" class="note-btn" tabindex="-1"><i class="note-icon-float-left"></i></button><button type="button" class="note-btn" tabindex="-1"><i class="note-icon-float-right"></i></button><button type="button" class="note-btn" tabindex="-1"><i class="note-icon-rollback"></i></button></div><div class="note-btn-group note-remove"><button type="button" class="note-btn" tabindex="-1"><i class="note-icon-trash"></i></button></div></div></div><div class="note-popover bottom note-table-popover" style="display: none;"><div class="note-popover-arrow"></div><div class="popover-content note-children-container"><div class="note-btn-group note-add"><button type="button" class="note-btn btn-md" tabindex="-1"><i class="note-icon-row-below"></i></button><button type="button" class="note-btn btn-md" tabindex="-1"><i class="note-icon-row-above"></i></button><button type="button" class="note-btn btn-md" tabindex="-1"><i class="note-icon-col-before"></i></button><button type="button" class="note-btn btn-md" tabindex="-1"><i class="note-icon-col-after"></i></button></div><div class="note-btn-group note-delete"><button type="button" class="note-btn btn-md" tabindex="-1"><i class="note-icon-row-remove"></i></button><button type="button" class="note-btn btn-md" tabindex="-1"><i class="note-icon-col-remove"></i></button><button type="button" class="note-btn btn-md" tabindex="-1"><i class="note-icon-trash"></i></button></div></div></div><div class="note-modal" aria-hidden="false" tabindex="-1" role="dialog" aria-label="Insert Video"><div class="note-modal-content"><div class="note-modal-header"><button type="button" class="close" aria-label="Close" aria-hidden="true"><i class="note-icon-close"></i></button><h4 class="note-modal-title">Insert Video</h4></div><div class="note-modal-body"><div class="form-group note-form-group row-fluid"><label for="note-dialog-video-url-17714399354301" class="note-form-label">Video URL <small class="text-muted">(YouTube, Google Drive, Vimeo, Vine, Instagram, DailyMotion, Youku, Peertube)</small></label><input id="note-dialog-video-url-17714399354301" class="note-video-url form-control note-form-control note-input" type="text"></div></div><div class="note-modal-footer"><input type="button" href="#" class="btn btn-primary note-btn note-btn-primary note-video-btn" value="Insert Video" disabled=""></div></div></div><div class="note-modal" aria-hidden="false" tabindex="-1" role="dialog" aria-label="Help"><div class="note-modal-content"><div class="note-modal-header"><button type="button" class="close" aria-label="Close" aria-hidden="true"><i class="note-icon-close"></i></button><h4 class="note-modal-title">Help</h4></div><div class="note-modal-body" style="max-height: 300px; overflow: scroll;"><div class="help-list-item"></div><label style="width: 180px; margin-right: 10px;"><kbd>ESC</kbd></label><span>Escape</span><div class="help-list-item"></div><label style="width: 180px; margin-right: 10px;"><kbd>ENTER</kbd></label><span>Insert Paragraph</span><div class="help-list-item"></div><label style="width: 180px; margin-right: 10px;"><kbd>CTRL+Z</kbd></label><span>Undo the last command</span><div class="help-list-item"></div><label style="width: 180px; margin-right: 10px;"><kbd>CTRL+Y</kbd></label><span>Redo the last command</span><div class="help-list-item"></div><label style="width: 180px; margin-right: 10px;"><kbd>TAB</kbd></label><span>Tab</span><div class="help-list-item"></div><label style="width: 180px; margin-right: 10px;"><kbd>SHIFT+TAB</kbd></label><span>Untab</span><div class="help-list-item"></div><label style="width: 180px; margin-right: 10px;"><kbd>CTRL+B</kbd></label><span>Set a bold style</span><div class="help-list-item"></div><label style="width: 180px; margin-right: 10px;"><kbd>CTRL+I</kbd></label><span>Set a italic style</span><div class="help-list-item"></div><label style="width: 180px; margin-right: 10px;"><kbd>CTRL+U</kbd></label><span>Set a underline style</span><div class="help-list-item"></div><label style="width: 180px; margin-right: 10px;"><kbd>CTRL+SHIFT+S</kbd></label><span>Set a strikethrough style</span><div class="help-list-item"></div><label style="width: 180px; margin-right: 10px;"><kbd>CTRL+BACKSLASH</kbd></label><span>Clean a style</span><div class="help-list-item"></div><label style="width: 180px; margin-right: 10px;"><kbd>CTRL+SHIFT+L</kbd></label><span>Set left align</span><div class="help-list-item"></div><label style="width: 180px; margin-right: 10px;"><kbd>CTRL+SHIFT+E</kbd></label><span>Set center align</span><div class="help-list-item"></div><label style="width: 180px; margin-right: 10px;"><kbd>CTRL+SHIFT+R</kbd></label><span>Set right align</span><div class="help-list-item"></div><label style="width: 180px; margin-right: 10px;"><kbd>CTRL+SHIFT+J</kbd></label><span>Set full align</span><div class="help-list-item"></div><label style="width: 180px; margin-right: 10px;"><kbd>CTRL+SHIFT+NUM7</kbd></label><span>Toggle unordered list</span><div class="help-list-item"></div><label style="width: 180px; margin-right: 10px;"><kbd>CTRL+SHIFT+NUM8</kbd></label><span>Toggle ordered list</span><div class="help-list-item"></div><label style="width: 180px; margin-right: 10px;"><kbd>CTRL+LEFTBRACKET</kbd></label><span>Outdent on current paragraph</span><div class="help-list-item"></div><label style="width: 180px; margin-right: 10px;"><kbd>CTRL+RIGHTBRACKET</kbd></label><span>Indent on current paragraph</span><div class="help-list-item"></div><label style="width: 180px; margin-right: 10px;"><kbd>CTRL+NUM0</kbd></label><span>Change current block's format as a paragraph(P tag)</span><div class="help-list-item"></div><label style="width: 180px; margin-right: 10px;"><kbd>CTRL+NUM1</kbd></label><span>Change current block's format as H1</span><div class="help-list-item"></div><label style="width: 180px; margin-right: 10px;"><kbd>CTRL+NUM2</kbd></label><span>Change current block's format as H2</span><div class="help-list-item"></div><label style="width: 180px; margin-right: 10px;"><kbd>CTRL+NUM3</kbd></label><span>Change current block's format as H3</span><div class="help-list-item"></div><label style="width: 180px; margin-right: 10px;"><kbd>CTRL+NUM4</kbd></label><span>Change current block's format as H4</span><div class="help-list-item"></div><label style="width: 180px; margin-right: 10px;"><kbd>CTRL+NUM5</kbd></label><span>Change current block's format as H5</span><div class="help-list-item"></div><label style="width: 180px; margin-right: 10px;"><kbd>CTRL+NUM6</kbd></label><span>Change current block's format as H6</span><div class="help-list-item"></div><label style="width: 180px; margin-right: 10px;"><kbd>CTRL+ENTER</kbd></label><span>Insert horizontal rule</span><div class="help-list-item"></div><label style="width: 180px; margin-right: 10px;"><kbd>CTRL+K</kbd></label><span>Show Link Dialog</span></div><div class="note-modal-footer"><p class="text-center"><a href="http://summernote.org/" target="_blank" rel="noopener noreferrer">Summernote 0.8.20</a> · <a href="https://github.com/summernote/summernote" target="_blank" rel="noopener noreferrer">Project</a> · <a href="https://github.com/summernote/summernote/issues" target="_blank" rel="noopener noreferrer">Issues</a></p></div></div></div></div>
+            </div>
+
+        </div>
+}
+
+finans/hesap planı{
+    <form id="AccountPlanSave" class="row p-20">
+
+    
+    <input id="Id" type="hidden" data-val="true" data-val-required="The Id field is required." name="Id" value="318">
+    <input id="CompanyId" type="hidden" data-val="true" data-val-required="The CompanyId field is required." name="CompanyId" value="1">
+    <input id="IsGroup" type="hidden" data-val="true" data-val-required="The IsGroup field is required." name="IsGroup" value="False">
+    <input id="CreatedBy" type="hidden" name="CreatedBy" value="SYSTEM-SEED">
+    <input id="CreatedDate" type="hidden" name="CreatedDate" value="19.12.2025 19:38:39">
+
+    <!-- HesapAdi -->
+    <div class="col-md-9 mb-2">
+        <div class="form-group">
+            <label class="control-label">Hesap Adı</label>
+            <div class="input-group">
+                <div class="input-group-text"><i class="fat fa-hashtag"></i></div>
+                <input id="AccountName" type="text" class="form-control" name="AccountName" value="DÖNEN VARLIKLAR">
+            </div>
+        </div>
+    </div>
+
+    <!-- Ref Kod -->
+    <div class="col-md-3 mb-2">
+        <div class="form-group">
+            <label class="control-label">Referans Kodu</label>
+            <div class="input-group">
+                <div class="input-group-text"><i class="fat fa-hashtag"></i></div>
+                <input id="RefCode" type="text" class="form-control" name="RefCode" value="1">
+            </div>
+        </div>
+    </div>
+
+
+    <!-- AccountCode -->
+    <div class="col-md-6 mb-2">
+        <div class="form-group">
+            <label class="control-label">Hesap Kodu</label>
+            <div class="input-group">
+                <div class="input-group-text"><i class="fat fa-hashtag"></i></div>
+                <input id="AccountCode" type="text" class="form-control" name="AccountCode" value="1">
+            </div>
+        </div>
+    </div>
+
+    <!-- AccountTypes -->
+    <div class="col-md-6 mb-2">
+        <div class="form-group">
+            <label class="control-label">Hesap Türü</label>
+            <div class="input-group">
+                <div class="input-group-text"><i class="fat fa-hashtag"></i></div>
+                <select id="AccountType" class="form-select">
+                        <option value="K">Ana Hesap</option>
+                        <option value="G">Grup Hesap</option>
+                        <option value="M">Alt Hesap</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <!-- InitialBalanceDate -->
+    <div class="col-md-6 mb-2">
+        <div class="form-group">
+            <label class="control-label">Açılış Bakiye Tarihi</label>
+            <div class="input-group">
+                <div class="input-group-text"><i class="fat fa-hashtag"></i></div>
+                <input id="InitialBalanceDate" type="date" class="form-control" name="InitialBalanceDate" value="2026-01-01">
+            </div>
+        </div>
+    </div>
+
+
+    <!-- InitialBalanceType -->
+    <div class="col-md-6 mb-2">
+        <div class="form-group">
+            <label class="control-label">Bakiye Türü</label>
+            <div class="input-group">
+                <div class="input-group-text"><i class="fat fa-hashtag"></i></div>
+                <select id="InitialBalanceType" class="form-select" name="InitialBalanceType">
+                    <option value="DEBT">DEBT</option>
+                    <option value="CREDIT">CREDIT</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <!-- KDV -->
+    <div class="col-md-6 mb-2">
+        <div class="form-group">
+            <label class="control-label">KDV %</label>
+            <div class="input-group">
+                <div class="input-group-text"><i class="fat fa-hashtag"></i></div>
+                <select id="KDV" class="form-select wd-50">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="8">8</option>
+                    <option value="18">18</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <!-- InitialBalance -->
+    <div class="col-md-6 mb-2">
+        <div class="form-group">
+            <label class="control-label">Açılış Bakiyesi</label>
+            <div class="input-group">
+                <div class="input-group-text"><i class="fat fa-hashtag"></i></div>
+                <input id="InitialBalance" type="text" value="0,00" class="form-control text-right font-bold" placeholder="Açılış Bakiyesi">
+            </div>
+        </div>
+    </div>
+
+    <!-- Budget -->
+    <div class="col-md-6 mb-2">
+        <div class="form-group">
+            <label class="control-label">Bütçe</label>
+            <div class="input-group">
+                <div class="input-group-text"><i class="fat fa-hashtag"></i></div>
+                <input id="Budget" type="text" value="0,00" class="form-control" data-val="true" data-val-number="The field Budget must be a number." data-val-required="The Budget field is required." name="Budget">
+                <label class="inputgrouptext border font-bold wd-40"><span class="fa fa-turkish-lira"></span></label>
+            </div>
+        </div>
+    </div>
+
+    <!-- Balance -->
+    <div class="col-md-6 mb-2">
+        <div class="form-group">
+            <label class="control-label">Bakiye</label>
+            <div class="input-group">
+                <div class="input-group-text"><i class="fat fa-hashtag"></i></div>
+                <input id="Balance" type="text" value="0,00" class="form-control" data-val="true" data-val-number="The field Balance must be a number." data-val-required="The Balance field is required." name="Balance">
+                <label class="inputgrouptext border font-bold wd-40"><span class="fa fa-turkish-lira"></span></label>
+            </div>
+        </div>
+    </div>
+
+    <!-- InitialBalanceTL -->
+    <div class="col-md-6 mb-2">
+        <div class="form-group">
+            <label class="control-label">Açılış Bakiyesi TL</label>
+            <div class="input-group">
+                <div class="input-group-text"><i class="fat fa-hashtag"></i></div>
+                <input id="InitialBalanceTL" type="text" value="0,00" class="form-control" data-val="true" data-val-number="The field InitialBalanceTL must be a number." data-val-required="The InitialBalanceTL field is required." name="InitialBalanceTL">
+                <label class="inputgrouptext border font-bold wd-40"><span class="fa fa-turkish-lira"></span></label>
+            </div>
+        </div>
+    </div>
+
+</form>
+}
+
+finans/faturalar{
+    <div id="workarea" class="card border shadow-lg m-0 p-2" style="height:calc(100vh - 160px)">
+
+        <!-- FATURA ÜST BİLGİLERİ -->
+
+        <style>
+            .info-label {
+                min-width: 120px; /* label hizası */
+                opacity: .75;
+                white-space: nowrap;
+            }
+        </style>
+
+        <div class="row align-items-start mb-0">
+
+            <!-- SOL: BİLGİ GRUPLARI -->
+            <div class="col-12 col-md-10">
+                <div class="d-flex flex-wrap">
+
+                    <!-- FATURA -->
+                    <div class="d-flex flex-column col-12 col-md-4">
+                        <h4 class="fw-bold text-uppercase mb-2">Fatura Bilgileri</h4>
+
+                        <div class="d-flex align-items-center mb-1">
+                            <span class="info-label">Fatura No</span>
+                            <strong>IAD-RTS20260208143351384</strong>
+                        </div>
+
+                        <div class="d-flex align-items-center mb-1">
+                            <span class="info-label">Fatura Tarihi</span>
+                            <strong>08.02.2026</strong>
+                        </div>
+
+                        <div class="d-flex align-items-center">
+                            <span class="info-label">Türü</span>
+                            <strong>Alış İade</strong>
+                        </div>
+                    </div>
+
+                    <!-- CARİ -->
+                    <div class="d-flex flex-column col-12 col-md-4">
+                        <h4 class="fw-bold text-uppercase mb-2">Cari Bilgileri</h4>
+
+                        <div class="d-flex align-items-center mb-1">
+                            <span class="info-label">Cari Id</span>
+                            <strong>816</strong>
+                        </div>
+
+                        <div class="d-flex align-items-center mb-1">
+                            <span class="info-label">Cari Kodu</span>
+                            <strong></strong>
+                        </div>
+
+                        <div class="d-flex align-items-center">
+                            <span class="info-label">Cari Adı</span>
+                            <strong></strong>
+                        </div>
+                    </div>
+
+                    <!-- FİŞ -->
+                    <div class="d-flex flex-column col-12 col-md-4">
+                        <h4 class="fw-bold text-uppercase mb-2">Muhasebe Fişi</h4>
+
+                            <div class="text-danger fw-bold">Fiş Oluşturulmadı!</div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- SAĞ: BUTONLAR -->
+            <div class="col-12 col-md-2 ms-auto">
+                <div class="d-flex flex-column align-items-end text-end">
+
+                        <a class="btn btn-outline-warning border btn-sm btn-label wd-150" href="/Sales/Invoice/CreateFromInvoice?invoiceId=4">
+                            <i class="fad fa-receipt label-icon"></i> Create Voucher
+                        </a>
+
+                    <form method="post" action="/Operation/Invoice/Delete?id=4" class="mt-2">
+                        <button class="btn btn-outline-danger border btn-sm btn-label wd-150">
+                            <i class="fa fa-trash label-icon"></i> Fişi Sil
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+
+
+        <hr>
+
+        <!-- FATURA SATIRLARI -->
+        <table class="table table-bordered table-striped table-sm">
+            <thead class="table-light">
+                <tr>
+                    <th class="wd-40">#</th>
+                    <th class="wd-0">Açıklama</th>
+                    <th class="wd-150 text-end">Miktar</th>
+                    <th class="wd-150 text-end">Birim Fiyat</th>
+                    <th class="wd-100 text-end">ISK %</th>
+                    <th class="wd-150 text-end">Net Tutar</th>
+                    <th class="wd-100 text-end">KDV %</th>
+                    <th class="wd-150 text-end">KDV Tutar</th>
+                    <th class="wd-150 text-end">Toplam</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                    <tr>
+                        <td>9</td>
+                        <td>STP245661 - YANMAZ KAPI KOLU</td>
+                        <td class="text-end">3,00</td>
+                        <td class="text-end">500,00</td>
+                        <td class="text-end">0,00</td>
+                        <td class="text-end">1.500,00</td>
+                        <td class="text-end">0,00</td>
+                        <td class="text-end">0,00</td>
+                        <td class="text-end">1.500,00</td>
+                    </tr>
+            </tbody>
+        </table>
+
+        <hr>
+
+        <!-- FATURA TOPLAMLARI -->
+        <div class="col-md-3 ms-auto">
+            <!-- Net Toplam -->
+            <div class="d-flex justify-content-between align-items-center">
+                <div class="w-50 text-end">
+                    <h4 class="m-0">Net Toplam</h4>
+                </div>
+                <div class="w-50 text-end">
+                    <h4 class="m-0"><strong>1.500,00 ₺</strong></h4>
+                </div>
+            </div>
+
+            <!-- KDV Toplamı -->
+            <div class="d-flex justify-content-between align-items-center mt-1">
+                <div class="w-50 text-end">
+                    <h5 class="m-0">KDV Toplamı</h5>
+                </div>
+                <div class="w-50 text-end">
+                    <h5 class="m-0"><strong>0,00 ₺</strong></h5>
+                </div>
+            </div>
+
+            <!-- Genel Toplam -->
+            <div class="d-flex justify-content-between align-items-center mt-1">
+                <div class="w-50 text-end">
+                    <h3 class="m-0">Genel Toplam</h3>
+                </div>
+                <div class="w-50 text-end">
+                    <h3 class="m-0"><strong>1.500,00 ₺</strong></h3>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+finans/fişler{
+    <div id="workarea" class="card border shadow-lg m-0 p-2" style="height:calc(100vh - 160px)">
+
+        <!-- FİŞ BAŞLIK -->
+        <div class="row mb-4">
+            <div class="col-md-4">
+                <h4 class="fw-bold text-uppercase mb-2">
+                    <i class="fa-thin fa-file-invoice me-1"></i> Fiş Bilgisi
+                </h4>
+                <style>
+                    .table-sm > :not(caption) > * > * {
+                        padding: 0.1rem 0.5rem;
+                    }
+                </style>
+
+                <table class="table table-sm table-borderless mb-0 p-0">
+                    <tbody>
+                        <tr>
+                            <td class="text-muted wd-100">Fiş No</td>
+                            <td class="fw-semibold">DEV-202601</td>
+                        </tr>
+                        <tr>
+                            <td class="text-muted wd-100">Tarih</td>
+                            <td class="fw-semibold">
+                                01.01.2026
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-muted wd-100">Tip</td>
+                            <td class="fw-semibold">CarryForward</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="col-md-4">
+                <h4 class="fw-bold text-uppercase">
+                    <i class="fa-thin fa-file-invoice-dollar me-1"></i> Fatura
+                </h4>
+                    <p class="text-danger fs-16 m-0">Faturayla bağlı değil.</p>
+            </div>
+
+            <div class="col-md-4 text-end">
+                <form method="post" action="/Operation/Voucher/ReCreate?id=36">
+                    <button class="btn btn-outline-warning btn-sm btn-label wd-200 mb-2">
+                        <i class="fa fa-sync label-icon"></i> Fişi Yeniden Oluştur
+                    </button>
+                </form>
+                <button id="btnDeleteVoucher" data-id="36" class="btn btn-outline-danger btn-sm btn-label wd-200">
+                    <i class="fa fa-trash label-icon"></i> Fişi Sil
+                </button>
+
+            </div>
+        </div>
+
+        <!-- SATIRLAR -->
+        <div class="table-responsive rounded-top-2" style="height: calc(100vh - 425px) !important">
+            <table class="table table-hover table-striped table-centered table-sm align-middle rounded m-0" style="cursor:pointer;">
+                <thead class="sticky-header">
+                    <tr>
+                        <th class="wd-150">Hesap Kodu</th>
+                        <th class="wd-0">Açıklama</th>
+                        <th class="text-end wd-80">PB</th>
+                        <th class="text-end wd-100">Kur</th>
+                        <th class="text-end wd-150">Borç</th>
+                        <th class="text-end wd-150">Borç TL</th>
+                        <th class="text-end wd-150">Alacak</th>
+                        <th class="text-end wd-150">Alacak TL</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                        <tr>
+                            <td>100.01.001</td>
+                            <td></td>
+                            <td class="text-end">TL</td>
+                            <td class="text-end">1,00</td>
+                            <td class="text-end">12.850,00</td>
+                            <td class="text-end">0,00</td>
+                            <td class="text-end">0,00</td>
+                            <td class="text-end">0,00</td>
+                        </tr>
+                </tbody>
+
+                <tfoot class="table-light">
+                    <tr>
+                        <th colspan="4" class="text-end">TOPLAM</th>
+                        <th class="h4 text-end">12.850,00</th>
+                        <th class="h4 text-end">0,00</th>
+                        <th class="h4 text-end">0,00</th>
+                        <th class="h4 text-end">0,00</th>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+
+    </div>
+}
+
+ik&personel/çalışanlar{
+    <div id="workarea" class="card shadow-lg p-3" style="height:calc(100vh - 180px); overflow-y:auto;">
+        
+        <div class="row">
+            <!-- Sol Taraf - Fotoğraf ve Özet -->
+            <div class="col-md-3">
+                <div class="card h-100 border-1">
+                    <div class="card-body text-center">
+                        <!-- Fotoğraf -->
+                        <div class="photo-container mx-auto mb-3 rounded-circle border shadow overflow-hidden">
+                                <div class="w-100 h-100 bg-light d-flex align-items-center justify-content-center">
+                                    <i class="fas fa-user fa-5x text-secondary"></i>
+                                </div>
+                        </div>
+                        
+                        <!-- Ad Soyad -->
+                        <h4 class="mb-1">ADNAN  DOLANBAY</h4>
+                        <p class="text-muted mb-2">-</p>
+                        
+                        <!-- Durum Badge -->
+                        <span class="badge bg-success fs-6 mb-3">Aktif</span>
+                        
+                        <hr>
+                        
+                        <!-- Hızlı Bilgiler -->
+                        <div class="text-start">
+                            <p class="mb-2"><i class="fas fa-id-badge text-primary me-2"></i><strong>EMP010</strong></p>
+                            <p class="mb-2"><i class="fas fa-building text-primary me-2"></i>OPERASYON</p>
+                            <p class="mb-2"><i class="fas fa-phone text-primary me-2"></i>-</p>
+                            <p class="mb-2"><i class="fas fa-envelope text-primary me-2"></i>-</p>
+                            <p class="mb-0"><i class="fas fa-calendar-check text-primary me-2"></i>16.02.2026</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Sağ Taraf - Detaylı Bilgiler -->
+            <div class="col-md-9 p-4  border rounded">
+                <ul class="nav nav-tabs mb-3" role="tablist">
+                    <li class="nav-item" role="presentation"><a class="nav-link active" data-bs-toggle="tab" href="#tabBasic" aria-selected="true" role="tab"><i class="fas fa-user me-1"></i>Temel Bilgiler</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" data-bs-toggle="tab" href="#tabContact" aria-selected="false" tabindex="-1" role="tab"><i class="fas fa-phone me-1"></i>İletişim</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" data-bs-toggle="tab" href="#tabWork" aria-selected="false" tabindex="-1" role="tab"><i class="fas fa-briefcase me-1"></i>İş Bilgileri</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" data-bs-toggle="tab" href="#tabBank" aria-selected="false" tabindex="-1" role="tab"><i class="fas fa-university me-1"></i>Banka &amp; SGK</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" data-bs-toggle="tab" href="#tabEducation" aria-selected="false" tabindex="-1" role="tab"><i class="fas fa-graduation-cap me-1"></i>Eğitim</a></li>
+                </ul>
+                
+                <div class="tab-content">
+                    <!-- Temel Bilgiler -->
+                    <div class="tab-pane fade show active" id="tabBasic" role="tabpanel">
+                        <div class="row g-3">
+                            <div class="col-md-4 mb-3">
+                                <div class="detail-label">Sicil No</div>
+                                <div class="detail-value">EMP010</div>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <div class="detail-label">Ad</div>
+                                <div class="detail-value">ADNAN </div>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <div class="detail-label">Soyad</div>
+                                <div class="detail-value">DOLANBAY</div>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <div class="detail-label">TC Kimlik No</div>
+                                <div class="detail-value">-</div>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <div class="detail-label">Pasaport No</div>
+                                <div class="detail-value">-</div>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <div class="detail-label">Doğum Tarihi</div>
+                                <div class="detail-value">-</div>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <div class="detail-label">Doğum Yeri</div>
+                                <div class="detail-value">-</div>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <div class="detail-label">Cinsiyet</div>
+                                <div class="detail-value">Erkek</div>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <div class="detail-label">Medeni Durum</div>
+                                <div class="detail-value">Evli</div>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <div class="detail-label">Askerlik Durumu</div>
+                                <div class="detail-value">Yapıldı</div>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <div class="detail-label">Uyruk</div>
+                                <div class="detail-value">Türk</div>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <div class="detail-label">Kan Grubu</div>
+                                <div class="detail-value">0 Rh+</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- İletişim Bilgileri -->
+                    <div class="tab-pane fade" id="tabContact" role="tabpanel">
+                        <div class="row g-3">
+                            <div class="col-md-4 mb-3">
+                                <div class="detail-label">Telefon</div>
+                                <div class="detail-value">-</div>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <div class="detail-label">Cep Telefonu</div>
+                                <div class="detail-value">-</div>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <div class="detail-label">Kurumsal E-posta</div>
+                                <div class="detail-value">-</div>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <div class="detail-label">Kişisel E-posta</div>
+                                <div class="detail-value">-</div>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <div class="detail-label">Şehir</div>
+                                <div class="detail-value">-</div>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <div class="detail-label">İlçe / Posta Kodu</div>
+                                <div class="detail-value">- / -</div>
+                            </div>
+                            <div class="col-12">
+                                <div class="detail-label">Adres</div>
+                                <div class="detail-value">-</div>
+                            </div>
+                            
+                            <div class="col-12"><hr class="my-2"></div>
+                            <div class="col-12"><h6 class="text-warning"><i class="fas fa-exclamation-triangle me-1"></i>Acil Durum Bilgileri</h6></div>
+                            
+                            <div class="col-md-4 mb-3">
+                                <div class="detail-label">Acil Durum Kişisi</div>
+                                <div class="detail-value">-</div>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <div class="detail-label">Acil Durum Telefonu</div>
+                                <div class="detail-value">-</div>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <div class="detail-label">Yakınlık Derecesi</div>
+                                <div class="detail-value">-</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- İş Bilgileri -->
+                    <div class="tab-pane fade" id="tabWork" role="tabpanel">
+                        <div class="row g-3">
+                            <div class="col-md-4 mb-3">
+                                <div class="detail-label">İşe Giriş Tarihi</div>
+                                <div class="detail-value">16.02.2026</div>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <div class="detail-label">Çalışma Süresi</div>
+                                <div class="detail-value">
+                                    0 yıl 0 ay
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <div class="detail-label">Çalışma Durumu</div>
+                                <div class="detail-value"><span class="badge bg-success">Aktif</span></div>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <div class="detail-label">Çalışma Tipi</div>
+                                <div class="detail-value">Tam Zamanlı</div>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <div class="detail-label">Departman</div>
+                                <div class="detail-value">OPERASYON</div>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <div class="detail-label">Pozisyon</div>
+                                <div class="detail-value">-</div>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <div class="detail-label">Yönetici</div>
+                                <div class="detail-value">-</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Banka & SGK -->
+                    <div class="tab-pane fade" id="tabBank" role="tabpanel">
+                        <div class="row g-3">
+                            <div class="col-md-4 mb-3">
+                                <div class="detail-label">Banka Adı</div>
+                                <div class="detail-value">-</div>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <div class="detail-label">Şube</div>
+                                <div class="detail-value">-</div>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <div class="detail-label">SGK No</div>
+                                <div class="detail-value">-</div>
+                            </div>
+                            <div class="col-12">
+                                <div class="detail-label">IBAN</div>
+                                <div class="detail-value font-monospace">TR76 0006 2001 0220 0006 6052 78</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Eğitim -->
+                    <div class="tab-pane fade" id="tabEducation" role="tabpanel">
+                        <div class="row g-3">
+                            <div class="col-md-4 mb-3">
+                                <div class="detail-label">Eğitim Seviyesi</div>
+                                <div class="detail-value">İlkokul</div>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <div class="detail-label">Okul Adı</div>
+                                <div class="detail-value">-</div>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <div class="detail-label">Bölüm</div>
+                                <div class="detail-value">-</div>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <div class="detail-label">Mezuniyet Yılı</div>
+                                <div class="detail-value">-</div>
+                            </div>
+                            <div class="col-12">
+                                <div class="detail-label">Notlar</div>
+                                <div class="detail-value">-</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+}
+
+Bu dökümandakiler sadece ilgili bölümlerdeki kartlara tıklandığında açılan detay sayfalarında görülecek bilgilerdir. Herhangi bir düzenleme değiştirme özelliği koymayacaksın, form yada input tarzı elementler varsa takılma sadece görüntüleme ekleyeceksin. Güzel, mobile-first, ve kolay okunabilir arayüzler ile ilgili belirtilen alanların detay sayfalarının içeriklerini yukarıda belirtilen html içeriklerine uygun olarak yapacaksın.

@@ -1,0 +1,11 @@
+<svg width="1000" height="300" viewBox="0 0 1000 300" xmlns="http://www.w3.org/2000/svg">
+  <g text-anchor="middle">
+    <text x="500" y="200" font-family="Arial, sans-serif" font-size="180" letter-spacing="-5">
+      <tspan fill="#2b91d1" font-weight="normal">blue<tspan fill="#2b91d1" font-weight="900">HUB</tspan></tspan>
+    </text>
+    
+    <text x="500" y="245" fill="#2b91d1" font-family="'Brush Script MT', cursive" font-size="32" font-style="italic">
+      Everything about sales, purchasing, logistics, finance
+    </text>
+  </g>
+</svg>

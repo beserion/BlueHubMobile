@@ -1,4 +1,4 @@
-﻿
+
 ======================================
   AppApi
 ======================================
@@ -22,24 +22,25 @@ GET /api/Auth/me
   Dashboard
 ======================================
 
-GET /api/Dashboard/customers-by-channel
+GET /api/Dashboard/general
   Parameters:
     - companyId (query, integer, int32, default: 1)
-    - channelId (query, integer, int32, default: 0)
-    - period (query, string, default: ytd)
   Responses: 200 Success
 
 POST /api/Dashboard/operational
   Responses: 200 Success
 
-GET /api/Dashboard/operational-summary
+GET /api/Dashboard/purchase/summary
   Parameters:
     - companyId (query, integer, int32, default: 1)
-    - userId (query, integer, int32, default: 0)
-    - period (query, string, default: month)
   Responses: 200 Success
 
 GET /api/Dashboard/purchase/chart
+  Parameters:
+    - companyId (query, integer, int32, default: 1)
+  Responses: 200 Success
+
+GET /api/Dashboard/purchase/top-suppliers
   Parameters:
     - companyId (query, integer, int32, default: 1)
   Responses: 200 Success
@@ -49,14 +50,18 @@ GET /api/Dashboard/purchase/last-invoices
     - companyId (query, integer, int32, default: 1)
   Responses: 200 Success
 
-GET /api/Dashboard/purchase/summary
+GET /api/Dashboard/operational-summary
   Parameters:
     - companyId (query, integer, int32, default: 1)
+    - userId (query, integer, int32, default: 0)
+    - period (query, string, default: month)
   Responses: 200 Success
 
-GET /api/Dashboard/purchase/top-suppliers
+GET /api/Dashboard/customers-by-channel
   Parameters:
     - companyId (query, integer, int32, default: 1)
+    - channelId (query, integer, int32, default: 0)
+    - period (query, string, default: ytd)
   Responses: 200 Success
 
 GET /api/Dashboard/quotes-by-customer
@@ -83,7 +88,7 @@ GET /api/Dashboard/simulate-salesman-bonus
   Delivery
 ======================================
 
-GET /api/Delivery/view
+GET /api/Delivery/list
   Parameters:
     - companyId (query, integer, int32, default: 0)
     - type (query)
@@ -107,12 +112,12 @@ POST /files/uploadAll
   Finance
 ======================================
 
-GET /api/Finance/bank-account-view
-  Responses: 200 Success
-
 GET /api/Finance/company-accounts
   Parameters:
     - companyId (query, integer, int32, default: 1)
+  Responses: 200 Success
+
+GET /api/Finance/bank-account-view
   Responses: 200 Success
 
 GET /api/Finance/partner-balance
@@ -130,6 +135,15 @@ GET /api/Finance/partner-balance
   HR
 ======================================
 
+GET /api/HR/employee-list
+  Responses: 200 Success
+
+GET /api/HR/contract-list
+  Responses: 200 Success
+
+GET /api/HR/leave-list
+  Responses: 200 Success
+
 GET /api/HR/attendance-list
   Parameters:
     - employeeId (query, integer, int32)
@@ -143,15 +157,6 @@ GET /api/HR/attendance-report-list
     - status (query)
     - startDate (query, string, date-time)
     - endDate (query, string, date-time)
-  Responses: 200 Success
-
-GET /api/HR/contract-list
-  Responses: 200 Success
-
-GET /api/HR/employee-list
-  Responses: 200 Success
-
-GET /api/HR/leave-list
   Responses: 200 Success
 
 
@@ -193,12 +198,6 @@ GET /api/Logistic/profitability-list
   Offer
 ======================================
 
-GET /api/Offer/details
-  Parameters:
-    - id (query, integer, int32)
-    - includeDeleted (query, boolean, default: False)
-  Responses: 200 Success
-
 GET /api/Offer/list
   Parameters:
     - companyId (query, integer, int32, default: 0)
@@ -207,15 +206,16 @@ GET /api/Offer/list
     - endRow (query, integer, int32, default: 50)
   Responses: 200 Success
 
+GET /api/Offer/details
+  Parameters:
+    - id (query, integer, int32)
+    - includeDeleted (query, boolean, default: false)
+  Responses: 200 Success
+
 
 ======================================
   Order
 ======================================
-
-GET /api/Order/details
-  Parameters:
-    - id (query, integer, int32)
-  Responses: 200 Success
 
 GET /api/Order/list
   Parameters:
@@ -225,12 +225,17 @@ GET /api/Order/list
     - endRow (query, integer, int32, default: 100)
   Responses: 200 Success
 
+GET /api/Order/details
+  Parameters:
+    - id (query, integer, int32)
+  Responses: 200 Success
+
 
 ======================================
   Partner
 ======================================
 
-GET /api/Partner/view
+GET /api/Partner/list
   Responses: 200 Success
 
 
@@ -255,17 +260,6 @@ GET /api/Payment/list
   Project
 ======================================
 
-GET /api/Project/dashboard
-  Parameters:
-    - companyId (query, integer, int32, default: 0)
-  Responses: 200 Success
-
-GET /api/Project/documents
-  Parameters:
-    - id (query, integer, int32, default: 0)
-    - companyId (query, integer, int32, default: 0)
-  Responses: 200 Success
-
 GET /api/Project/list
   Parameters:
     - CompanyId (query, integer, int32)
@@ -275,6 +269,17 @@ GET /api/Project/list
 
 GET /api/Project/team-work-stats
   Parameters:
+    - companyId (query, integer, int32, default: 0)
+  Responses: 200 Success
+
+GET /api/Project/dashboard
+  Parameters:
+    - companyId (query, integer, int32, default: 0)
+  Responses: 200 Success
+
+GET /api/Project/documents
+  Parameters:
+    - id (query, integer, int32, default: 0)
     - companyId (query, integer, int32, default: 0)
   Responses: 200 Success
 
@@ -295,17 +300,17 @@ GET /api/Report/income-statement
   Request
 ======================================
 
-GET /api/Request/details
-  Parameters:
-    - id (query, integer, int32)
-  Responses: 200 Success
-
 GET /api/Request/list
   Parameters:
     - companyId (query, integer, int32, default: 0)
     - kriter (query, string)
     - startRow (query, integer, int32, default: 0)
     - endRow (query, integer, int32, default: 100)
+  Responses: 200 Success
+
+GET /api/Request/details
+  Parameters:
+    - id (query, integer, int32)
   Responses: 200 Success
 
 

@@ -2,7 +2,7 @@
 // BlueHUB — Centralized API Service Layer
 // ============================================================
 // ⚡ Toggle: set USE_MOCK = false to use real API
-const USE_MOCK = true;
+const USE_MOCK = false;
 
 import type {
     LoginRequest,
@@ -639,7 +639,7 @@ export async function simulateSalesmanBonus(params: SalesmanBonusParams) {
 
 export async function getDeliveries(_params?: DeliveryViewParams) {
     if (USE_MOCK) { await delay(300); return MOCK.deliveries; }
-    return apiGet('/api/Delivery/view', _params);
+    return apiGet('/api/Delivery/list', _params);
 }
 
 // ============================================================
@@ -745,6 +745,7 @@ export async function getInvoices(_params?: InvoiceViewParams) {
     return apiGet('/api/Invoice/list', _params);
 }
 
+// ⚠️ /api/Invoice/details was REMOVED from the API
 export async function getInvoiceDetails(id: number) {
     if (USE_MOCK) {
         await delay(300);
@@ -752,7 +753,12 @@ export async function getInvoiceDetails(id: number) {
         // @ts-ignore
         return item ? { ...item, lines: generateMockItems(Math.floor(Math.random() * 5) + 2) } : undefined;
     }
-    return apiGet('/api/Invoice/details', { id });
+    try {
+        return await apiGet('/api/Invoice/details', { id });
+    } catch {
+        console.warn('[API] /api/Invoice/details endpoint no longer available');
+        return undefined;
+    }
 }
 
 // ============================================================
@@ -914,14 +920,26 @@ export async function getVesselVisits(_params?: VesselVisitViewParams) {
 // ── SALES ──────────────────────────────────────────────────
 // ============================================================
 
+// ⚠️ /api/Product/list is NOT in the API — mock-only
 export async function getProducts() {
     if (USE_MOCK) { await delay(300); return MOCK.products; }
-    return apiGet('/api/Product/list');
+    try {
+        return await apiGet('/api/Product/list');
+    } catch {
+        console.warn('[API] /api/Product/list endpoint not available');
+        return [];
+    }
 }
 
+// ⚠️ /api/Report/sales is NOT in the API — mock-only
 export async function getSalesReports() {
     if (USE_MOCK) { await delay(300); return MOCK.salesReports; }
-    return apiGet('/api/Report/sales');
+    try {
+        return await apiGet('/api/Report/sales');
+    } catch {
+        console.warn('[API] /api/Report/sales endpoint not available');
+        return { dailySales: [], topSellingProducts: [] };
+    }
 }
 
 // ============================================================
@@ -937,16 +955,28 @@ export async function getVouchers(_params?: VoucherViewParams) {
 // ── SHIP ───────────────────────────────────────────────────
 // ============================================================
 
+// ⚠️ /api/Ship/list is NOT in the API — mock-only
 export async function getShips() {
     if (USE_MOCK) { await delay(300); return MOCK.ships; }
-    return apiGet('/api/Ship/list');
+    try {
+        return await apiGet('/api/Ship/list');
+    } catch {
+        console.warn('[API] /api/Ship/list endpoint not available');
+        return [];
+    }
 }
 
 // ============================================================
 // ── SERVICE ────────────────────────────────────────────────
 // ============================================================
 
+// ⚠️ /api/Service/list is NOT in the API — mock-only
 export async function getServices() {
     if (USE_MOCK) { await delay(300); return MOCK.services; }
-    return apiGet('/api/Service/list');
+    try {
+        return await apiGet('/api/Service/list');
+    } catch {
+        console.warn('[API] /api/Service/list endpoint not available');
+        return [];
+    }
 }

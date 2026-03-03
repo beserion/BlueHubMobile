@@ -43,7 +43,19 @@ const HRPanel = () => {
                     case 'leaves': result = await getLeaves(); break;
                     case 'attendance': result = await getAttendanceReport(); break;
                 }
-                setData(Array.isArray(result) ? result : result?.data ? (Array.isArray(result.data) ? result.data : [result.data]) : []);
+                // API returns wrapper objects: { employees: [...] }, { contracts: [...] }, etc.
+                let items: any[] = [];
+                if (Array.isArray(result)) {
+                    items = result;
+                } else if (result) {
+                    // Try tab-specific keys first
+                    if (activeTab === 'employees' && result.employees) items = result.employees;
+                    else if (activeTab === 'contracts' && result.contracts) items = result.contracts;
+                    else if (activeTab === 'leaves' && result.leaves) items = result.leaves;
+                    else if (activeTab === 'attendance' && result.attendances) items = result.attendances;
+                    else if (result.data && Array.isArray(result.data)) items = result.data;
+                }
+                setData(items);
             } catch (err: any) {
                 setError(err.message || 'Veriler yüklenemedi');
             } finally {
@@ -71,13 +83,13 @@ const HRPanel = () => {
                                 {item.name ? item.name.charAt(0) : <User size={20} />}
                             </div>
                             <div>
-                                <h3 className="font-bold text-slate-800 dark:text-slate-100">{item.name}</h3>
-                                <p className="text-xs text-rose-500 font-medium">{item.position || 'Pozisyon Yok'}</p>
+                                {item.fullName || item.name || `${item.firstName || ''} ${item.lastName || ''}`.trim() || '—'}
+                                <p className="text-xs text-rose-500 font-medium">{item.positionName || item.position || 'Pozisyon Yok'}</p>
                             </div>
                         </div>
                         <div className="space-y-1 pt-2 border-t border-slate-50 dark:border-slate-800">
-                            <DataRow label="Departman" value={item.department || '—'} icon={<Briefcase size={14} className="text-rose-400" />} />
-                            <DataRow label="Telefon" value={item.phone || '—'} icon={<Phone size={14} className="text-rose-400" />} />
+                            <DataRow label="Departman" value={item.departmentName || item.department || '—'} icon={<Briefcase size={14} className="text-rose-400" />} />
+                            <DataRow label="Telefon" value={item.mobile || item.phone || '—'} icon={<Phone size={14} className="text-rose-400" />} />
                             <DataRow label="E-posta" value={item.email || '—'} icon={<Mail size={14} className="text-rose-400" />} />
                         </div>
                     </div>

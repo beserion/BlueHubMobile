@@ -1,8 +1,8 @@
-﻿AppApi v1.0  Schemas
+AppApi v1.0  Schemas
 =====================
 
 ======================================
-  EDApi.Controllers.AuthController.LoginRequest
+  AuthController.LoginRequest
 ======================================
 Type: object
 additionalProperties: false
@@ -13,7 +13,7 @@ Properties:
   password                  string  nullable: true
 
 ======================================
-  EDApi.Controllers.AuthController.LoginResponse
+  AuthController.LoginResponse
 ======================================
 Type: object
 additionalProperties: false
@@ -22,10 +22,10 @@ Properties:
   success                   boolean
   token                     string  nullable: true
   expiresUtc                string  (date-time)
-  user                      EDApi.Controllers.AuthController.UserInfo
+  user                      unknown
 
 ======================================
-  EDApi.Controllers.AuthController.UserInfo
+  AuthController.UserInfo
 ======================================
 Type: object
 additionalProperties: false
@@ -54,7 +54,7 @@ Properties:
   isDeleted                 boolean
   isNew                     boolean  readOnly: true
   companyId                 integer  (int32)
-  company                   Companies
+  company                   unknown
   rowCnt                    integer  (int32)
   rowNumber                 integer  (int32)
   accountCode               string  nullable: true
@@ -76,8 +76,8 @@ Properties:
   isSelectable              boolean
   hide                      boolean
   transactionCount          integer  (int32)
-  accountTypes              array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
-  cCurrencies               array of CCurrency  nullable: true
+  accountTypes              array of undefined  nullable: true
+  cCurrencies               array of undefined  nullable: true
 
 ======================================
   AccountTransactionsVM
@@ -223,7 +223,7 @@ Properties:
   isDeleted                 boolean
   isNew                     boolean  readOnly: true
   companyId                 integer  (int32)
-  company                   Companies
+  company                   unknown
   rowCnt                    integer  (int32)
   rowNumber                 integer  (int32)
   refId                     integer  (int64)
@@ -306,7 +306,7 @@ Properties:
   isDeleted                 boolean
   isNew                     boolean  readOnly: true
   companyId                 integer  (int32)
-  company                   Companies
+  company                   unknown
   rowCnt                    integer  (int32)
   rowNumber                 integer  (int32)
   active                    boolean
@@ -331,11 +331,11 @@ Properties:
   balance                   number  (double)
   remarks                   string  nullable: true
   logoUrl                   string  nullable: true  readOnly: true
-  banks                     array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
-  bankAccounts              array of BankAccount  nullable: true
-  companies                 array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
-  countries                 array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
-  cities                    array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
+  banks                     array of undefined  nullable: true
+  bankAccounts              array of undefined  nullable: true
+  companies                 array of undefined  nullable: true
+  countries                 array of undefined  nullable: true
+  cities                    array of undefined  nullable: true
 
 ======================================
   BloodType
@@ -402,9 +402,9 @@ Properties:
   purchaseOrderNote         string  nullable: true
   logo                      string  nullable: true
   logoUrl                   string  nullable: true  readOnly: true
-  vesselList                array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
-  countryList               array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
-  partnerTypes              array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
+  vesselList                array of undefined  nullable: true
+  countryList               array of undefined  nullable: true
+  partnerTypes              array of undefined  nullable: true
 
 ======================================
   CompanyAccountGroupCurrencyList
@@ -415,10 +415,10 @@ additionalProperties: false
 Properties:
   companyId                 integer  (int32)
   accountCode               string  nullable: true
-  companies                 array of Companies  nullable: true
-  tlAccounts                array of AccountVM  nullable: true
-  eurAccounts               array of AccountVM  nullable: true
-  usdAccounts               array of AccountVM  nullable: true
+  companies                 array of undefined  nullable: true
+  tlAccounts                array of undefined  nullable: true
+  eurAccounts               array of undefined  nullable: true
+  usdAccounts               array of undefined  nullable: true
   totalTL                   number  (double)
   totalUSD                  number  (double)
   totalEUR                  number  (double)
@@ -446,8 +446,8 @@ Properties:
   companyId                 integer  (int32)
   deliveryNo                string  nullable: true
   deliveryDate              string  (date-time)
-  deliveryType              EDUtility.DeliveryType
-  status                    EDUtility.DeliveryStatus
+  deliveryType              unknown
+  status                    unknown
   partnerId                 integer  (int32)
   partnerName               string  nullable: true
   warehouseId               integer  (int32)  nullable: true
@@ -459,10 +459,10 @@ Properties:
   totalAmount               number  (double)
   totalAmountTL             number  (double)
   invoiceId                 integer  (int32)  nullable: true
-  lines                     array of DeliveryLineDto  nullable: true
-  partnerList               array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
-  currencyList              array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
-  warehouseList             array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
+  lines                     array of undefined  nullable: true
+  partnerList               array of undefined  nullable: true
+  currencyList              array of undefined  nullable: true
+  warehouseList             array of undefined  nullable: true
 
 ======================================
   DeliveryHeader
@@ -479,15 +479,15 @@ Properties:
   isDeleted                 boolean
   isNew                     boolean  readOnly: true
   companyId                 integer  (int32)
-  company                   Companies
+  company                   unknown
   rowCnt                    integer  (int32)
   rowNumber                 integer  (int32)
   deliveryNo                string  nullable: true
   deliveryDate              string  (date-time)
-  deliveryType              EDUtility.DeliveryType
-  status                    EDUtility.DeliveryStatus
+  deliveryType              unknown
+  status                    unknown
   partnerId                 integer  (int32)
-  partner                   Partner
+  partner                   unknown
   warehouseId               integer  (int32)  nullable: true
   docNo                     string  nullable: true
   description               string  nullable: true
@@ -498,7 +498,7 @@ Properties:
   totalAmountTL             number  (double)
   invoiceId                 integer  (int32)  nullable: true
   voucherId                 integer  (int32)  nullable: true
-  lines                     array of DeliveryLine  nullable: true
+  lines                     array of undefined  nullable: true
 
 ======================================
   DeliveryLine
@@ -515,11 +515,11 @@ Properties:
   isDeleted                 boolean
   isNew                     boolean  readOnly: true
   companyId                 integer  (int32)
-  company                   Companies
+  company                   unknown
   rowCnt                    integer  (int32)
   rowNumber                 integer  (int32)
   headerId                  integer  (int32)
-  header                    DeliveryHeader
+  header                    unknown
   productId                 integer  (int32)  nullable: true
   description               string  nullable: true
   qty                       number  (double)
@@ -611,6 +611,31 @@ Type: integer int32
 Values: 1, 2, 3
 
 ======================================
+  GeneralDashboardCardDto
+======================================
+Type: object
+additionalProperties: false
+
+Properties:
+  key                       string  nullable: true
+  label                     string  nullable: true
+  value                     number  (double)
+  valueFormatted            string  nullable: true
+  changePercent             number  (double)
+  compareLabel              string  nullable: true
+  isPositiveGood            boolean
+
+======================================
+  GeneralDashboardResponseDto
+======================================
+Type: object
+additionalProperties: false
+
+Properties:
+  cards                     array of undefined  nullable: true
+  updatedAt                 string  (date-time)
+
+======================================
   GoodsIssue
 ======================================
 Type: object
@@ -625,23 +650,23 @@ Properties:
   isDeleted                 boolean
   isNew                     boolean  readOnly: true
   companyId                 integer  (int32)
-  company                   Companies
+  company                   unknown
   rowCnt                    integer  (int32)
   rowNumber                 integer  (int32)
   documentNo                string
   documentDate              string  (date-time)
   warehouseId               integer  (int32)
-  warehouse                 Warehouse
+  warehouse                 unknown
   requisitionId             integer  (int32)  nullable: true
   projectId                 integer  (int32)  nullable: true
-  project                   Project
+  project                   unknown
   issueType                 string  nullable: true
   status                    string  nullable: true
   remarks                   string  nullable: true
   createdByUserId           integer  (int32)  nullable: true
   postedDate                string  (date-time)  nullable: true
   postedByUserId            integer  (int32)  nullable: true
-  lines                     array of GoodsIssueLine  nullable: true
+  lines                     array of undefined  nullable: true
   warehouseName             string  nullable: true
 
 ======================================
@@ -659,13 +684,13 @@ Properties:
   isDeleted                 boolean
   isNew                     boolean  readOnly: true
   companyId                 integer  (int32)
-  company                   Companies
+  company                   unknown
   rowCnt                    integer  (int32)
   rowNumber                 integer  (int32)
   goodsIssueId              integer  (int32)
-  goodsIssue                GoodsIssue
+  goodsIssue                unknown
   stockId                   integer  (int32)
-  stock                     Stock
+  stock                     unknown
   batchNo                   string  nullable: true
   serialNo                  string  nullable: true
   requestedQty              number  (double)
@@ -693,18 +718,18 @@ Properties:
   isDeleted                 boolean
   isNew                     boolean  readOnly: true
   companyId                 integer  (int32)
-  company                   Companies
+  company                   unknown
   rowCnt                    integer  (int32)
   rowNumber                 integer  (int32)
   documentNo                string
   documentDate              string  (date-time)
   warehouseId               integer  (int32)
-  warehouse                 Warehouse
+  warehouse                 unknown
   partnerId                 integer  (int32)  nullable: true
-  partner                   Partner
+  partner                   unknown
   purchaseOrderId           integer  (int32)  nullable: true
   projectId                 integer  (int32)  nullable: true
-  project                   Project
+  project                   unknown
   supplierInvoiceNo         string  nullable: true
   supplierInvoiceDate       string  (date-time)  nullable: true
   status                    string  nullable: true
@@ -712,7 +737,7 @@ Properties:
   createdByUserId           integer  (int32)  nullable: true
   postedDate                string  (date-time)  nullable: true
   postedByUserId            integer  (int32)  nullable: true
-  lines                     array of GoodsReceiptLine  nullable: true
+  lines                     array of undefined  nullable: true
   warehouseName             string  nullable: true
   partnerName               string  nullable: true
 
@@ -731,13 +756,13 @@ Properties:
   isDeleted                 boolean
   isNew                     boolean  readOnly: true
   companyId                 integer  (int32)
-  company                   Companies
+  company                   unknown
   rowCnt                    integer  (int32)
   rowNumber                 integer  (int32)
   goodsReceiptId            integer  (int32)
-  goodsReceipt              GoodsReceipt
+  goodsReceipt              unknown
   stockId                   integer  (int32)
-  stock                     Stock
+  stock                     unknown
   batchNo                   string  nullable: true
   serialNo                  string  nullable: true
   orderedQty                number  (double)
@@ -769,17 +794,17 @@ Properties:
   isDeleted                 boolean
   isNew                     boolean  readOnly: true
   companyId                 integer  (int32)
-  company                   Companies
+  company                   unknown
   rowCnt                    integer  (int32)
   rowNumber                 integer  (int32)
   employeeId                integer  (int32)
-  employee                  HREmployee
+  employee                  unknown
   attendanceDate            string  (date-time)
   checkInTime               string  (date-time)  nullable: true
   checkOutTime              string  (date-time)  nullable: true
   workedHours               number  (double)  nullable: true
   overtimeHours             number  (double)  nullable: true
-  status                    AttendanceStatus
+  status                    unknown
   checkInLocation           string  nullable: true
   checkOutLocation          string  nullable: true
   notes                     string  nullable: true
@@ -792,12 +817,12 @@ Type: object
 additionalProperties: false
 
 Properties:
-  attendances               array of HRAttendance  nullable: true
-  employeeList              array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
-  statusList                array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
+  attendances               array of undefined  nullable: true
+  employeeList              array of undefined  nullable: true
+  statusList                array of undefined  nullable: true
   employeeId                integer  (int32)  nullable: true
   date                      string  (date-time)  nullable: true
-  status                    AttendanceStatus
+  status                    unknown
 
 ======================================
   HRAttendanceReportListVM
@@ -806,12 +831,12 @@ Type: object
 additionalProperties: false
 
 Properties:
-  employeeList              array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
-  departmentList            array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
-  statusList                array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
+  employeeList              array of undefined  nullable: true
+  departmentList            array of undefined  nullable: true
+  statusList                array of undefined  nullable: true
   employeeId                integer  (int32)  nullable: true
   departmentId              integer  (int32)  nullable: true
-  status                    AttendanceStatus
+  status                    unknown
   startDate                 string  (date-time)  nullable: true
   endDate                   string  (date-time)  nullable: true
   totalRecords              integer  (int32)
@@ -821,10 +846,10 @@ Properties:
   onLeaveCount              integer  (int32)
   totalWorkedHours          number  (double)
   totalOvertimeHours        number  (double)
-  attendances               array of HRAttendance  nullable: true
-  attendancesByStatus       array of AttendanceByStatusVM  nullable: true
-  attendancesByDepartment   array of AttendanceByDepartmentVM  nullable: true
-  attendancesByDate         array of AttendanceByDateVM  nullable: true
+  attendances               array of undefined  nullable: true
+  attendancesByStatus       array of undefined  nullable: true
+  attendancesByDepartment   array of undefined  nullable: true
+  attendancesByDate         array of undefined  nullable: true
 
 ======================================
   HRCertificate
@@ -841,11 +866,11 @@ Properties:
   isDeleted                 boolean
   isNew                     boolean  readOnly: true
   companyId                 integer  (int32)
-  company                   Companies
+  company                   unknown
   rowCnt                    integer  (int32)
   rowNumber                 integer  (int32)
   employeeId                integer  (int32)
-  employee                  HREmployee
+  employee                  unknown
   certificateName           string
   certificateNo             string  nullable: true
   issuingAuthority          string  nullable: true
@@ -870,23 +895,23 @@ Properties:
   isDeleted                 boolean
   isNew                     boolean  readOnly: true
   companyId                 integer  (int32)
-  company                   Companies
+  company                   unknown
   rowCnt                    integer  (int32)
   rowNumber                 integer  (int32)
   employeeId                integer  (int32)
-  employee                  HREmployee
+  employee                  unknown
   contractNo                string
-  contractType              ContractType
+  contractType              unknown
   startDate                 string  (date-time)
   endDate                   string  (date-time)  nullable: true
   grossSalary               number  (double)
   currency                  string  nullable: true
-  paymentPeriod             PaymentPeriod
+  paymentPeriod             unknown
   workingHoursPerWeek       integer  (int32)
   annualLeaveDays           integer  (int32)
   benefits                  string  nullable: true
   specialTerms              string  nullable: true
-  status                    ContractStatus
+  status                    unknown
   documentPath              string  nullable: true
   notes                     string  nullable: true
 
@@ -897,8 +922,8 @@ Type: object
 additionalProperties: false
 
 Properties:
-  contracts                 array of HRContract  nullable: true
-  employeeList              array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
+  contracts                 array of undefined  nullable: true
+  employeeList              array of undefined  nullable: true
 
 ======================================
   HRDepartment
@@ -915,19 +940,19 @@ Properties:
   isDeleted                 boolean
   isNew                     boolean  readOnly: true
   companyId                 integer  (int32)
-  company                   Companies
+  company                   unknown
   rowCnt                    integer  (int32)
   rowNumber                 integer  (int32)
   departmentCode            string
   departmentName            string
   parentDepartmentId        integer  (int32)  nullable: true
-  parentDepartment          HRDepartment
+  parentDepartment          unknown
   managerId                 integer  (int32)  nullable: true
   description               string  nullable: true
   isActive                  boolean
   sortOrder                 integer  (int32)
-  employees                 array of HREmployee  nullable: true
-  positions                 array of HRPosition  nullable: true
+  employees                 array of undefined  nullable: true
+  positions                 array of undefined  nullable: true
 
 ======================================
   HRDiscipline
@@ -944,15 +969,15 @@ Properties:
   isDeleted                 boolean
   isNew                     boolean  readOnly: true
   companyId                 integer  (int32)
-  company                   Companies
+  company                   unknown
   rowCnt                    integer  (int32)
   rowNumber                 integer  (int32)
   employeeId                integer  (int32)
-  employee                  HREmployee
+  employee                  unknown
   incidentDate              string  (date-time)
-  disciplineType            DisciplineType
+  disciplineType            unknown
   description               string
-  action                    DisciplineAction
+  action                    unknown
   actionDate                string  (date-time)
   issuedById                integer  (int32)  nullable: true
   documentPath              string  nullable: true
@@ -975,13 +1000,13 @@ Properties:
   isDeleted                 boolean
   isNew                     boolean  readOnly: true
   companyId                 integer  (int32)
-  company                   Companies
+  company                   unknown
   rowCnt                    integer  (int32)
   rowNumber                 integer  (int32)
   employeeId                integer  (int32)
-  employee                  HREmployee
+  employee                  unknown
   documentName              string
-  documentType              HRDocumentType
+  documentType              unknown
   filePath                  string  nullable: true
   expiryDate                string  (date-time)  nullable: true
   description               string  nullable: true
@@ -1008,7 +1033,7 @@ Properties:
   isDeleted                 boolean
   isNew                     boolean  readOnly: true
   companyId                 integer  (int32)
-  company                   Companies
+  company                   unknown
   rowCnt                    integer  (int32)
   rowNumber                 integer  (int32)
   employeeCode              string
@@ -1019,11 +1044,11 @@ Properties:
   passportNo                string  nullable: true
   birthDate                 string  (date-time)  nullable: true
   birthPlace                string  nullable: true
-  gender                    Gender
-  maritalStatus             MaritalStatus
-  militaryStatus            MilitaryStatus
+  gender                    unknown
+  maritalStatus             unknown
+  militaryStatus            unknown
   nationality               string  nullable: true
-  bloodType                 BloodType
+  bloodType                 unknown
   phone                     string  nullable: true
   mobile                    string  nullable: true
   email                     string  nullable: true
@@ -1038,35 +1063,35 @@ Properties:
   hireDate                  string  (date-time)
   terminationDate           string  (date-time)  nullable: true
   terminationReason         string  nullable: true
-  employmentStatus          EmploymentStatus
-  employmentType            EmploymentType
+  employmentStatus          unknown
+  employmentType            unknown
   departmentId              integer  (int32)  nullable: true
-  department                HRDepartment
+  department                unknown
   positionId                integer  (int32)  nullable: true
-  position                  HRPosition
+  position                  unknown
   salaryGradeId             integer  (int32)  nullable: true
-  salaryGrade               HRSalaryGrade
+  salaryGrade               unknown
   managerId                 integer  (int32)  nullable: true
-  manager                   HREmployee
+  manager                   unknown
   branchId                  integer  (int32)  nullable: true
   bankName                  string  nullable: true
   bankBranch                string  nullable: true
   iban                      string  nullable: true
   sgkNo                     string  nullable: true
-  educationLevel            EducationLevel
+  educationLevel            unknown
   university                string  nullable: true
   educationDepartment       string  nullable: true
   graduationYear            integer  (int32)  nullable: true
   photoPath                 string  nullable: true
   notes                     string  nullable: true
-  contracts                 array of HRContract  nullable: true
-  leaves                    array of HRLeave  nullable: true
-  attendances               array of HRAttendance  nullable: true
-  employeeTrainings         array of HREmployeeTraining  nullable: true
-  performances              array of HRPerformance  nullable: true
-  disciplines               array of HRDiscipline  nullable: true
-  certificates              array of HRCertificate  nullable: true
-  documents                 array of HRDocument  nullable: true
+  contracts                 array of undefined  nullable: true
+  leaves                    array of undefined  nullable: true
+  attendances               array of undefined  nullable: true
+  employeeTrainings         array of undefined  nullable: true
+  performances              array of undefined  nullable: true
+  disciplines               array of undefined  nullable: true
+  certificates              array of undefined  nullable: true
+  documents                 array of undefined  nullable: true
 
 ======================================
   HREmployeeDto
@@ -1082,13 +1107,13 @@ Properties:
   fullName                  string  nullable: true  readOnly: true
   tcKimlikNo                string  nullable: true
   birthDate                 string  (date-time)  nullable: true
-  gender                    Gender
+  gender                    unknown
   phone                     string  nullable: true
   mobile                    string  nullable: true
   email                     string  nullable: true
   hireDate                  string  (date-time)
-  employmentStatus          EmploymentStatus
-  employmentType            EmploymentType
+  employmentStatus          unknown
+  employmentType            unknown
   departmentId              integer  (int32)  nullable: true
   departmentName            string  nullable: true
   positionId                integer  (int32)  nullable: true
@@ -1104,13 +1129,13 @@ Type: object
 additionalProperties: false
 
 Properties:
-  employees                 array of HREmployeeDto  nullable: true
-  departmentList            array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
-  positionList              array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
-  statusList                array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
+  employees                 array of undefined  nullable: true
+  departmentList            array of undefined  nullable: true
+  positionList              array of undefined  nullable: true
+  statusList                array of undefined  nullable: true
   departmentId              integer  (int32)  nullable: true
   positionId                integer  (int32)  nullable: true
-  status                    EmploymentStatus
+  status                    unknown
   searchTerm                string  nullable: true
 
 ======================================
@@ -1128,14 +1153,14 @@ Properties:
   isDeleted                 boolean
   isNew                     boolean  readOnly: true
   companyId                 integer  (int32)
-  company                   Companies
+  company                   unknown
   rowCnt                    integer  (int32)
   rowNumber                 integer  (int32)
   employeeId                integer  (int32)
-  employee                  HREmployee
+  employee                  unknown
   trainingId                integer  (int32)
-  training                  HRTraining
-  status                    TrainingStatus
+  training                  unknown
+  status                    unknown
   completionDate            string  (date-time)  nullable: true
   score                     number  (double)  nullable: true
   isPassed                  boolean
@@ -1158,24 +1183,24 @@ Properties:
   isDeleted                 boolean
   isNew                     boolean  readOnly: true
   companyId                 integer  (int32)
-  company                   Companies
+  company                   unknown
   rowCnt                    integer  (int32)
   rowNumber                 integer  (int32)
   employeeId                integer  (int32)
-  employee                  HREmployee
+  employee                  unknown
   leaveTypeId               integer  (int32)
-  leaveType                 HRLeaveType
+  leaveType                 unknown
   startDate                 string  (date-time)
   endDate                   string  (date-time)
   totalDays                 number  (double)
   reason                    string  nullable: true
-  status                    LeaveStatus
+  status                    unknown
   approvedById              integer  (int32)  nullable: true
   approvalDate              string  (date-time)  nullable: true
   approvalNotes             string  nullable: true
   documentPath              string  nullable: true
   deputyEmployeeId          integer  (int32)  nullable: true
-  deputyEmployee            HREmployee
+  deputyEmployee            unknown
 
 ======================================
   HRLeaveDto
@@ -1193,7 +1218,7 @@ Properties:
   endDate                   string  (date-time)
   totalDays                 number  (double)
   reason                    string  nullable: true
-  status                    LeaveStatus
+  status                    unknown
   approvedByName            string  nullable: true
   approvalDate              string  (date-time)  nullable: true
 
@@ -1204,13 +1229,13 @@ Type: object
 additionalProperties: false
 
 Properties:
-  leaves                    array of HRLeaveDto  nullable: true
-  employeeList              array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
-  leaveTypeList             array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
-  statusList                array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
+  leaves                    array of undefined  nullable: true
+  employeeList              array of undefined  nullable: true
+  leaveTypeList             array of undefined  nullable: true
+  statusList                array of undefined  nullable: true
   employeeId                integer  (int32)  nullable: true
   leaveTypeId               integer  (int32)  nullable: true
-  status                    LeaveStatus
+  status                    unknown
   startDate                 string  (date-time)  nullable: true
   endDate                   string  (date-time)  nullable: true
 
@@ -1229,7 +1254,7 @@ Properties:
   isDeleted                 boolean
   isNew                     boolean  readOnly: true
   companyId                 integer  (int32)
-  company                   Companies
+  company                   unknown
   rowCnt                    integer  (int32)
   rowNumber                 integer  (int32)
   leaveTypeName             string
@@ -1256,15 +1281,15 @@ Properties:
   isDeleted                 boolean
   isNew                     boolean  readOnly: true
   companyId                 integer  (int32)
-  company                   Companies
+  company                   unknown
   rowCnt                    integer  (int32)
   rowNumber                 integer  (int32)
   employeeId                integer  (int32)
-  employee                  HREmployee
+  employee                  unknown
   periodId                  integer  (int32)
-  period                    HRPerformancePeriod
+  period                    unknown
   evaluatorId               integer  (int32)  nullable: true
-  evaluator                 HREmployee
+  evaluator                 unknown
   goalAchievement           number  (double)  nullable: true
   jobKnowledge              number  (double)  nullable: true
   quality                   number  (double)  nullable: true
@@ -1274,13 +1299,13 @@ Properties:
   initiative                number  (double)  nullable: true
   attendance                number  (double)  nullable: true
   overallScore              number  (double)  nullable: true
-  rating                    PerformanceRating
+  rating                    unknown
   strengths                 string  nullable: true
   areasToImprove            string  nullable: true
   goals                     string  nullable: true
   employeeComments          string  nullable: true
   managerComments           string  nullable: true
-  status                    PerformanceStatus
+  status                    unknown
   submissionDate            string  (date-time)  nullable: true
   approvalDate              string  (date-time)  nullable: true
 
@@ -1299,14 +1324,14 @@ Properties:
   isDeleted                 boolean
   isNew                     boolean  readOnly: true
   companyId                 integer  (int32)
-  company                   Companies
+  company                   unknown
   rowCnt                    integer  (int32)
   rowNumber                 integer  (int32)
   periodName                string
   year                      integer  (int32)
   startDate                 string  (date-time)
   endDate                   string  (date-time)
-  status                    PerformancePeriodStatus
+  status                    unknown
   isActive                  boolean
 
 ======================================
@@ -1324,20 +1349,20 @@ Properties:
   isDeleted                 boolean
   isNew                     boolean  readOnly: true
   companyId                 integer  (int32)
-  company                   Companies
+  company                   unknown
   rowCnt                    integer  (int32)
   rowNumber                 integer  (int32)
   positionCode              string
   positionName              string
   departmentId              integer  (int32)  nullable: true
-  department                HRDepartment
+  department                unknown
   level                     integer  (int32)
   description               string  nullable: true
   requirements              string  nullable: true
   minSalary                 number  (double)  nullable: true
   maxSalary                 number  (double)  nullable: true
   isActive                  boolean
-  employees                 array of HREmployee  nullable: true
+  employees                 array of undefined  nullable: true
 
 ======================================
   HRSalaryGrade
@@ -1354,7 +1379,7 @@ Properties:
   isDeleted                 boolean
   isNew                     boolean  readOnly: true
   companyId                 integer  (int32)
-  company                   Companies
+  company                   unknown
   rowCnt                    integer  (int32)
   rowNumber                 integer  (int32)
   gradeCode                 string
@@ -1366,7 +1391,7 @@ Properties:
   description               string  nullable: true
   isActive                  boolean
   sortOrder                 integer  (int32)
-  employees                 array of HREmployee  nullable: true
+  employees                 array of undefined  nullable: true
 
 ======================================
   HRTraining
@@ -1383,12 +1408,12 @@ Properties:
   isDeleted                 boolean
   isNew                     boolean  readOnly: true
   companyId                 integer  (int32)
-  company                   Companies
+  company                   unknown
   rowCnt                    integer  (int32)
   rowNumber                 integer  (int32)
   trainingName              string
   trainingCode              string  nullable: true
-  trainingType              TrainingType
+  trainingType              unknown
   provider                  string  nullable: true
   startDate                 string  (date-time)
   endDate                   string  (date-time)  nullable: true
@@ -1398,7 +1423,7 @@ Properties:
   currency                  string  nullable: true
   description               string  nullable: true
   isCompleted               boolean
-  employeeTrainings         array of HREmployeeTraining  nullable: true
+  employeeTrainings         array of undefined  nullable: true
 
 ======================================
   IncomeStatementFilterDto
@@ -1410,7 +1435,7 @@ Properties:
   companyId                 integer  (int32)
   startDate                 string  (date-time)
   endDate                   string  (date-time)
-  companyList               array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
+  companyList               array of undefined  nullable: true
 
 ======================================
   IncomeStatementVM
@@ -1419,9 +1444,9 @@ Type: object
 additionalProperties: false
 
 Properties:
-  filter                    IncomeStatementFilterDto
-  gelirRows                 array of BalanceSheetRowDto  nullable: true
-  giderRows                 array of BalanceSheetRowDto  nullable: true
+  filter                    unknown
+  gelirRows                 array of undefined  nullable: true
+  giderRows                 array of undefined  nullable: true
   totalGelir                number  (double)
   totalGider                number  (double)
   netKarZarar               number  (double)
@@ -1441,17 +1466,17 @@ Properties:
   isDeleted                 boolean
   isNew                     boolean  readOnly: true
   companyId                 integer  (int32)
-  company                   Companies
+  company                   unknown
   rowCnt                    integer  (int32)
   rowNumber                 integer  (int32)
   partnerId                 integer  (int32)
-  partner                   Partner
+  partner                   unknown
   invoiceNo                 string
   documentNo                string  nullable: true
   description               string  nullable: true
   invoiceDate               string  (date-time)
   dueDate                   string  (date-time)  nullable: true
-  invoiceType               EDUtility.InvoiceType
+  invoiceType               unknown
   currency                  string  nullable: true
   currencyRate              number  (double)
   subTotal                  number  (double)
@@ -1464,12 +1489,12 @@ Properties:
   isClosed                  boolean
   status                    string  nullable: true
   voucherId                 integer  (int32)  nullable: true
-  voucherType               EDUtility.VoucherType
+  voucherType               unknown
   projectId                 integer  (int32)  nullable: true
-  project                   Project
+  project                   unknown
   purchaseOrderId           integer  (int32)  nullable: true
-  lines                     array of InvoiceLine  nullable: true
-  payments                  array of InvoicePayment  nullable: true
+  lines                     array of undefined  nullable: true
+  payments                  array of undefined  nullable: true
 
 ======================================
   InvoiceDto
@@ -1484,8 +1509,8 @@ Properties:
   partnerId                 integer  (int32)
   voucherId                 integer  (int32)  nullable: true
   projectId                 integer  (int32)  nullable: true
-  voucherType               EDUtility.VoucherType
-  invoiceType               EDUtility.InvoiceType
+  voucherType               unknown
+  invoiceType               unknown
   accountCode               string  nullable: true
   accountName               string  nullable: true
   invoiceNo                 string  nullable: true
@@ -1504,11 +1529,11 @@ Properties:
   isClosed                  boolean
   purchaseOrderId           integer  (int32)  nullable: true
   purchaseOrderNo           string  nullable: true
-  partners                  array of Partner  nullable: true
-  lines                     array of InvoiceLineDto  nullable: true
-  currencyList              array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
-  partnerList               array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
-  projectList               array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
+  partners                  array of undefined  nullable: true
+  lines                     array of undefined  nullable: true
+  currencyList              array of undefined  nullable: true
+  partnerList               array of undefined  nullable: true
+  projectList               array of undefined  nullable: true
 
 ======================================
   InvoiceFilter
@@ -1518,7 +1543,7 @@ additionalProperties: false
 
 Properties:
   companyId                 integer  (int32)
-  invoiceType               EDUtility.InvoiceType
+  invoiceType               unknown
   partnerId                 integer  (int32)  nullable: true
   startDate                 string  (date-time)  nullable: true
   endDate                   string  (date-time)  nullable: true
@@ -1539,11 +1564,11 @@ Properties:
   isDeleted                 boolean
   isNew                     boolean  readOnly: true
   companyId                 integer  (int32)
-  company                   Companies
+  company                   unknown
   rowCnt                    integer  (int32)
   rowNumber                 integer  (int32)
   invoiceId                 integer  (int32)
-  invoice                   Invoice
+  invoice                   unknown
   productId                 integer  (int32)  nullable: true
   warehouseId               integer  (int32)  nullable: true
   description               string  nullable: true
@@ -1585,10 +1610,10 @@ Type: object
 additionalProperties: false
 
 Properties:
-  filter                    InvoiceFilter
-  invoiceList               array of InvoiceDto  nullable: true
-  partnerList               array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
-  invoiceTypeList           array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
+  filter                    unknown
+  invoiceList               array of undefined  nullable: true
+  partnerList               array of undefined  nullable: true
+  invoiceTypeList           array of undefined  nullable: true
 
 ======================================
   InvoicePayment
@@ -1605,7 +1630,7 @@ Properties:
   isDeleted                 boolean
   isNew                     boolean  readOnly: true
   companyId                 integer  (int32)
-  company                   Companies
+  company                   unknown
   rowCnt                    integer  (int32)
   rowNumber                 integer  (int32)
   invoiceId                 integer  (int32)
@@ -1648,7 +1673,7 @@ Properties:
   isDeleted                 boolean
   isNew                     boolean  readOnly: true
   companyId                 integer  (int32)
-  company                   Companies
+  company                   unknown
   rowCnt                    integer  (int32)
   rowNumber                 integer  (int32)
   documentNo                string  nullable: true
@@ -1679,7 +1704,7 @@ Properties:
   messageReceived           boolean  nullable: true
   deliveryLocation          string  nullable: true
   partnerId                 integer  (int32)  nullable: true
-  partner                   Partner
+  partner                   unknown
   partnerName               string  nullable: true
   groupPartnerName          string  nullable: true
   companyName               string  nullable: true
@@ -1693,18 +1718,18 @@ Properties:
   companyIdFirst            integer  (int32)
   accountName               string  nullable: true
   rate                      number  (double)  nullable: true
-  groupPartners             array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
-  vessels                   array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
-  preparedByList            array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
-  accountManagerList        array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
-  middleManList             array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
-  billingAddressList        array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
-  shipingAddressList        array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
-  invcoiceTypes             array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
-  partners                  array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
-  companies                 array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
-  countries                 array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
-  transportations           array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
+  groupPartners             array of undefined  nullable: true
+  vessels                   array of undefined  nullable: true
+  preparedByList            array of undefined  nullable: true
+  accountManagerList        array of undefined  nullable: true
+  middleManList             array of undefined  nullable: true
+  billingAddressList        array of undefined  nullable: true
+  shipingAddressList        array of undefined  nullable: true
+  invcoiceTypes             array of undefined  nullable: true
+  partners                  array of undefined  nullable: true
+  companies                 array of undefined  nullable: true
+  countries                 array of undefined  nullable: true
+  transportations           array of undefined  nullable: true
 
 ======================================
   OfferDetailsResponseDto
@@ -1714,7 +1739,7 @@ additionalProperties: false
 
 Properties:
   offerId                   integer  (int32)
-  header                    Offer
+  header                    unknown
   lineCount                 integer  (int32)
   totalQty                  number  (double)
   subTotal                  number  (double)
@@ -1729,11 +1754,11 @@ Type: object
 additionalProperties: false
 
 Properties:
-  offers                    array of Offer  nullable: true
-  statusCounts              StatusCount
+  offers                    array of undefined  nullable: true
+  statusCounts              unknown
   selectedCompanyId         integer  (int32)
-  companies                 array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
-  offerStatuses             array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
+  companies                 array of undefined  nullable: true
+  offerStatuses             array of undefined  nullable: true
   rowCnt                    integer  (int32)
   rowNumber                 integer  (int32)
 
@@ -1752,13 +1777,13 @@ Properties:
   isDeleted                 boolean
   isNew                     boolean  readOnly: true
   companyId                 integer  (int32)  nullable: true
-  company                   Companies
+  company                   unknown
   rowCnt                    integer  (int32)
   rowNumber                 integer  (int32)
   offerId                   integer  (int32)  nullable: true
-  offer                     Offer
+  offer                     unknown
   partnerId                 integer  (int32)  nullable: true
-  partner                   Partner
+  partner                   unknown
   partnerName               string  nullable: true
   vesselName                string  nullable: true
   orderStatus               string  nullable: true
@@ -1787,7 +1812,7 @@ Properties:
   netAmount                 number  (double)  nullable: true
   kdvAmount                 number  (double)  nullable: true
   ttlAmount                 number  (double)  nullable: true
-  details                   array of OrderDetail  nullable: true
+  details                   array of undefined  nullable: true
   expectedDeliveryDate      string  (date-time)  nullable: true
   delayDays                 integer  (int32)  nullable: true
 
@@ -1806,11 +1831,11 @@ Properties:
   isDeleted                 boolean
   isNew                     boolean  readOnly: true
   companyId                 integer  (int32)
-  company                   Companies
+  company                   unknown
   rowCnt                    integer  (int32)
   rowNumber                 integer  (int32)
   orderId                   integer  (int32)  nullable: true
-  order                     Order
+  order                     unknown
   offerDetailId             integer  (int32)  nullable: true
   rowNo                     integer  (int32)  nullable: true
   warehouseId               integer  (int32)  nullable: true
@@ -1846,18 +1871,18 @@ additionalProperties: false
 
 Properties:
   orderId                   integer  (int32)
-  header                    Order
+  header                    unknown
   lineCount                 integer  (int32)
   totalQty                  number  (double)
   subTotal                  number  (double)
   totalDiscount             number  (double)
   totalVAT                  number  (double)
   grandTotal                number  (double)
-  stores                    array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
-  companies                 array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
-  vessels                   array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
-  users                     array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
-  deliveryTypes             array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
+  stores                    array of undefined  nullable: true
+  companies                 array of undefined  nullable: true
+  vessels                   array of undefined  nullable: true
+  users                     array of undefined  nullable: true
+  deliveryTypes             array of undefined  nullable: true
 
 ======================================
   OrderListVM
@@ -1866,10 +1891,10 @@ Type: object
 additionalProperties: false
 
 Properties:
-  order                     array of Order  nullable: true
-  companies                 array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
-  orderStatuses             array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
-  statusCounts              OrderStatusCount
+  order                     array of undefined  nullable: true
+  companies                 array of undefined  nullable: true
+  orderStatuses             array of undefined  nullable: true
+  statusCounts              unknown
 
 ======================================
   OrderStatusCount
@@ -1894,7 +1919,7 @@ Type: object
 additionalProperties: false
 
 Properties:
-  items                     array of VoucherDto  nullable: true
+  items                     array of undefined  nullable: true
   page                      integer  (int32)
   pageSize                  integer  (int32)
   totalCount                integer  (int32)
@@ -1997,7 +2022,7 @@ Properties:
   isDeleted                 boolean
   isNew                     boolean  readOnly: true
   companyId                 integer  (int32)
-  company                   Companies
+  company                   unknown
   rowCnt                    integer  (int32)
   rowNumber                 integer  (int32)
   identityNo                string  nullable: true
@@ -2062,8 +2087,8 @@ Properties:
   customers                 integer  (int32)
   suppliers                 integer  (int32)
   makers                    integer  (int32)
-  partnerTypes              array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
-  partnerGroupList          array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
+  partnerTypes              array of undefined  nullable: true
+  partnerGroupList          array of undefined  nullable: true
 
 ======================================
   PaymentDto
@@ -2076,8 +2101,8 @@ Properties:
   title                     string  nullable: true
   companyId                 integer  (int32)
   userName                  string  nullable: true
-  paymentType               EDUtility.PaymentType
-  voucherType               EDUtility.VoucherType
+  paymentType               unknown
+  voucherType               unknown
   docNo                     string  nullable: true
   transDate                 string  (date-time)
   partnerId                 integer  (int32)  nullable: true
@@ -2098,10 +2123,10 @@ Properties:
   remarks                   string  nullable: true
   voucherId                 integer  (int32)  nullable: true
   voucherNo                 string  nullable: true
-  currencyList              array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
-  partnerList               array of SelectListItemData  nullable: true
-  bankAccountList           array of SelectListItemData  nullable: true
-  cashAccountList           array of SelectListItemData  nullable: true
+  currencyList              array of undefined  nullable: true
+  partnerList               array of undefined  nullable: true
+  bankAccountList           array of undefined  nullable: true
+  cashAccountList           array of undefined  nullable: true
 
 ======================================
   PaymentListVM
@@ -2110,18 +2135,18 @@ Type: object
 additionalProperties: false
 
 Properties:
-  items                     array of PaymentDto  nullable: true
+  items                     array of undefined  nullable: true
   startDate                 string  (date-time)  nullable: true
   endDate                   string  (date-time)  nullable: true
-  paymentType               EDUtility.PaymentType
+  paymentType               unknown
   currency                  string  nullable: true
   kriter                    string  nullable: true
   currentPage               integer  (int32)
   totalPages                integer  (int32)
   pageSize                  integer  (int32)
   totalCount                integer  (int32)
-  paymentTypeList           array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
-  currencyList              array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
+  paymentTypeList           array of undefined  nullable: true
+  currencyList              array of undefined  nullable: true
   fromPurchase              boolean
   returnUrl                 string  nullable: true
   returnLabel               string  nullable: true
@@ -2178,7 +2203,7 @@ Properties:
   isDeleted                 boolean
   isNew                     boolean  readOnly: true
   companyId                 integer  (int32)
-  company                   Companies
+  company                   unknown
   rowCnt                    integer  (int32)
   rowNumber                 integer  (int32)
   active                    boolean
@@ -2251,11 +2276,11 @@ Properties:
   isDeleted                 boolean
   isNew                     boolean  readOnly: true
   companyId                 integer  (int32)
-  company                   Companies
+  company                   unknown
   rowCnt                    integer  (int32)
   rowNumber                 integer  (int32)
   partnerId                 integer  (int32)  nullable: true
-  partner                   Partner
+  partner                   unknown
   offerId                   integer  (int32)  nullable: true
   orderId                   integer  (int32)  nullable: true
   projectNo                 string  nullable: true
@@ -2270,11 +2295,11 @@ Properties:
   serviceLocation           string  nullable: true
   countryCode               string  nullable: true
   partnerName               string  nullable: true
-  partners                  array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
-  statusList                array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
-  companies                 array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
-  currencyList              array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
-  countryList               array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
+  partners                  array of undefined  nullable: true
+  statusList                array of undefined  nullable: true
+  companies                 array of undefined  nullable: true
+  currencyList              array of undefined  nullable: true
+  countryList               array of undefined  nullable: true
 
 ======================================
   ProjectDashboardVM
@@ -2283,9 +2308,9 @@ Type: object
 additionalProperties: false
 
 Properties:
-  statusCounts              ProjectStatusCount
+  statusCounts              unknown
   companyId                 integer  (int32)
-  companies                 array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
+  companies                 array of undefined  nullable: true
 
 ======================================
   ProjectDocumentsVM
@@ -2294,14 +2319,14 @@ Type: object
 additionalProperties: false
 
 Properties:
-  projectList               array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
-  companyList               array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
-  project                   Project
-  invoices                  array of Invoice  nullable: true
-  goodsReceipts             array of GoodsReceipt  nullable: true
-  goodsIssues               array of GoodsIssue  nullable: true
-  vouchers                  array of Voucher  nullable: true
-  attachments               array of Attachments  nullable: true
+  projectList               array of undefined  nullable: true
+  companyList               array of undefined  nullable: true
+  project                   unknown
+  invoices                  array of undefined  nullable: true
+  goodsReceipts             array of undefined  nullable: true
+  goodsIssues               array of undefined  nullable: true
+  vouchers                  array of undefined  nullable: true
+  attachments               array of undefined  nullable: true
 
 ======================================
   ProjectListFilterDto
@@ -2312,7 +2337,7 @@ additionalProperties: false
 Properties:
   companyId                 integer  (int32)
   kriter                    string  nullable: true
-  companyList               array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
+  companyList               array of undefined  nullable: true
 
 ======================================
   ProjectListItemDto
@@ -2341,8 +2366,8 @@ Type: object
 additionalProperties: false
 
 Properties:
-  items                     array of ProjectListItemDto  nullable: true
-  companyList               array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
+  items                     array of undefined  nullable: true
+  companyList               array of undefined  nullable: true
   rowCount                  integer  (int32)
 
 ======================================
@@ -2395,12 +2420,12 @@ additionalProperties: false
 
 Properties:
   companyId                 integer  (int32)
-  companies                 array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
-  teamByProject             array of ProjectTeamDistributionRow  nullable: true
-  employeeProjectCount      array of EmployeeProjectCountRow  nullable: true
-  taskByPhase               array of PhaseTaskCountRow  nullable: true
-  taskStatusCounts          ProjectTaskStatusCount
-  taskByAssignee            array of AssigneeTaskCountRow  nullable: true
+  companies                 array of undefined  nullable: true
+  teamByProject             array of undefined  nullable: true
+  employeeProjectCount      array of undefined  nullable: true
+  taskByPhase               array of undefined  nullable: true
+  taskStatusCounts          unknown
+  taskByAssignee            array of undefined  nullable: true
 
 ======================================
   Request
@@ -2417,13 +2442,13 @@ Properties:
   isDeleted                 boolean
   isNew                     boolean  readOnly: true
   companyId                 integer  (int32)
-  company                   Companies
+  company                   unknown
   rowCnt                    integer  (int32)
   rowNumber                 integer  (int32)
   vesselId                  integer  (int32)  nullable: true
-  vessel                    Vessel
+  vessel                    unknown
   partnerId                 integer  (int32)  nullable: true
-  partner                   Partner
+  partner                   unknown
   requestNo                 string  nullable: true
   makerType                 string  nullable: true
   refType                   string  nullable: true
@@ -2441,7 +2466,7 @@ Properties:
   vesselName                string  nullable: true
   supplierCount             integer  (int32)
   stockCount                integer  (int32)
-  requestDetails            array of RequestDetail  nullable: true
+  requestDetails            array of undefined  nullable: true
 
 ======================================
   RequestDetail
@@ -2458,13 +2483,13 @@ Properties:
   isDeleted                 boolean
   isNew                     boolean  readOnly: true
   companyId                 integer  (int32)
-  company                   Companies
+  company                   unknown
   rowCnt                    integer  (int32)
   rowNumber                 integer  (int32)
   requestId                 integer  (int32)
-  request                   Request
+  request                   unknown
   productId                 integer  (int32)  nullable: true
-  product                   Product
+  product                   unknown
   qty                       integer  (int32)
   unit                      string  nullable: true
   supplierNote              string  nullable: true
@@ -2501,9 +2526,9 @@ additionalProperties: false
 
 Properties:
   selectedCompanyId         integer  (int32)
-  requests                  array of Request  nullable: true
-  statusCounts              StatusCount
-  companies                 array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
+  requests                  array of undefined  nullable: true
+  statusCounts              unknown
+  companies                 array of undefined  nullable: true
 
 ======================================
   RequestVM
@@ -2513,13 +2538,13 @@ additionalProperties: false
 
 Properties:
   requestId                 integer  (int32)
-  request                   Request
-  partners                  array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
-  vessels                   array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
-  companies                 array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
-  personels                 array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
-  countries                 array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
-  requestDetails            array of RequestDetail  nullable: true
+  request                   unknown
+  partners                  array of undefined  nullable: true
+  vessels                   array of undefined  nullable: true
+  companies                 array of undefined  nullable: true
+  personels                 array of undefined  nullable: true
+  countries                 array of undefined  nullable: true
+  requestDetails            array of undefined  nullable: true
 
 ======================================
   SelectListItemData
@@ -2571,7 +2596,7 @@ Properties:
   isDeleted                 boolean
   isNew                     boolean  readOnly: true
   companyId                 integer  (int32)
-  company                   Companies
+  company                   unknown
   rowCnt                    integer  (int32)
   rowNumber                 integer  (int32)
   refCode                   string  nullable: true
@@ -2641,11 +2666,11 @@ Properties:
   fotoUrlSm                 string  nullable: true  readOnly: true
   remarks                   string  nullable: true
   warehouseId               integer  (int32)  nullable: true
-  warehouse                 Warehouse
-  units                     array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
-  stores                    array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
-  partners                  array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
-  product                   Product
+  warehouse                 unknown
+  units                     array of undefined  nullable: true
+  stores                    array of undefined  nullable: true
+  partners                  array of undefined  nullable: true
+  product                   unknown
 
 ======================================
   ToDo
@@ -2662,11 +2687,11 @@ Properties:
   isDeleted                 boolean
   isNew                     boolean  readOnly: true
   companyId                 integer  (int32)
-  company                   Companies
+  company                   unknown
   rowCnt                    integer  (int32)
   rowNumber                 integer  (int32)
   vesselId                  integer  (int32)  nullable: true
-  vessel                    Vessel
+  vessel                    unknown
   imo                       string  nullable: true
   companyName               string  nullable: true
   portCode                  string  nullable: true
@@ -2678,8 +2703,8 @@ Properties:
   priority                  string  nullable: true
   assignedTo                string  nullable: true
   reminderDate              string  (date-time)  nullable: true
-  vessels                   array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
-  partners                  array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
+  vessels                   array of undefined  nullable: true
+  partners                  array of undefined  nullable: true
   vesselName                string  nullable: true
 
 ======================================
@@ -2689,8 +2714,8 @@ Type: object
 additionalProperties: false
 
 Properties:
-  items                     array of ToDo  nullable: true
-  statusCounts              ToDoStatusCount
+  items                     array of undefined  nullable: true
+  statusCounts              unknown
   startDate                 string  (date-time)  nullable: true
   endDate                   string  (date-time)  nullable: true
   companyId                 integer  (int32)
@@ -2737,7 +2762,7 @@ Properties:
   isDeleted                 boolean
   isNew                     boolean  readOnly: true
   companyId                 integer  (int32)
-  company                   Companies
+  company                   unknown
   rowCnt                    integer  (int32)
   rowNumber                 integer  (int32)
   active                    boolean
@@ -2766,12 +2791,12 @@ Properties:
   vesselPhoto               string  nullable: true
   remarks                   string  nullable: true
   partnerId                 integer  (int32)
-  partner                   Partner
+  partner                   unknown
   fotoUrl                   string  nullable: true  readOnly: true
   flagUrl                   string  nullable: true  readOnly: true
-  partners                  array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
-  vesselTypes               array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
-  countries                 array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
+  partners                  array of undefined  nullable: true
+  vesselTypes               array of undefined  nullable: true
+  countries                 array of undefined  nullable: true
 
 ======================================
   VesselVisit
@@ -2788,11 +2813,11 @@ Properties:
   isDeleted                 boolean
   isNew                     boolean  readOnly: true
   companyId                 integer  (int32)
-  company                   Companies
+  company                   unknown
   rowCnt                    integer  (int32)
   rowNumber                 integer  (int32)
   vesselId                  integer  (int32)  nullable: true
-  vessel                    Vessel
+  vessel                    unknown
   imo                       string  nullable: true
   companyName               string  nullable: true
   portCode                  string  nullable: true
@@ -2801,7 +2826,7 @@ Properties:
   salesNote                 string  nullable: true
   fieldSalesNote            string  nullable: true
   isVisited                 boolean
-  vessels                   array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
+  vessels                   array of undefined  nullable: true
   vesselName                string  nullable: true
 
 ======================================
@@ -2811,13 +2836,13 @@ Type: object
 additionalProperties: false
 
 Properties:
-  items                     array of VesselVisit  nullable: true
+  items                     array of undefined  nullable: true
   startDate                 string  (date-time)  nullable: true
   endDate                   string  (date-time)  nullable: true
   companyId                 integer  (int32)
   kriter                    string  nullable: true
-  companies                 array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
-  vessels                   array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
+  companies                 array of undefined  nullable: true
+  vessels                   array of undefined  nullable: true
   rowCount                  integer  (int32)
 
 ======================================
@@ -2835,31 +2860,31 @@ Properties:
   isDeleted                 boolean
   isNew                     boolean  readOnly: true
   companyId                 integer  (int32)
-  company                   Companies
+  company                   unknown
   rowCnt                    integer  (int32)
   rowNumber                 integer  (int32)
   docNo                     string  nullable: true
   refNo                     string  nullable: true
   invoiceId                 integer  (int32)  nullable: true
   voucherNo                 string  nullable: true
-  voucherType               EDUtility.VoucherType
+  voucherType               unknown
   voucherDate               string  (date-time)
   description               string  nullable: true
   remarks                   string  nullable: true
   currency                  string  nullable: true
   currencyRate              number  (double)
-  refModule                 EDUtility.ModuleType
+  refModule                 unknown
   refId                     integer  (int32)  nullable: true
   status                    string  nullable: true
   projectId                 integer  (int32)  nullable: true
-  project                   Project
+  project                   unknown
   totalDebit                number  (double)
   totalCredit               number  (double)
   isReversal                boolean
   reversedVoucherId         integer  (int32)  nullable: true
   isLocked                  boolean
   isPosted                  boolean
-  lines                     array of VoucherLine  nullable: true
+  lines                     array of undefined  nullable: true
 
 ======================================
   VoucherDto
@@ -2872,7 +2897,7 @@ Properties:
   companyId                 integer  (int32)
   voucherNo                 string  nullable: true
   voucherDate               string  (date-time)
-  voucherType               EDUtility.VoucherType
+  voucherType               unknown
   accountCode               string  nullable: true
   description               string  nullable: true
   remarks                   string  nullable: true
@@ -2884,7 +2909,7 @@ Properties:
   isLocked                  boolean
   isPosted                  boolean
   reversedVoucherId         integer  (int32)  nullable: true
-  lines                     array of VoucherLineDto  nullable: true
+  lines                     array of undefined  nullable: true
 
 ======================================
   VoucherFilter
@@ -2894,12 +2919,12 @@ additionalProperties: false
 
 Properties:
   companyId                 integer  (int32)
-  voucherType               EDUtility.VoucherType
+  voucherType               unknown
   startDate                 string  nullable: true
   endDate                   string  nullable: true
   status                    string  nullable: true
-  pagedVouchers             PagedResult`1[[EDModels.VoucherDto, EDModels, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
-  voucherList               array of VoucherDto  nullable: true
+  pagedVouchers             unknown
+  voucherList               array of undefined  nullable: true
 
 ======================================
   VoucherLine
@@ -2916,18 +2941,18 @@ Properties:
   isDeleted                 boolean
   isNew                     boolean  readOnly: true
   companyId                 integer  (int32)
-  company                   Companies
+  company                   unknown
   rowCnt                    integer  (int32)
   rowNumber                 integer  (int32)
   voucherId                 integer  (int32)
-  voucher                   Voucher
+  voucher                   unknown
   accountPlanId             integer  (int32)
-  accountPlan               AccountPlan
+  accountPlan               unknown
   accountCode               string  nullable: true
   accountName               string  nullable: true
   counterAccount            string  nullable: true
   partnerId                 integer  (int32)  nullable: true
-  partner                   Partner
+  partner                   unknown
   debit                     number  (double)
   debitTL                   number  (double)
   credit                    number  (double)
@@ -2935,7 +2960,7 @@ Properties:
   balance                   number  (double)
   currency                  string  nullable: true
   currencyRate              number  (double)
-  refModule                 EDUtility.ModuleType
+  refModule                 unknown
   refId                     integer  (int32)  nullable: true
   explanation               string  nullable: true
   remarks                   string  nullable: true
@@ -2980,7 +3005,7 @@ Properties:
   isDeleted                 boolean
   isNew                     boolean  readOnly: true
   companyId                 integer  (int32)
-  company                   Companies
+  company                   unknown
   rowCnt                    integer  (int32)
   rowNumber                 integer  (int32)
   warehouseCode             string
@@ -3007,40 +3032,40 @@ Properties:
   profit                    number  (double)
   totalStockCount           integer  (int32)
   activeItemCount           integer  (int32)
-  countries                 array of Microsoft.AspNetCore.Mvc.Rendering.SelectListItem  nullable: true
+  countries                 array of undefined  nullable: true
 
 ======================================
-  EDUtility.DeliveryStatus
+  DeliveryStatus
 ======================================
 Type: integer int32
 Values: 0, 1, 2, 3, 9
 
 ======================================
-  EDUtility.DeliveryType
+  DeliveryType
 ======================================
 Type: integer int32
 Values: 1, 2, 3, 4
 
 ======================================
-  EDUtility.InvoiceType
+  InvoiceType
 ======================================
 Type: integer int32
 Values: 1, 2, 3, 4
 
 ======================================
-  EDUtility.ModuleType
+  ModuleType
 ======================================
 Type: integer int32
 Values: 1, 2, 3, 4, 5, 6, 9
 
 ======================================
-  EDUtility.PaymentType
+  PaymentType
 ======================================
 Type: integer int32
 Values: 1, 2, 3, 4
 
 ======================================
-  EDUtility.VoucherType
+  VoucherType
 ======================================
 Type: integer int32
 Values: 0, 1, 2, 3, 4, 5, 6, 7, 8, 11, 12, 13, 14, 21, 22, 23, 24, 31, 32, 33, 34, 35, 36, 37
@@ -3063,7 +3088,7 @@ additionalProperties: false
 
 Properties:
   disabled                  boolean
-  group                     Microsoft.AspNetCore.Mvc.Rendering.SelectListGroup
+  group                     unknown
   selected                  boolean
   text                      string  nullable: true
   value                     string  nullable: true

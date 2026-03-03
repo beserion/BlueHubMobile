@@ -3,6 +3,7 @@ import { useNavigate, useLocation } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { Lock, User, Loader2, AlertCircle, ArrowRight, Ship, Anchor } from 'lucide-react';
 import Logo from '../components/Logo.svg';
+import loginBg from '../assets/login-bg.png';
 
 const Login = () => {
     const [identifier, setIdentifier] = useState('admin@bluehub.com');
@@ -43,7 +44,7 @@ const Login = () => {
             {/* Animated Background Elements */}
             <div className="absolute inset-0 z-0">
                 <div className="absolute inset-0 bg-gradient-to-br from-indigo-900/40 via-slate-900/60 to-slate-950/80 z-10" />
-                <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1498036882173-b41c28a8ba34?q=80&w=2564&auto=format&fit=crop')] bg-cover bg-center opacity-30 animate-pulse-slow" />
+                <div className="absolute inset-0 bg-cover bg-center opacity-30 animate-pulse-slow" style={{ backgroundImage: `url(${loginBg})` }} />
 
                 {/* Floating Orbs */}
                 <div className="absolute top-[-10%] left-[-10%] w-[500px] h-[500px] rounded-full bg-blue-600/20 blur-[100px] animate-blob" />
